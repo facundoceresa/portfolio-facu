@@ -38,6 +38,7 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/sector07-control");
   await expect(page.getByRole("navigation", { name: /secciones/i })).toBeVisible();
   await expect(page.getByRole("link", { name: /Qué soluciona/i })).toHaveAttribute("href", "#que-soluciona");
+  await expect(page.getByRole("link", { name: /abrir captura: Tablero operativo/i }).first()).toHaveAttribute("href", "/work/sector07-control/tablero-operativo-desktop.png");
   await expect(page.getByRole("link", { name: /Peluqueria Agenda/i })).toHaveAttribute("href", "/casos/peluqueria-agenda");
   await page.goto("/casos");
   await expect(page.getByRole("link", { name: /Ver caso Peluqueria Agenda/i })).toBeVisible();

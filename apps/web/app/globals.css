@@ -485,6 +485,10 @@ select {
   overflow: hidden;
 }
 
+.case-image-link {
+  display: block;
+}
+
 .case-image {
   aspect-ratio: 16 / 10;
   display: block;
@@ -506,13 +510,25 @@ select {
 }
 
 .case-image-frame figcaption {
+  align-items: center;
   border-top: 1px solid var(--line);
   color: var(--dim);
+  display: flex;
   font-family: var(--font-mono), monospace;
   font-size: 0.72rem;
+  gap: 1rem;
+  justify-content: space-between;
   letter-spacing: 0.08em;
   padding: 0.9rem 1rem;
   text-transform: uppercase;
+}
+
+.case-image-frame figcaption a {
+  color: var(--glow);
+  flex: 0 0 auto;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
 }
 
 .content-link {
@@ -682,6 +698,11 @@ select {
   .case-image-portrait {
     height: auto;
     max-height: none;
+  }
+
+  .case-image-frame figcaption {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 

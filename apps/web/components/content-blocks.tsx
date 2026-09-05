@@ -5,7 +5,13 @@ import rehypeSanitize from "rehype-sanitize";
 import type { ContentBlock } from "@/features/content/schemas";
 import { headingId } from "@/features/content/project-meta";
 
-export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
+export function ContentBlocks({
+  blocks,
+  openImageLabel = "abrir captura",
+}: {
+  blocks: ContentBlock[];
+  openImageLabel?: string;
+}) {
   return (
     <div className="grid gap-7">
       {blocks.map((block, index) => {
@@ -31,8 +37,13 @@ export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
             .join(" ");
           return (
             <figure key={index} className="case-image-frame">
-              <Image src={block.src} alt={block.alt} width={block.width} height={block.height} className={imageClassName} sizes="(min-width: 1024px) 960px, calc(100vw - 40px)" />
-              {block.caption ? <figcaption>{block.caption}</figcaption> : null}
+              <a href={block.src} target="_blank" rel="noopener noreferrer" className="case-image-link" aria-label={`${openImageLabel}: ${block.alt}`}>
+                <Image src={block.src} alt={block.alt} width={block.width} height={block.height} className={imageClassName} sizes="(min-width: 1024px) 960px, calc(100vw - 40px)" />
+              </a>
+              <figcaption>
+                {block.caption ? <span>{block.caption}</span> : null}
+                <a href={block.src} target="_blank" rel="noopener noreferrer">{openImageLabel}</a>
+              </figcaption>
             </figure>
           );
         }

@@ -65,14 +65,14 @@ export function CasesList({
                   sizes="(min-width: 1024px) 520px, calc(100vw - 40px)"
                 />
               ) : (
-                <div className="grid h-full place-items-center font-display text-6xl font-bold text-[rgba(115,255,184,0.24)]">0{index + 1}</div>
+                <div className="grid h-full place-items-center font-display text-6xl font-bold text-[rgba(115,255,184,0.58)]" aria-hidden="true">0{index + 1}</div>
               )}
             </Link>
             <div className="grid content-between gap-6 p-2 md:p-3">
               <div>
                 <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
                   <p className="tech-label">{item.translation.category} · {item.caseStudy.readTimeMinutes} min</p>
-                  <span className="font-display text-5xl font-bold text-[rgba(115,255,184,0.22)]">0{index + 1}</span>
+                  <span className="font-display text-5xl font-bold text-[rgba(115,255,184,0.58)]" aria-hidden="true">0{index + 1}</span>
                 </div>
                 <h2 className="font-display text-3xl font-bold uppercase text-mint md:text-4xl">{item.translation.title}</h2>
                 <p className="mt-4 max-w-3xl leading-7 text-[color:var(--muted)]">{item.translation.dek}</p>

@@ -65,7 +65,7 @@ export function CaseDetailLayout({
       </nav>
 
       <div className="mt-14 border-t border-[color:var(--line)] pt-10 text-lg leading-8 text-[color:var(--muted)]">
-        <ContentBlocks blocks={blocks} />
+        <ContentBlocks blocks={blocks} openImageLabel={locale === "es" ? "abrir captura" : "open capture"} />
       </div>
 
       {nextCase ? (
