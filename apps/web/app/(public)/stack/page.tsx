@@ -24,7 +24,7 @@ export function StackBody({ locale }: { locale: "es" | "en" }) {
           <div>
             <h2 className="font-display text-4xl font-bold uppercase text-[color:var(--glow)]">{layer.title}</h2>
             <p className="mt-4 max-w-2xl leading-7 text-[color:var(--muted)]">
-              {locale === "es" ? "Herramientas seleccionadas por interoperabilidad, trazabilidad y operacion sencilla." : "Tools selected for interoperability, traceability and simple operation."}
+              {locale === "es" ? "Herramientas seleccionadas por interoperabilidad, trazabilidad y operación sencilla." : "Tools selected for interoperability, traceability and simple operation."}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {layer.tools.map((tool) => <span key={tool} className="border border-[color:var(--line)] px-3 py-2 font-mono text-xs uppercase text-[color:var(--dim)]">{tool}</span>)}

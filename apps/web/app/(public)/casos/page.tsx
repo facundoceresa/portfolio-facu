@@ -10,7 +10,7 @@ export default async function CasesPage() {
   const [settings, cases] = await Promise.all([getSettings(), getPublishedCases("es")]);
   return (
     <PublicShell locale="es" settings={settings}>
-      <PageHeader eyebrow="// casos" title="Casos reales, sin humo." body="Detalle tecnico publicado solo cuando existe evidencia y traduccion completa." />
+      <PageHeader eyebrow="// casos" title="Casos reales, sin humo." body="Detalle técnico publicado sólo cuando existe evidencia y traducción completa." />
       <CasesList locale="es" cases={cases} />
     </PublicShell>
   );
@@ -23,7 +23,7 @@ export function CasesList({ locale, cases }: { locale: "es" | "en"; cases: Await
       <section className="mx-auto max-w-[1360px] px-5 pb-28 md:px-10">
         <div className="technical-card p-8">
           <p className="tech-label mb-4">{"// empty_state"}</p>
-          <h2 className="font-display text-3xl font-bold uppercase text-mint">{locale === "es" ? "No hay casos publicados todavia." : "No case studies are published yet."}</h2>
+          <h2 className="font-display text-3xl font-bold uppercase text-mint">{locale === "es" ? "No hay casos publicados todavía." : "No case studies are published yet."}</h2>
           <p className="mt-4 max-w-2xl text-[color:var(--muted)]">{locale === "es" ? "Los borradores candidatos existen solo en desarrollo y no se muestran como logros reales." : "Candidate drafts exist only in development and are not shown as real achievements."}</p>
         </div>
       </section>

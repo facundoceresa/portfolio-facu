@@ -31,7 +31,7 @@ type ProjectScreenshot = {
   height: number;
 };
 
-const keywords = ["integraciones", "erp", "automatizacion", "arquitectura", "postgres", "ia responsable", "producto", "infra", "observabilidad", "eventos"];
+const keywords = ["integraciones", "erp", "automatización", "arquitectura", "postgres", "ia responsable", "producto", "infra", "observabilidad", "eventos"];
 const rowOffsets = ["md:ml-0", "md:ml-4", "md:ml-8", "md:ml-12"];
 
 type HeroCopy = (typeof copy)["es"]["hero"];
@@ -154,9 +154,9 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           <div className="grid gap-4 md:grid-cols-2">
             {[
               ["trazabilidad", "prompts, decisiones, versiones y riesgo no se pierden en una caja negra"],
-              ["fallback humano", "la automatizacion no reemplaza criterio donde el error cuesta"],
+              ["fallback humano", "la automatización no reemplaza criterio donde el error cuesta"],
               ["datos propios", "sin enviar PII a herramientas que no tienen contrato claro"],
-              ["medicion", "si no mejora el proceso real, no se publica como logro"],
+              ["medición", "si no mejora el proceso real, no se publica como logro"],
             ].map(([title, body]) => (
               <div key={title} className="technical-card p-5">
                 <h3 className="tech-label mb-3">{title}</h3>
@@ -265,6 +265,11 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
           {project.project.repoUrl ? (
             <a href={project.project.repoUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
               repo <BrandIcon kind="github" />
+            </a>
+          ) : null}
+          {project.project.liveUrl ? (
+            <a href={project.project.liveUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
+              demo <ArrowUpRight size={15} />
             </a>
           ) : null}
         </div>

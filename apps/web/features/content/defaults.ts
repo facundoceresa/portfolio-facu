@@ -34,7 +34,7 @@ export const copy = {
       body: "No colecciono tecnologías. Elijo herramientas que resuelven el problema y saben comunicarse entre sí.",
     },
     method: {
-      eyebrow: "// metodo",
+      eyebrow: "// método",
       title: "observar·modelar automatizar·sostener",
     },
     ai: {
