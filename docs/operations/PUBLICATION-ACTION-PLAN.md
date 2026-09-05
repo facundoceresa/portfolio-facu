@@ -60,15 +60,22 @@ Commit: `b50bb68`
 
 Commit: `c7edbd3`
 
-### Tanda 7 - Repo demostrable y documentacion publica - en curso
+### Tanda 7 - Repo demostrable y documentacion publica - completada
 
 - Mejorar README publico con capturas, arquitectura y casos publicados.
 - Actualizar documentacion operativa con resultados de validacion recientes.
 
-### Tanda 8 - Admin operativo - pendiente
+Commit: `ff4db1f`
 
-- Crear usuario admin `facundo@ceresa.dev`.
+### Tanda 8 - Contacto publico y admin operativo - completada
+
+- Centralizar fallback publico de email/GitHub.
+- Ocultar LinkedIn si no existe URL confirmada.
+- Limpiar copy visible y TODOs obsoletos.
+- Crear usuario admin local `facundo@ceresa.dev`.
 - Validar login local sin exponer credenciales en Git.
+
+Commit: `6286176` para cambios versionados. Usuario admin creado localmente fuera de Git.
 
 ## Regla de push
 
