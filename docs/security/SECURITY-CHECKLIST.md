@@ -14,3 +14,7 @@
 - PII y secretos redactados en logs.
 - Admin y APIs admin con `noindex` y `Cache-Control: no-store`.
 - Cloudflare Access requerido delante de `/admin/*` y `/api/admin/*` en produccion.
+- `.env`, `.env.*`, `secrets/`, storage local, backups, reportes y caches ignorados por Git.
+- Escaneo Gitleaks requerido antes de pushes de publicacion.
+- No pasar contrasenas por argumentos; usar `ADMIN_PASSWORD_FILE`.
+- Repositorio publico sin tokens, dumps, logs con PII, capturas sensibles ni configuracion privada.

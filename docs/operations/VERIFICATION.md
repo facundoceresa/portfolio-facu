@@ -1,6 +1,6 @@
 # Verification Log
 
-Fecha local: 2026-09-01, America/Montevideo.
+Fecha local: 2026-09-05, America/Montevideo.
 
 ## Runtime local verificado
 
@@ -20,6 +20,7 @@ pnpm build
 WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:e2e
 WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:a11y
 WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:visual
+docker run --rm -v "$PWD":/repo ghcr.io/gitleaks/gitleaks:latest detect --source=/repo --redact -v
 docker compose -f compose.yaml -f compose.dev.yaml config --quiet
 WEB_IMAGE_DIGEST=ghcr.io/example/portfolio@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa APP_ORIGIN=https://portfolio.example docker compose -f compose.yaml config --quiet
 docker build -t portfolio-facu-web:local .
@@ -32,10 +33,14 @@ CHROME_PATH=/home/fceresa/.cache/ms-playwright/chromium-1234/chrome-linux64/chro
 
 ## Resultados medidos
 
-- Unit/integration: 3 archivos, 4 tests, verde.
-- E2E público: 1 test, verde.
-- Axe: 0 violaciones serious/critical en home.
-- Visual regression local: 6 snapshots, verde en `1440x900`, `1366x768`, `1024x768`, `768x1024`, `390x844`, `360x800`.
+- Unit/integration: 3 archivos, 5 tests, verde.
+- E2E publico: 3 tests, verde.
+- Axe: 0 violaciones serious/critical en `/`, `/casos`, `/casos/sector07-control` y `/contacto`.
+- Visual regression local: 10 snapshots, verde en home responsive, indice de casos desktop/mobile y detalle Sector 07 desktop/mobile.
+- Build Next.js 16: 17 paginas generadas y rutas dinamicas compiladas correctamente.
+- Sitemap: incluye rutas ES/EN de los 4 casos publicados.
+- Open Graph: `/opengraph-image` responde `image/png`.
+- Gitleaks fuente/historial local: no leaks found.
 - Motion QA 2026-09-01: hero revalidado contra referencia con Playwright. Se restauró consola en `// core_manifesto` (`~/ceresa`, `$ whoami`, cursor `blink`) y matriz de capas bajo el hero. Se removieron reveals de hero/secciones/cards, `scroll-timeline` y drift del watermark porque Lovable los computa estáticos; quedan vivos `blink`, `pulse`, `scanline` y `marquee`. Hover alineado a `150ms cubic-bezier(0.4, 0, 0.2, 1)`: manifiesto `translate: -2px -2px`, filas `translate: -4px`, botón primario sin desplazamiento y glow doble.
 - Lovable parity pass 2026-09-01: se recuperaron los icon buttons `github/linkedin/email` bajo los CTA del hero, el bloque de contacto `hola@ceresa.dev / linkedin / github`, el link `admin ↗` del footer y los iconos de flecha en CTA. La terminal de `// core_manifesto` ahora hidrata correctamente, se autotypea en ~2.5 s y permite click/teclado para avanzar o reiniciar. Se agregó `allowedDevOrigins` para `127.0.0.1`/`localhost`, WebSocket local en CSP dev y `devIndicators: false` para que localhost no muestre el indicador visual de Next.
 - Lighthouse standalone: performance `0.97`, accessibility `1.00`, best-practices `1.00`, SEO `1.00`, FCP `0.8 s`, LCP `2.6 s`, CLS `0`, TBT `50 ms`.

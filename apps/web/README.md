@@ -9,6 +9,7 @@ Aplicacion publica y panel admin del portfolio de Facundo Ceresa.
 - Tailwind CSS 4
 - PostgreSQL con Drizzle ORM
 - Playwright, Axe y Vitest para validacion
+- Auth admin con sesiones opacas, Argon2id, CSRF y rate limiting
 
 ## Desarrollo local
 
@@ -31,11 +32,19 @@ pnpm lint
 pnpm typecheck
 pnpm test
 pnpm build
-pnpm --filter web test:e2e
-pnpm --filter web test:a11y
-pnpm --filter web test:visual
+WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:e2e
+WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:a11y
+WEB_BASE_URL=http://127.0.0.1:3000 pnpm --filter web test:visual
 ```
 
 ## Seguridad
 
 No guardar secretos en settings, seed, capturas ni archivos versionados. Usar `.env` local o los archivos `secrets/*` indicados por `compose.yaml`.
+
+## Rutas principales
+
+- `/`: home publica.
+- `/casos`: indice de casos publicados.
+- `/casos/[slug]`: detalle con capturas, stack, resultado, repo y demo.
+- `/contacto`: formulario publico.
+- `/admin`: panel privado, no indexable.
