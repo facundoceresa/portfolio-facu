@@ -15,6 +15,7 @@ export function PublicShell({ locale, settings, children }: PublicShellProps) {
   const other = oppositeLocale(locale);
   const configuredEmail = settings.public_email?.trim();
   const publicEmail = configuredEmail && !configuredEmail.endsWith(".local") ? configuredEmail : "hola@ceresa.dev";
+  const showAdminFooter = settings.admin_footer_link === "true";
   return (
     <div className="min-h-dvh text-fog">
       <header className="sticky top-0 z-40 border-b border-[color:var(--line)] bg-[rgba(13,27,42,0.85)] backdrop-blur-xl">
@@ -54,7 +55,7 @@ export function PublicShell({ locale, settings, children }: PublicShellProps) {
           <div className="flex flex-wrap gap-4">
             <Link href={getRoute(locale, "privacy")}>{locale === "es" ? "privacidad" : "privacy"}</Link>
             <Link href={getRoute(locale, "terms")}>{locale === "es" ? "terminos" : "terms"}</Link>
-            <Link href="/admin">admin ↗</Link>
+            {showAdminFooter ? <Link href="/admin">admin ↗</Link> : null}
             <a href={`mailto:${publicEmail}`}>email</a>
           </div>
         </div>

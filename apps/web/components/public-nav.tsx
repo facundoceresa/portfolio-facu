@@ -21,17 +21,15 @@ export function PublicNav({ locale }: { locale: Locale }) {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  const label = (key: (typeof keys)[number]) => {
-    const labels = {
-      es: { home: "inicio", stack: "stack", cases: "casos", contact: "contacto" },
-      en: { home: "home", stack: "stack", cases: "cases", contact: "contact" },
-    };
-    return labels[locale][key];
+  const labels = {
+    es: { home: "inicio", stack: "stack", cases: "casos", contact: "contacto", open: "Abrir menú", close: "Cerrar menú", nav: "Principal", mobile: "Principal móvil" },
+    en: { home: "home", stack: "stack", cases: "cases", contact: "contact", open: "Open menu", close: "Close menu", nav: "Primary", mobile: "Mobile primary" },
   };
+  const label = (key: (typeof keys)[number]) => labels[locale][key];
 
   return (
     <>
-      <nav className="hidden gap-1 md:flex" aria-label="Principal">
+      <nav className="hidden gap-1 md:flex" aria-label={labels[locale].nav}>
         {keys.map((key) => {
           const href = getRoute(locale, key);
           const active = pathname === href;
@@ -52,7 +50,7 @@ export function PublicNav({ locale }: { locale: Locale }) {
       <button
         type="button"
         className="grid h-11 w-11 place-items-center border border-[color:var(--line)] text-[color:var(--glow)] md:hidden"
-        aria-label={open ? "Cerrar menu" : "Abrir menu"}
+        aria-label={open ? labels[locale].close : labels[locale].open}
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
       >
@@ -60,18 +58,27 @@ export function PublicNav({ locale }: { locale: Locale }) {
       </button>
       {open ? (
         <div className="absolute left-0 right-0 top-[var(--header-height)] border-b border-[color:var(--line)] bg-[rgba(10,21,33,0.98)] px-5 py-5 md:hidden">
-          <nav className="grid gap-2" aria-label="Principal movil">
-            {keys.map((key, index) => (
-              <Link
-                key={key}
-                href={getRoute(locale, key)}
-                onClick={() => setOpen(false)}
-                className="flex min-h-12 items-center justify-between border border-[color:var(--line)] px-4 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--glow)]"
-              >
-                <span>{label(key)}</span>
-                <span>0{index + 1}</span>
-              </Link>
-            ))}
+          <nav className="grid gap-2" aria-label={labels[locale].mobile}>
+            {keys.map((key, index) => {
+              const href = getRoute(locale, key);
+              const active = pathname === href;
+              return (
+                <Link
+                  key={key}
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  onClick={() => setOpen(false)}
+                  className={`flex min-h-12 items-center justify-between border px-4 font-mono text-xs font-bold uppercase tracking-[0.16em] ${
+                    active
+                      ? "border-[color:var(--mint)] bg-[rgba(45,212,168,0.12)] text-mint"
+                      : "border-[color:var(--line)] text-[color:var(--glow)]"
+                  }`}
+                >
+                  <span>{label(key)}</span>
+                  <span>0{index + 1}</span>
+                </Link>
+              );
+            })}
           </nav>
         </div>
       ) : null}

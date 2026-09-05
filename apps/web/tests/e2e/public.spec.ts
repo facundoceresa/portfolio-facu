@@ -19,6 +19,7 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("link", { name: /demo/i }).nth(1)).toHaveAttribute("href", "https://calculadora.anclauruguay.com");
   await expect(page.getByRole("heading", { name: /Software cerca del proceso/i })).toBeVisible();
   await expect(page.getByRole("link", { name: /descargar cv técnico/i })).toHaveAttribute("href", "/facundo-ceresa-cv.md");
+  await expect(page.getByRole("contentinfo").getByRole("link", { name: /admin/i })).toHaveCount(0);
   await page.getByRole("link", { name: /ver caso/i }).first().click();
   await expect(page).toHaveURL(/\/casos\/peluqueria-agenda$/);
   await expect(page.getByRole("heading", { name: /Qué soluciona/i })).toBeVisible();
@@ -48,6 +49,17 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page).toHaveURL(/\/stack$/);
   await page.goto("/casos/no-existe");
   await expect(page.getByText(/ruta no encontrada/i)).toBeVisible();
+});
+
+test("mobile navigation exposes localized active state", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/en/cases");
+  await page.getByRole("button", { name: "Open menu" }).click();
+  const mobileNav = page.getByRole("navigation", { name: "Mobile primary" });
+  await expect(mobileNav).toBeVisible();
+  await expect(mobileNav.getByRole("link", { name: /cases/i })).toHaveAttribute("aria-current", "page");
+  await page.getByRole("button", { name: "Close menu" }).click();
+  await expect(mobileNav).toBeHidden();
 });
 
 test("seo routes expose case metadata and share assets", async ({ page }) => {
