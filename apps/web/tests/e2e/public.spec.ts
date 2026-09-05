@@ -17,6 +17,8 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("link", { name: /repo/i }).nth(3)).toHaveAttribute("href", "https://github.com/facundoceresa/sector07-control");
   await expect(page.getByRole("link", { name: /demo/i }).first()).toHaveAttribute("href", "https://stock.anclauruguay.com");
   await expect(page.getByRole("link", { name: /demo/i }).nth(1)).toHaveAttribute("href", "https://calculadora.anclauruguay.com");
+  await expect(page.getByRole("heading", { name: /Software cerca del proceso/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /descargar cv técnico/i })).toHaveAttribute("href", "/facundo-ceresa-cv.md");
   await page.getByRole("link", { name: /ver caso/i }).first().click();
   await expect(page).toHaveURL(/\/casos\/peluqueria-agenda$/);
   await expect(page.getByRole("heading", { name: /Qué soluciona/i })).toBeVisible();

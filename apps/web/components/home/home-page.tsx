@@ -27,6 +27,20 @@ type ProjectRow = {
 
 const keywords = ["integraciones", "erp", "automatización", "arquitectura", "postgres", "ia responsable", "producto", "infra", "observabilidad", "eventos"];
 const rowOffsets = ["md:ml-0", "md:ml-4", "md:ml-8", "md:ml-12"];
+const capabilityCards = {
+  es: [
+    { kicker: "01", title: "Sistemas internos", body: "Paneles, flujos operativos, permisos, auditoría y reportes para equipos que viven dentro del proceso." },
+    { kicker: "02", title: "Integraciones ERP", body: "Lecturas controladas, sincronizaciones, snapshots, límites claros y herramientas que no rompen la base oficial." },
+    { kicker: "03", title: "Automatización", body: "Tareas repetibles convertidas en procesos observables, con fallback humano cuando el error cuesta." },
+    { kicker: "04", title: "Producto técnico", body: "MVPs, demos y herramientas publicables con tests, despliegue y documentación operativa." },
+  ],
+  en: [
+    { kicker: "01", title: "Internal systems", body: "Dashboards, operational flows, permissions, audit trails and reports for teams working inside the process." },
+    { kicker: "02", title: "ERP integrations", body: "Controlled reads, synchronization, snapshots, clear boundaries and tools that avoid breaking the official database." },
+    { kicker: "03", title: "Automation", body: "Repeatable tasks turned into observable processes, with human fallback where mistakes are expensive." },
+    { kicker: "04", title: "Technical product", body: "MVPs, demos and publishable tools with tests, deployment and operational documentation." },
+  ],
+};
 
 type HeroCopy = (typeof copy)["es"]["hero"];
 
@@ -104,6 +118,32 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         />
         <div className="mx-auto mt-14 grid max-w-[1360px] gap-24 px-5 md:px-10">
           {projects.length ? projects.map((project, index) => <ProjectFeature key={project.project.id} project={project} index={index} locale={locale} />) : <DraftEmptyState text={t.work.empty} locale={locale} />}
+        </div>
+      </section>
+      <section id="perfil" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.34)] py-24">
+        <div className="mx-auto grid max-w-[1360px] gap-10 px-5 md:grid-cols-[0.85fr_1fr] md:px-10">
+          <div>
+            <p className="tech-label mb-4">{locale === "es" ? "// perfil" : "// profile"}</p>
+            <h2 className="display-title text-[clamp(2.4rem,5vw,5.4rem)] text-mint">{locale === "es" ? "Software cerca del proceso." : "Software close to the process."}</h2>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-[color:var(--muted)]">
+              {locale === "es"
+                ? "Trabajo mejor cuando el problema cruza operación, datos e integración: entender cómo se mueve el negocio, modelarlo bien y dejar una herramienta que alguien pueda usar todos los días."
+                : "My best work sits where operations, data and integration meet: understanding how the business moves, modeling it well and leaving behind a tool people can use every day."}
+            </p>
+            <a className="hard-button hard-button-secondary mt-8" href="/facundo-ceresa-cv.md" download>
+              {locale === "es" ? "descargar cv técnico" : "download technical cv"}
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {capabilityCards[locale].map((item) => (
+              <div key={item.title} className="technical-card p-5">
+                <p className="tech-label mb-3">{item.kicker}</p>
+                <h3 className="font-display text-2xl font-bold uppercase text-[color:var(--glow)]">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section id="stack" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.42)] py-24">

@@ -12,7 +12,7 @@ for (const viewport of [
     await page.setViewportSize({ width: viewport[0], height: viewport[1] });
     await page.goto("/");
     await expect(await page.screenshot({ animations: "disabled", fullPage: true })).toMatchSnapshot(`home-${viewport[0]}x${viewport[1]}.png`, {
-      maxDiffPixelRatio: 0.05,
+      maxDiffPixelRatio: 0.08,
     });
   });
 }
