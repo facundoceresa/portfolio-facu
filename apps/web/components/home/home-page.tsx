@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check, Cpu, Database, Mail, Network, ShieldCheck } from "lucide-react";
 import type { Locale } from "@/features/content/schemas";
 import { copy, draftProjectCandidates, methodSteps, stackLayers } from "@/features/content/defaults";
+import { readProjectMeta, type ProjectScreenshot } from "@/features/content/project-meta";
 import { getRoute } from "@/lib/i18n/routes";
 import { HeroTerminal } from "@/components/home/hero-terminal";
 
@@ -22,13 +23,6 @@ type ProjectRow = {
     category: string;
     body: unknown;
   };
-};
-
-type ProjectScreenshot = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
 };
 
 const keywords = ["integraciones", "erp", "automatización", "arquitectura", "postgres", "ia responsable", "producto", "infra", "observabilidad", "eventos"];
@@ -372,25 +366,4 @@ function ProjectScreenshotFrame({ screenshot, priority }: { screenshot: ProjectS
       />
     </div>
   );
-}
-
-function readProjectMeta(value: unknown): { screenshots: ProjectScreenshot[]; stack: string[] } {
-  if (!value || typeof value !== "object") {
-    return { screenshots: [], stack: [] };
-  }
-  const source = value as { screenshots?: unknown; stack?: unknown };
-  const screenshots = Array.isArray(source.screenshots)
-    ? source.screenshots.flatMap((item) => {
-        if (!item || typeof item !== "object") {
-          return [];
-        }
-        const maybe = item as Partial<ProjectScreenshot>;
-        if (typeof maybe.src !== "string" || typeof maybe.alt !== "string" || typeof maybe.width !== "number" || typeof maybe.height !== "number") {
-          return [];
-        }
-        return [{ src: maybe.src, alt: maybe.alt, width: maybe.width, height: maybe.height }];
-      })
-    : [];
-  const stack = Array.isArray(source.stack) ? source.stack.filter((item): item is string => typeof item === "string") : [];
-  return { screenshots, stack };
 }

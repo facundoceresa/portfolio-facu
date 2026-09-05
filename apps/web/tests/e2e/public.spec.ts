@@ -33,7 +33,16 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /Sector 07 Control/i })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Stack técnico/i })).toBeVisible();
   await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/sector07-control");
-  await page.getByRole("link", { name: /stack/i }).click();
+  await expect(page.getByRole("navigation", { name: /secciones/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Qué soluciona/i })).toHaveAttribute("href", "#que-soluciona");
+  await expect(page.getByRole("link", { name: /Peluqueria Agenda/i })).toHaveAttribute("href", "/casos/peluqueria-agenda");
+  await page.goto("/casos");
+  await expect(page.getByRole("link", { name: /Ver caso Peluqueria Agenda/i })).toBeVisible();
+  await expect(page.getByRole("img", { name: /Consulta Stock General en modo interno/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /demo/i }).first()).toHaveAttribute("href", "https://stock.anclauruguay.com");
+  await page.goto("/casos/consulta-stock-general");
+  await expect(page.getByRole("link", { name: /ver demo/i })).toHaveAttribute("href", "https://stock.anclauruguay.com");
+  await page.getByRole("navigation", { name: "Principal" }).getByRole("link", { name: "stack" }).click();
   await expect(page).toHaveURL(/\/stack$/);
   await page.goto("/casos/no-existe");
   await expect(page.getByText(/ruta no encontrada/i)).toBeVisible();

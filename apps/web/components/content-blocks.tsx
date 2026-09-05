@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSanitize from "rehype-sanitize";
 import type { ContentBlock } from "@/features/content/schemas";
+import { headingId } from "@/features/content/project-meta";
 
 export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
   return (
@@ -10,7 +11,7 @@ export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
       {blocks.map((block, index) => {
         if (block.type === "heading") {
           const Tag = `h${block.level}` as "h2" | "h3" | "h4";
-          return <Tag key={index} className="mt-6 font-display text-3xl font-bold uppercase text-mint">{block.text}</Tag>;
+          return <Tag key={index} id={headingId(block.text)} className="scroll-mt-28 mt-6 font-display text-3xl font-bold uppercase text-mint">{block.text}</Tag>;
         }
         if (block.type === "paragraph") {
           return <ReactMarkdown key={index} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSanitize]} components={{ p: "p", a: SafeLink }}>{block.markdown}</ReactMarkdown>;
