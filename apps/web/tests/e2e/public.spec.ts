@@ -1,0 +1,38 @@
+import { expect, test } from "@playwright/test";
+
+test("public navigation and case 404 work", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("heading", { name: /FACUNDO/i })).toBeVisible();
+  await expect(page.getByRole("button", { name: /terminal de perfil/i })).toContainText("$ whoami");
+  await expect(page.getByRole("link", { name: /github/i }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /linkedin/i }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /email/i }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Peluqueria Agenda/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Consulta Stock General/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Calculadora Materiales Anclaflex/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Sector 07 Control/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /repo/i }).first()).toHaveAttribute("href", "https://github.com/facundoceresa/peluqueria-agenda");
+  await expect(page.getByRole("link", { name: /repo/i }).nth(1)).toHaveAttribute("href", "https://github.com/facundoceresa/consulta-stock-general");
+  await expect(page.getByRole("link", { name: /repo/i }).nth(2)).toHaveAttribute("href", "https://github.com/facundoceresa/calculadora-materiales-anclaflex");
+  await expect(page.getByRole("link", { name: /repo/i }).nth(3)).toHaveAttribute("href", "https://github.com/facundoceresa/sector07-control");
+  await page.getByRole("link", { name: /ver caso/i }).first().click();
+  await expect(page).toHaveURL(/\/casos\/peluqueria-agenda$/);
+  await expect(page.getByRole("heading", { name: /Que soluciona/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/peluqueria-agenda");
+  await page.goto("/casos/consulta-stock-general");
+  await expect(page.getByRole("heading", { name: /Consulta Stock General/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Stack tecnico/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/consulta-stock-general");
+  await page.goto("/casos/calculadora-materiales-anclaflex");
+  await expect(page.getByRole("heading", { name: /Calculadora Materiales Anclaflex/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Stack tecnico/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/calculadora-materiales-anclaflex");
+  await page.goto("/casos/sector07-control");
+  await expect(page.getByRole("heading", { name: /Sector 07 Control/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Stack tecnico/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Repositorio en GitHub/i })).toHaveAttribute("href", "https://github.com/facundoceresa/sector07-control");
+  await page.getByRole("link", { name: /stack/i }).click();
+  await expect(page).toHaveURL(/\/stack$/);
+  await page.goto("/casos/no-existe");
+  await expect(page.getByText(/ruta no encontrada/i)).toBeVisible();
+});

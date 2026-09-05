@@ -1,0 +1,155 @@
+name: portfolio-facu
+
+services:
+  web:
+    image: ${WEB_IMAGE_DIGEST:?set WEB_IMAGE_DIGEST}
+    restart: unless-stopped
+    init: true
+    user: "1001:1001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=64m
+      - /app/apps/web/.next/cache:rw,nosuid,nodev,size=128m
+    environment:
+      NODE_ENV: production
+      APP_ORIGIN: ${APP_ORIGIN:?set APP_ORIGIN}
+      MEDIA_ROOT: /var/lib/portfolio-media
+      DATABASE_URL_FILE: /run/secrets/database_url
+      SESSION_SECRET_FILE: /run/secrets/session_secret
+      CSRF_SECRET_FILE: /run/secrets/csrf_secret
+      IP_HASH_SECRET_FILE: /run/secrets/ip_hash_secret
+      TURNSTILE_SECRET_KEY_FILE: /run/secrets/turnstile_secret
+      SMTP_PASSWORD_FILE: /run/secrets/smtp_password
+    secrets:
+      - database_url
+      - session_secret
+      - csrf_secret
+      - ip_hash_secret
+      - turnstile_secret
+      - smtp_password
+    volumes:
+      - media_data:/var/lib/portfolio-media:rw
+    networks:
+      - edge
+      - backend
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:3000/api/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "5"
+
+  db:
+    image: docker.io/library/postgres:18.1-bookworm@sha256:99c4aa9886879ca26fb9fb99185a087ace6299b14fc23f96c2f07033653e04ed
+    restart: unless-stopped
+    init: true
+    user: "999:999"
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      POSTGRES_DB: portfolio
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets:
+      - postgres_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:rw
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portfolio -d portfolio"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "5"
+
+  migrate:
+    image: ${WEB_IMAGE_DIGEST:?set WEB_IMAGE_DIGEST}
+    profiles: ["migrate"]
+    command: ["node", "apps/web/scripts/migrate-runtime.mjs"]
+    environment:
+      DATABASE_URL_FILE: /run/secrets/database_url
+    networks:
+      - backend
+    depends_on:
+      db:
+        condition: service_healthy
+    secrets:
+      - database_url
+
+  cloudflared:
+    image: cloudflare/cloudflared:2026.8.0
+    restart: unless-stopped
+    command: tunnel --no-autoupdate --config /etc/cloudflared/config.yml run
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ./infra/cloudflare/config.yml:/etc/cloudflared/config.yml:ro
+    secrets:
+      - cloudflared_token
+    networks:
+      - edge
+    depends_on:
+      web:
+        condition: service_healthy
+
+  backup:
+    image: docker.io/library/postgres:18.1-bookworm@sha256:99c4aa9886879ca26fb9fb99185a087ace6299b14fc23f96c2f07033653e04ed
+    profiles: ["backup"]
+    command: ["/bin/sh", "/backup/run-backup.sh"]
+    networks:
+      - backend
+    volumes:
+      - ./infra/scripts/run-backup.sh:/backup/run-backup.sh:ro
+      - backup_data:/backup/out:rw
+      - media_data:/backup/media:ro
+    secrets:
+      - postgres_password
+    depends_on:
+      db:
+        condition: service_healthy
+
+networks:
+  edge: {}
+  backend:
+    internal: true
+
+volumes:
+  postgres_data: {}
+  media_data: {}
+  backup_data: {}
+
+secrets:
+  database_url:
+    file: ./secrets/database_url
+  postgres_password:
+    file: ./secrets/postgres_password
+  session_secret:
+    file: ./secrets/session_secret
+  csrf_secret:
+    file: ./secrets/csrf_secret
+  ip_hash_secret:
+    file: ./secrets/ip_hash_secret
+  turnstile_secret:
+    file: ./secrets/turnstile_secret
+  smtp_password:
+    file: ./secrets/smtp_password
+  cloudflared_token:
+    file: ./secrets/cloudflared_token

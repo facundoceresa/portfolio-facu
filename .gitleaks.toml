@@ -1,0 +1,27 @@
+title = "portfolio-facu gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated artifacts and local-only files are not source."
+paths = [
+  '''(^|/)node_modules/''',
+  '''(^|/)\.next/''',
+  '''(^|/)test-results/''',
+  '''(^|/)\.lighthouseci/''',
+  '''(^|/)\.env$''',
+  '''(^|/)apps/web/\.env$''',
+  '''(^|/)secrets/''',
+  '''(^|/)storage/''',
+  '''(^|/)backups/''',
+  '''(^|/)playwright-report/''',
+  '''(^|/)coverage/''',
+  '''(^|/).*\.tsbuildinfo$''',
+]
+regexes = [
+  '''replace-with-[a-z0-9-]+''',
+  '''portfolio_(dev|ci)_password''',
+  '''ci_[a-z_]+_32_bytes_minimum_value''',
+  '''1x0{20,}AA''',
+]

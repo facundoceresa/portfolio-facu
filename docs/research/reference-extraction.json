@@ -1,0 +1,4547 @@
+{
+  "referenceUrl": "https://core-composition.lovable.app/",
+  "generatedAt": "2026-08-31T22:10:00.257Z",
+  "toolNote": "chrome-devtools MCP target closed; Playwright local automation used for clone-website browser sweep.",
+  "routes": {
+    "/": {
+      "url": "https://core-composition.lovable.app/",
+      "title": "Facundo Ceresa Portfolio",
+      "lang": "en",
+      "height": 8448,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "section",
+          "id": "",
+          "className": "relative overflow-hidden",
+          "text": "CERESAdisponible · q1 2026 / remoto latam · euFACUNDOCERESA// core_manifestoSoftware con criterio.No solo escribo código. Diseño los procesos que el código automatiza. Trabajo donde el negocio y la arquitectura se encuentran.~/ceresaFull-stack dev especializado en integraciones críticas, arquitecturas ERP, automatización de procesos e IA aplicada con responsabilidad técnica.ver trabajoiniciar_conversación()01frontendreact · next · tanstack↳ ok02backendnode · python · postgres↳ ok03data & iapostgres · vector · llm ops↳ ok04infradocker · cloudflare · ci/cd↳ ok",
+          "rect": {
+            "x": 0,
+            "y": 69,
+            "width": 1440,
+            "height": 1206.03125,
+            "top": 69,
+            "right": 1440,
+            "bottom": 1275.03125,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "div",
+          "id": "",
+          "className": "relative overflow-hidden border-y border-mint/10 bg-navy-2/60 py-4",
+          "text": "integracioneserpautomatizaciónarquitecturapostgresia responsableproductoinfraobservabilidadeventosintegracioneserpautomatizaciónarquitecturapostgresia responsableproductoinfraobservabilidadeventosintegracioneserpautomatizaciónarquitecturapostgresia responsableproductoinfraobservabilidadeventos",
+          "rect": {
+            "x": 0,
+            "y": 1275.03125,
+            "width": 1440,
+            "height": 82,
+            "top": 1275.03125,
+            "right": 1440,
+            "bottom": 1357.03125,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+            "padding": "16px 0px",
+            "display": "block",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "section",
+          "id": "trabajo",
+          "className": "relative py-24 md:py-32",
+          "text": "// trabajo_seleccionadoproyectos_Casos donde el software cambió el proceso, no al revés. Cada uno es una decisión técnica con consecuencias medibles.todos los casos WEBAPPERPPOSintegraciones · erp01nodepostgresrediskafkacaso · 01 liveSincronización de inventario multicanal en tiempo realMotor event-driven que unifica ecommerce, tienda física y ERP. Cero desalineación de stock entre canales, latencia sub-segundo.99.7%precisión de stockver casoproducto · retail02reacttrpcpostgrescaso · 02 liveCotizador B2B con reglas de precio dinámicasMotor configurable que reemplazó planillas y correos. Propuestas comerciales que antes tardaban 45 min ahora se arman en 6.-87%tiempo de armadover casoLLMautomatización · ia03pythonopenaipgvectorcaso · 03 liveClasificador de tickets con LLM + reglas de negocioTriage automático de tickets de soporte con fallback humano y auditoría. La IA propone, el operador ",
+          "rect": {
+            "x": 0,
+            "y": 1357.03125,
+            "width": 1440,
+            "height": 4168.109375,
+            "top": 1357.03125,
+            "right": 1440,
+            "bottom": 5525.140625,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "padding": "128px 0px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "article",
+          "id": "",
+          "className": "relative",
+          "text": "WEBAPPERPPOSintegraciones · erp01nodepostgresrediskafkacaso · 01 liveSincronización de inventario multicanal en tiempo realMotor event-driven que unifica ecommerce, tienda física y ERP. Cero desalineación de stock entre canales, latencia sub-segundo.99.7%precisión de stockver caso",
+          "rect": {
+            "x": 80,
+            "y": 1717.828125,
+            "width": 1280,
+            "height": 847.828125,
+            "top": 1717.828125,
+            "right": 1360,
+            "bottom": 2565.65625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 6,
+          "tag": "article",
+          "id": "",
+          "className": "relative",
+          "text": "producto · retail02reacttrpcpostgrescaso · 02 liveCotizador B2B con reglas de precio dinámicasMotor configurable que reemplazó planillas y correos. Propuestas comerciales que antes tardaban 45 min ahora se arman en 6.-87%tiempo de armadover caso",
+          "rect": {
+            "x": 80,
+            "y": 2661.65625,
+            "width": 1280,
+            "height": 847.828125,
+            "top": 2661.65625,
+            "right": 1360,
+            "bottom": 3509.484375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 7,
+          "tag": "article",
+          "id": "",
+          "className": "relative",
+          "text": "LLMautomatización · ia03pythonopenaipgvectorcaso · 03 liveClasificador de tickets con LLM + reglas de negocioTriage automático de tickets de soporte con fallback humano y auditoría. La IA propone, el operador confirma.72%auto-resueltosver caso",
+          "rect": {
+            "x": 80,
+            "y": 3605.484375,
+            "width": 1280,
+            "height": 847.828125,
+            "top": 3605.484375,
+            "right": 1360,
+            "bottom": 4453.3125,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 8,
+          "tag": "article",
+          "id": "",
+          "className": "relative",
+          "text": "infra · devex04dockercloudflareterraformcaso · 04 livePlataforma interna de despliegue self-serviceConsola donde cada equipo despliega servicios sin pedir permisos a infra. Guardrails, no bloqueos.12xvelocidad de deployver caso",
+          "rect": {
+            "x": 80,
+            "y": 4549.3125,
+            "width": 1280,
+            "height": 847.828125,
+            "top": 4549.3125,
+            "right": 1360,
+            "bottom": 5397.140625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 9,
+          "tag": "section",
+          "id": "stack",
+          "className": "relative border-y border-mint/10 bg-navy-2/40 py-24 md:py-32",
+          "text": "// stack_ecosystemcapas que se hablan.No colecciono tecnologías. Elijo herramientas que resuelven el problema y saben comunicarse entre sí. Este es el ecosistema en el que soy productivo hoy.01/frontendinterfaces reactivas & ux técnicareactnexttanstacktailwindmotion02/backendapis robustas & lógica de negocionodepythontrpcfastifyzod03/data & iamodelado & ia generativa aplicadapostgresredispgvectorllm opsrag04/infracloud native & automatización ci/cddockercloudflareterraformgh actions",
+          "rect": {
+            "x": 0,
+            "y": 5525.140625,
+            "width": 1440,
+            "height": 800.59375,
+            "top": 5525.140625,
+            "right": 1440,
+            "bottom": 6325.734375,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "padding": "128px 0px",
+            "display": "block",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 10,
+          "tag": "section",
+          "id": "metodo",
+          "className": "relative py-24 md:py-32",
+          "text": "// métodoobservar·modelarautomatizar·sostener01observarAntes de escribir código, entiendo el proceso real. Dónde duele, qué se rompe, quién sufre.02modelarDiseño el sistema en capas y contratos claros. Los datos primero, la interfaz después.03automatizarConstruyo lo mínimo que funciona en producción. Iteración medible, no perfección teórica.04sostenerObservabilidad, tests donde importan, documentación viva. El sistema se mantiene solo.",
+          "rect": {
+            "x": 0,
+            "y": 6325.734375,
+            "width": 1440,
+            "height": 707.84375,
+            "top": 6325.734375,
+            "right": 1440,
+            "bottom": 7033.578125,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "padding": "128px 0px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 11,
+          "tag": "section",
+          "id": "ia",
+          "className": "relative overflow-hidden py-24 md:py-32",
+          "text": "// postura_iaia con criterio, no por moda.No implemento IA por tendencia. La uso donde reemplaza reglas rígidas por juicio acotado, con auditoría, fallback humano y trazabilidad.aceleradorClasificación, extracción, resúmenes y triage. La IA propone, el sistema decide.responsabilidadAuditoría por decisión, evaluaciones automáticas, límites explícitos de confianza.arquitecturaRAG sobre fuentes propias, control de contexto, guardrails de negocio primero.productoIA como capa opcional, nunca como caja negra. El usuario entiende qué pasa.",
+          "rect": {
+            "x": 0,
+            "y": 7033.578125,
+            "width": 1440,
+            "height": 621,
+            "top": 7033.578125,
+            "right": 1440,
+            "bottom": 7654.578125,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "padding": "128px 0px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 12,
+          "tag": "section",
+          "id": "contacto",
+          "className": "relative overflow-hidden border-t border-mint/15 py-32 md:py-40",
+          "text": "// contactohablemos de tu proceso.Si tenés un sistema que duele, un proceso que se rompe o una integración que nadie quiere tocar, mandame un mensaje. Respondo con criterio. hola@ceresa.dev linkedin github",
+          "rect": {
+            "x": 0,
+            "y": 7654.578125,
+            "width": 1440,
+            "height": 713.78125,
+            "top": 7654.578125,
+            "right": 1440,
+            "bottom": 8368.359375,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "padding": "160px 0px",
+            "display": "block",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 13,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 8368.359375,
+            "width": 1440,
+            "height": 80,
+            "top": 8368.359375,
+            "right": 1440,
+            "bottom": 8448.359375,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "ver trabajo",
+          "href": "https://core-composition.lovable.app/#trabajo",
+          "target": ""
+        },
+        {
+          "text": "iniciar_conversación()",
+          "href": "https://core-composition.lovable.app/#contacto",
+          "target": ""
+        },
+        {
+          "text": "",
+          "href": "https://core-composition.lovable.app/#",
+          "target": ""
+        },
+        {
+          "text": "",
+          "href": "https://core-composition.lovable.app/#",
+          "target": ""
+        },
+        {
+          "text": "",
+          "href": "https://core-composition.lovable.app/#contacto",
+          "target": ""
+        },
+        {
+          "text": "todos los casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "ver caso",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "ver caso",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "ver caso",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "ver caso",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "hola@ceresa.dev",
+          "href": "mailto:hola@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "linkedin",
+          "href": "https://core-composition.lovable.app/#",
+          "target": ""
+        },
+        {
+          "text": "github",
+          "href": "https://core-composition.lovable.app/#",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [],
+      "assets": {
+        "images": [],
+        "backgrounds": [
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint absolute inset-0 opacity-70"
+          },
+          {
+            "bg": "repeating-linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 3px, rgba(115, 255, 184, 0.024) 3px, rgba(115, 255, 184, 0.024) 4px)",
+            "className": "scanlines pointer-events-none absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "radial-gradient(circle, rgb(45, 212, 168) 0%, rgba(0, 0, 0, 0) 70%)",
+            "className": "pointer-events-none absolute -left-40 top-40 h-[560px] w-[560px] rounded-full opacity-40 blur-3xl"
+          },
+          {
+            "bg": "radial-gradient(circle, rgb(115, 255, 184) 0%, rgba(0, 0, 0, 0) 70%)",
+            "className": "pointer-events-none absolute -right-32 -top-20 h-[420px] w-[420px] rounded-full opacity-25 blur-3xl"
+          },
+          {
+            "bg": "radial-gradient(circle at 30% 30%, rgba(115, 255, 184, 0.35) 0%, rgba(0, 0, 0, 0) 60%)",
+            "className": "absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "absolute inset-0 grid-blueprint opacity-40"
+          },
+          {
+            "bg": "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, oklab(0.904065 -0.14753 0.0576204 / 0.1) 50%, rgba(0, 0, 0, 0) 100%)",
+            "className": "pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-mint-glow/10 to-"
+          },
+          {
+            "bg": "radial-gradient(circle at 30% 30%, rgba(115, 255, 184, 0.35) 0%, rgba(0, 0, 0, 0) 60%)",
+            "className": "absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "absolute inset-0 grid-blueprint opacity-40"
+          },
+          {
+            "bg": "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, oklab(0.904065 -0.14753 0.0576204 / 0.1) 50%, rgba(0, 0, 0, 0) 100%)",
+            "className": "pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-mint-glow/10 to-"
+          },
+          {
+            "bg": "radial-gradient(circle at 30% 30%, rgba(115, 255, 184, 0.35) 0%, rgba(0, 0, 0, 0) 60%)",
+            "className": "absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "absolute inset-0 grid-blueprint opacity-40"
+          },
+          {
+            "bg": "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, oklab(0.904065 -0.14753 0.0576204 / 0.1) 50%, rgba(0, 0, 0, 0) 100%)",
+            "className": "pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-mint-glow/10 to-"
+          },
+          {
+            "bg": "radial-gradient(circle at 30% 30%, rgba(115, 255, 184, 0.35) 0%, rgba(0, 0, 0, 0) 60%)",
+            "className": "absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "absolute inset-0 grid-blueprint opacity-40"
+          },
+          {
+            "bg": "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, oklab(0.904065 -0.14753 0.0576204 / 0.1) 50%, rgba(0, 0, 0, 0) 100%)",
+            "className": "pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-mint-glow/10 to-"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-40"
+          },
+          {
+            "bg": "radial-gradient(circle, rgb(115, 255, 184) 0%, rgba(0, 0, 0, 0) 70%)",
+            "className": "pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity"
+          },
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-60"
+          },
+          {
+            "bg": "radial-gradient(circle, rgb(115, 255, 184) 0%, rgba(0, 0, 0, 0) 65%)",
+            "className": "pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity"
+          }
+        ],
+        "svgCount": 29,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          525
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          231
+        ],
+        [
+          "rgb(13, 27, 42)",
+          98
+        ],
+        [
+          "rgb(45, 212, 168)",
+          63
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.187255)",
+          60
+        ],
+        [
+          "rgb(0, 0, 0)",
+          34
+        ],
+        [
+          "rgb(115, 255, 184)",
+          33
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          33
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          29
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          28
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          27
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          19
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.25)",
+          18
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          14
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.599216)",
+          14
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.7)",
+          13
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          12
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.2)",
+          6
+        ],
+        [
+          "rgb(27, 67, 50)",
+          5
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          4
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          4
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.2)",
+          4
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.25)",
+          4
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.561765)",
+          4
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          2
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.6)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.348379 -0.052385 0.0156674 / 0.4)",
+          1
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.224706)",
+          1
+        ],
+        [
+          "rgb(10, 21, 33)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          310
+        ],
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          170
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          107
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ]
+      ]
+    },
+    "/stack": {
+      "url": "https://core-composition.lovable.app/stack",
+      "title": "Stack · Facundo Ceresa",
+      "lang": "en",
+      "height": 2593,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "header",
+          "id": "",
+          "className": "relative mb-20 border-l-4 border-mint-glow bg-navy-2/40 p-8 md:p-12 shadow-brutal-stack",
+          "text": "// stackmáquinas que construyen máquinas_No creo en el stack universal. Creo en elegir herramientas por problema, mantenerlas afiladas, y descartar las que no rinden. Este es el set con el que trabajo hoy.",
+          "rect": {
+            "x": 80,
+            "y": 133,
+            "width": 1280,
+            "height": 393.390625,
+            "top": 133,
+            "right": 1360,
+            "bottom": 526.390625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "padding": "48px",
+            "margin": "0px 0px 80px",
+            "display": "block",
+            "boxShadow": "rgb(10, 21, 33) 10px 10px 0px 0px, rgb(45, 212, 168) 11px 11px 0px 0px",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "section",
+          "id": "",
+          "className": "mb-24",
+          "text": "// 01capasde la interfaz al metalL1interfacesReactTanStack StartSvelteTailwind v4Motioncomponentes accesibles, tipados y con animaciones deliberadas.L2aplicaciónTypeScriptNodeNestJSGoPythonservicios pequeños con contratos claros, tests y observabilidad.L3datosPostgresPrismaRedisClickhousepgvectormodelado normalizado por defecto, con lecturas rápidas donde importa.L4infraDockerKubernetesTerraformCloudflareGitHub Actionsinfra como código, despliegues reproducibles, rollbacks baratos.",
+          "rect": {
+            "x": 80,
+            "y": 606.390625,
+            "width": 1280,
+            "height": 533,
+            "top": 606.390625,
+            "right": 1360,
+            "bottom": 1139.390625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "section",
+          "id": "",
+          "className": "mb-24",
+          "text": "// 02herramientascotidianas// editorNeovimVSCodeZed// terminalfishtmuxwezterm// diseñoFigmaExcalidrawtldraw// iaClaudeGPTCursorOllama// observabilidadGrafanaSentryOpenTelemetry// colabLinearGitHubNotion",
+          "rect": {
+            "x": 80,
+            "y": 1235.390625,
+            "width": 1280,
+            "height": 409,
+            "top": 1235.390625,
+            "right": 1360,
+            "bottom": 1644.390625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "section",
+          "id": "",
+          "className": "mb-24",
+          "text": "// 03principiosreglas de la casavelocidadprototipo primero, medí después, optimizá al final.resilienciael sistema falla; el usuario no debería notarlo.iteracióncambios pequeños, revisables, con historia clara.capas finasabstraer solo lo que probaste que necesita abstracción.",
+          "rect": {
+            "x": 80,
+            "y": 1740.390625,
+            "width": 1280,
+            "height": 289,
+            "top": 1740.390625,
+            "right": 1360,
+            "bottom": 2029.390625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 96px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 6,
+          "tag": "section",
+          "id": "",
+          "className": "relative border-l-4 border-mint bg-navy-2 p-8 shadow-brutal-mint md:p-12",
+          "text": "// próximo¿lo ponemos a trabajar?Contame el problema. Devolvemos una hipótesis técnica en 48 h.iniciar conversación",
+          "rect": {
+            "x": 80,
+            "y": 2125.390625,
+            "width": 1280,
+            "height": 259.5,
+            "top": 2125.390625,
+            "right": 1360,
+            "bottom": 2384.890625,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "rgb(10, 21, 33)",
+            "padding": "48px",
+            "display": "block",
+            "boxShadow": "rgb(45, 212, 168) 12px 12px 0px 0px",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 7,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 2512.890625,
+            "width": 1440,
+            "height": 80,
+            "top": 2512.890625,
+            "right": 1440,
+            "bottom": 2592.890625,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "iniciar conversación",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [],
+      "assets": {
+        "images": [],
+        "backgrounds": [],
+        "svgCount": 12,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          231
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          74
+        ],
+        [
+          "rgb(45, 212, 168)",
+          54
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.599216)",
+          45
+        ],
+        [
+          "rgb(13, 27, 42)",
+          36
+        ],
+        [
+          "rgb(0, 0, 0)",
+          32
+        ],
+        [
+          "rgb(115, 255, 184)",
+          20
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.25)",
+          20
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          14
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          14
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          12
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          8
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          6
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          6
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          5
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          4
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          2
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          2
+        ],
+        [
+          "rgb(10, 21, 33)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.348379 -0.052385 0.0156674 / 0.4)",
+          1
+        ],
+        [
+          "rgb(27, 67, 50)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          125
+        ],
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          117
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          19
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ]
+      ]
+    },
+    "/casos": {
+      "url": "https://core-composition.lovable.app/casos",
+      "title": "Casos de estudio · Facundo Ceresa",
+      "lang": "en",
+      "height": 1283,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "header",
+          "id": "",
+          "className": "mb-14",
+          "text": "// casos de estudioescritos técnicos_Historias completas: contexto, decisiones, trade-offs, código, resultados. Sin storytelling de agencia.",
+          "rect": {
+            "x": 80,
+            "y": 133,
+            "width": 1280,
+            "height": 228.59375,
+            "top": 133,
+            "right": 1360,
+            "bottom": 361.59375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 56px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "div",
+          "id": "",
+          "className": "flex items-end justify-between border-b border-mint/15 pb-4",
+          "text": "// idxíndice4 entradas",
+          "rect": {
+            "x": 80,
+            "y": 417.59375,
+            "width": 1280,
+            "height": 57,
+            "top": 417.59375,
+            "right": 1360,
+            "bottom": 474.59375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "padding": "0px 0px 16px",
+            "display": "flex",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "div",
+          "id": "",
+          "className": "mt-8 grid gap-4",
+          "text": "caso01backend · fintech· 8 min·mar 2026Cómo reducimos un 62% el tiempo de conciliación bancariaReemplazamos un proceso batch nocturno por un pipeline event-driven. De 4 h a 90 min con la misma infra.resultado-62%caso02arquitectura · saas· 12 min·feb 2026Motor de reglas para pricing dinámico B2BDSL propio para reglas de precios auditables. El equipo comercial deja de pedirle cambios al equipo técnico.resultado+3 segcaso03arquitectura · escala· 15 min·ene 2026Migración de monolito Django a arquitectura event-drivenEstrangulamiento gradual con outbox pattern. Cero downtime, rollbacks a nivel evento.resultado0 caídascaso04ia · ops· 10 min·dic 2025Clasificador de tickets con LLM en producciónRouter semántico con evaluación continua. 89% de acierto, costos controlados con cache y fallback determinístico.resultado89%",
+          "rect": {
+            "x": 80,
+            "y": 506.59375,
+            "width": 1280,
+            "height": 632,
+            "top": 506.59375,
+            "right": 1360,
+            "bottom": 1138.59375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "32px 0px 0px",
+            "display": "grid",
+            "gridTemplateColumns": "1280px",
+            "gap": "16px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 1202.59375,
+            "width": 1440,
+            "height": 80,
+            "top": 1202.59375,
+            "right": 1440,
+            "bottom": 1282.59375,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "caso01backend · fintech· 8 min·mar 2026Cómo reducimos un 62% el tiempo de conciliación bancariaReemplazamos un proceso batch nocturno por un pipeline event-driven. De 4 h a 90 min con la misma infra.resultado-62%",
+          "href": "https://core-composition.lovable.app/casos/conciliacion-62",
+          "target": ""
+        },
+        {
+          "text": "caso02arquitectura · saas· 12 min·feb 2026Motor de reglas para pricing dinámico B2BDSL propio para reglas de precios auditables. El equipo comercial deja de pedirle cambios al equipo técnico.resultado+3 seg",
+          "href": "https://core-composition.lovable.app/casos/pricing-b2b",
+          "target": ""
+        },
+        {
+          "text": "caso03arquitectura · escala· 15 min·ene 2026Migración de monolito Django a arquitectura event-drivenEstrangulamiento gradual con outbox pattern. Cero downtime, rollbacks a nivel evento.resultado0 caídas",
+          "href": "https://core-composition.lovable.app/casos/migracion-event-driven",
+          "target": ""
+        },
+        {
+          "text": "caso04ia · ops· 10 min·dic 2025Clasificador de tickets con LLM en producciónRouter semántico con evaluación continua. 89% de acierto, costos controlados con cache y fallback determinístico.resultado89%",
+          "href": "https://core-composition.lovable.app/casos/clasificador-llm",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [],
+      "assets": {
+        "images": [],
+        "backgrounds": [],
+        "svgCount": 11,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          192
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          42
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          42
+        ],
+        [
+          "rgb(0, 0, 0)",
+          31
+        ],
+        [
+          "rgb(115, 255, 184)",
+          28
+        ],
+        [
+          "rgb(45, 212, 168)",
+          25
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "rgb(13, 27, 42)",
+          12
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          10
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          6
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          6
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          4
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          4
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          2
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          2
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.348379 -0.052385 0.0156674 / 0.4)",
+          1
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          90
+        ],
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          81
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          17
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ]
+      ]
+    },
+    "/contacto": {
+      "url": "https://core-composition.lovable.app/contacto",
+      "title": "Contacto · Facundo Ceresa",
+      "lang": "en",
+      "height": 1350,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "header",
+          "id": "",
+          "className": "mb-12",
+          "text": "// contactoping directo_Sin formularios de 20 campos. Contame qué querés construir y respondo en 48 h con una hipótesis técnica.",
+          "rect": {
+            "x": 80,
+            "y": 133,
+            "width": 1280,
+            "height": 228.59375,
+            "top": 133,
+            "right": 1360,
+            "bottom": 361.59375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 48px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "div",
+          "id": "",
+          "className": "grid gap-8 md:grid-cols-[1fr_320px]",
+          "text": "// formulario_directov1 · 4 camposnombreemailempresa · rolalcanceauditoría técnicaprototipoproducto end-to-endconsultoríaotropresupuesto (usd)< 5k5k — 15k15k — 40k> 40kpor definircontame el problemamarkdown soportado0 / 2000autorizo el uso de estos datos únicamente para responder este mensaje.respuesta estimada < 48 henviar mensajeemailfacundo@ceresa.devgithub@facundoceresalinkedin/in/facundoceresa// disponibilidad lun–vie · 09–18 gmt-3 buenos aires · ar tomando proyectos q2 2026no enviarNo respondo a reclutadores, agencias sin contexto, ni pedidos de trabajo gratuito «para el portfolio».",
+          "rect": {
+            "x": 80,
+            "y": 409.59375,
+            "width": 1280,
+            "height": 796,
+            "top": 409.59375,
+            "right": 1360,
+            "bottom": 1205.59375,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "grid",
+            "gridTemplateColumns": "928px 320px",
+            "gap": "32px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "form",
+          "id": "",
+          "className": "space-y-6",
+          "text": "// formulario_directov1 · 4 camposnombreemailempresa · rolalcanceauditoría técnicaprototipoproducto end-to-endconsultoríaotropresupuesto (usd)< 5k5k — 15k15k — 40k> 40kpor definircontame el problemamarkdown soportado0 / 2000autorizo el uso de estos datos únicamente para responder este mensaje.respuesta estimada < 48 henviar mensaje",
+          "rect": {
+            "x": 116,
+            "y": 441.59375,
+            "width": 860,
+            "height": 732,
+            "top": 441.59375,
+            "right": 976,
+            "bottom": 1173.59375,
+            "left": 116
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 1269.59375,
+            "width": 1440,
+            "height": 80,
+            "top": 1269.59375,
+            "right": 1440,
+            "bottom": 1349.59375,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "emailfacundo@ceresa.dev",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "github@facundoceresa",
+          "href": "https://core-composition.lovable.app/contacto#",
+          "target": ""
+        },
+        {
+          "text": "linkedin/in/facundoceresa",
+          "href": "https://core-composition.lovable.app/contacto#",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "auditoría técnica",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "prototipo",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "rgb(13, 27, 42)",
+            "backgroundColor": "rgb(45, 212, 168)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid rgb(45, 212, 168)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "producto end-to-end",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "consultoría",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "otro",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "< 5k",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "5k — 15k",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "rgb(13, 27, 42)",
+            "backgroundColor": "rgb(115, 255, 184)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid rgb(115, 255, 184)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "15k — 40k",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "> 40k",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "por definir",
+          "type": "button",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.2px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+            "padding": "6px 12px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.25)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "enviar mensaje",
+          "type": "submit",
+          "styles": {
+            "fontSize": "11px",
+            "fontWeight": "700",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "16.5px",
+            "letterSpacing": "2.64px",
+            "color": "rgb(13, 27, 42)",
+            "backgroundColor": "rgb(45, 212, 168)",
+            "padding": "12px 20px",
+            "display": "flex",
+            "gap": "8px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [
+        {
+          "action": "https://core-composition.lovable.app/contacto",
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "name": null,
+              "type": "text",
+              "placeholder": "Cómo te llamás",
+              "required": true
+            },
+            {
+              "tag": "input",
+              "name": null,
+              "type": "email",
+              "placeholder": "tu@correo.com",
+              "required": true
+            },
+            {
+              "tag": "input",
+              "name": null,
+              "type": "text",
+              "placeholder": "Company · CTO",
+              "required": true
+            },
+            {
+              "tag": "textarea",
+              "name": null,
+              "type": null,
+              "placeholder": "Qué querés resolver, contexto, dead-lines, cualquier link útil…",
+              "required": true
+            },
+            {
+              "tag": "input",
+              "name": null,
+              "type": "checkbox",
+              "placeholder": null,
+              "required": true
+            }
+          ]
+        }
+      ],
+      "assets": {
+        "images": [],
+        "backgrounds": [],
+        "svgCount": 12,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          171
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          44
+        ],
+        [
+          "rgb(0, 0, 0)",
+          34
+        ],
+        [
+          "rgb(115, 255, 184)",
+          22
+        ],
+        [
+          "rgb(13, 27, 42)",
+          21
+        ],
+        [
+          "rgb(45, 212, 168)",
+          21
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          17
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          16
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          15
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.25)",
+          12
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          9
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          6
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          5
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          4
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          2
+        ],
+        [
+          "rgb(10, 21, 33)",
+          2
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.348379 -0.052385 0.0156674 / 0.4)",
+          1
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          99
+        ],
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          80
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          4
+        ]
+      ]
+    },
+    "/privacidad": {
+      "url": "https://core-composition.lovable.app/privacidad",
+      "title": "Política de privacidad · Facundo Ceresa",
+      "lang": "en",
+      "height": 2218,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "div",
+          "id": "",
+          "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-40",
+          "text": "",
+          "rect": {
+            "x": 40,
+            "y": 69,
+            "width": 1360,
+            "height": 2068.5,
+            "top": 69,
+            "right": 1400,
+            "bottom": 2137.5,
+            "left": 40
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundImage": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "absolute",
+            "zIndex": "auto",
+            "opacity": "0.4",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "div",
+          "id": "",
+          "className": "relative",
+          "text": "// legal / privacidadpolítica de privacidad_Sin letra chica ni párrafos copiados de plantillas: esto es exactamente lo que pasa con tus datos cuando usás este sitio.última actualización · 2026-08// 01datos que recolectosecciónSolo lo que enviás voluntariamente en el formulario de contacto: nombre, email, empresa, presupuesto estimado y el mensaje. No hay registro de usuarios ni perfiles comerciales. resumen nombre y email empresa (opcional) mensaje del formulario métricas anónimas de visita// 02para qué se usansecciónExclusivamente para responder tu consulta y evaluar si el proyecto tiene sentido para ambas partes. No vendo, alquilo ni comparto datos con terceros con fines publicitarios. resumen responder consultas presupuestar trabajo mantener registro contractual// 03cookies y analíticasecciónEste sitio no usa cookies publicitarias ni rastreo cross-site. Se guarda una única preferencia",
+          "rect": {
+            "x": 80,
+            "y": 165,
+            "width": 1280,
+            "height": 1876.5,
+            "top": 165,
+            "right": 1360,
+            "bottom": 2041.5,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "section",
+          "id": "",
+          "className": "",
+          "text": "// 01datos que recolectosecciónSolo lo que enviás voluntariamente en el formulario de contacto: nombre, email, empresa, presupuesto estimado y el mensaje. No hay registro de usuarios ni perfiles comerciales. resumen nombre y email empresa (opcional) mensaje del formulario métricas anónimas de visita",
+          "rect": {
+            "x": 80,
+            "y": 451,
+            "width": 1280,
+            "height": 238,
+            "top": 451,
+            "right": 1360,
+            "bottom": 689,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 56px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "section",
+          "id": "",
+          "className": "",
+          "text": "// 02para qué se usansecciónExclusivamente para responder tu consulta y evaluar si el proyecto tiene sentido para ambas partes. No vendo, alquilo ni comparto datos con terceros con fines publicitarios. resumen responder consultas presupuestar trabajo mantener registro contractual",
+          "rect": {
+            "x": 80,
+            "y": 745,
+            "width": 1280,
+            "height": 213.5,
+            "top": 745,
+            "right": 1360,
+            "bottom": 958.5,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 56px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 6,
+          "tag": "section",
+          "id": "",
+          "className": "",
+          "text": "// 03cookies y analíticasecciónEste sitio no usa cookies publicitarias ni rastreo cross-site. Se guarda una única preferencia local (idioma) en tu navegador, que podés borrar cuando quieras. resumen localStorage: idioma sin cookies de terceros sin fingerprinting",
+          "rect": {
+            "x": 80,
+            "y": 1014.5,
+            "width": 1280,
+            "height": 213.5,
+            "top": 1014.5,
+            "right": 1360,
+            "bottom": 1228,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 56px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 7,
+          "tag": "section",
+          "id": "",
+          "className": "",
+          "text": "// 04conservaciónsecciónLos mensajes de contacto se conservan hasta 24 meses. Si el proyecto avanza, la documentación asociada se guarda según obligaciones fiscales y contractuales. resumen mensajes: 24 meses contratos: 5 años",
+          "rect": {
+            "x": 80,
+            "y": 1284,
+            "width": 1280,
+            "height": 189,
+            "top": 1284,
+            "right": 1360,
+            "bottom": 1473,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "0px 0px 56px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 8,
+          "tag": "section",
+          "id": "",
+          "className": "",
+          "text": "// 05tus derechossecciónPodés pedir acceso, rectificación o eliminación de tus datos escribiendo a facundo@ceresa.dev. Respondo en un plazo máximo de 15 días hábiles. resumen acceso rectificación eliminación portabilidad",
+          "rect": {
+            "x": 80,
+            "y": 1529,
+            "width": 1280,
+            "height": 238,
+            "top": 1529,
+            "right": 1360,
+            "bottom": 1767,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 9,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 2137.5,
+            "width": 1440,
+            "height": 80,
+            "top": 2137.5,
+            "right": 1440,
+            "bottom": 2217.5,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "facundo@ceresa.dev",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [],
+      "assets": {
+        "images": [],
+        "backgrounds": [
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-40"
+          }
+        ],
+        "svgCount": 8,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          198
+        ],
+        [
+          "rgb(45, 212, 168)",
+          54
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          52
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          42
+        ],
+        [
+          "rgb(0, 0, 0)",
+          33
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          10
+        ],
+        [
+          "rgb(13, 27, 42)",
+          9
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          9
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          7
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          7
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          6
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "rgb(115, 255, 184)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          2
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          2
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.25)",
+          1
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.2)",
+          1
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          100
+        ],
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          88
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          9
+        ]
+      ]
+    },
+    "/terminos": {
+      "url": "https://core-composition.lovable.app/terminos",
+      "title": "Términos de uso · Facundo Ceresa",
+      "lang": "en",
+      "height": 1327,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgba(115, 255, 184, 0.75)",
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "display": "block",
+        "position": "sticky",
+        "zIndex": "40",
+        "opacity": "1",
+        "transition": "all",
+        "backdropFilter": "blur(24px)"
+      },
+      "sections": [
+        {
+          "index": 0,
+          "tag": "header",
+          "id": "",
+          "className": "sticky top-0 z-40 border-b border-mint/10 bg-navy/85 backdrop-blur-xl",
+          "text": "fcfacundo.ceresainiciostackcasoscontactoes/enhablemos",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 69,
+            "top": 0,
+            "right": 1440,
+            "bottom": 69,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+            "display": "block",
+            "position": "sticky",
+            "zIndex": "40",
+            "opacity": "1",
+            "transition": "all",
+            "backdropFilter": "blur(24px)"
+          }
+        },
+        {
+          "index": 1,
+          "tag": "nav",
+          "id": "",
+          "className": "hidden gap-1 md:flex",
+          "text": "iniciostackcasoscontacto",
+          "rect": {
+            "x": 530.1875,
+            "y": 17.75,
+            "width": 334.125,
+            "height": 32.5,
+            "top": 17.75,
+            "right": 864.3125,
+            "bottom": 50.25,
+            "left": 530.1875
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "flex",
+            "gap": "4px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 2,
+          "tag": "div",
+          "id": "",
+          "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-40",
+          "text": "",
+          "rect": {
+            "x": 40,
+            "y": 69,
+            "width": 1360,
+            "height": 1177.5,
+            "top": 69,
+            "right": 1400,
+            "bottom": 1246.5,
+            "left": 40
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundImage": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "absolute",
+            "zIndex": "auto",
+            "opacity": "0.4",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 3,
+          "tag": "div",
+          "id": "",
+          "className": "relative",
+          "text": "// legal / términostérminos de uso_Reglas simples para usar el contenido de este sitio y entender el alcance de lo que se publica.#01uso del sitioEste sitio es un portfolio personal. La información se publica de buena fe y con fines informativos; no constituye asesoramiento técnico contratado ni una oferta comercial vinculante.#02propiedad del contenidoTextos, diagramas, código de ejemplo y diseño son de mi autoría salvo indicación contraria. Podés citar fragmentos con atribución y enlace; la reproducción total requiere permiso escrito.#03casos de estudio y confidencialidadLas métricas de los casos se publican anonimizadas o con autorización del cliente. Los nombres de empresa aparecen únicamente cuando existe permiso explícito.#04limitación de responsabilidadNo me responsabilizo por decisiones tomadas a partir del contenido publicado ni por interrupciones de servicio de proveedores exte",
+          "rect": {
+            "x": 80,
+            "y": 165,
+            "width": 1280,
+            "height": 985.5,
+            "top": 165,
+            "right": 1360,
+            "bottom": 1150.5,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 4,
+          "tag": "article",
+          "id": "",
+          "className": "group relative border border-mint/15 bg-navy-2/60 p-6 transition-all hover:-translate-y-0.5 hover:border-mint",
+          "text": "#01uso del sitioEste sitio es un portfolio personal. La información se publica de buena fe y con fines informativos; no constituye asesoramiento técnico contratado ni una oferta comercial vinculante.",
+          "rect": {
+            "x": 80,
+            "y": 394,
+            "width": 628,
+            "height": 190.25,
+            "top": 394,
+            "right": 708,
+            "bottom": 584.25,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+            "padding": "24px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.15)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "index": 5,
+          "tag": "article",
+          "id": "",
+          "className": "group relative border border-mint/15 bg-navy-2/60 p-6 transition-all hover:-translate-y-0.5 hover:border-mint",
+          "text": "#02propiedad del contenidoTextos, diagramas, código de ejemplo y diseño son de mi autoría salvo indicación contraria. Podés citar fragmentos con atribución y enlace; la reproducción total requiere permiso escrito.",
+          "rect": {
+            "x": 732,
+            "y": 394,
+            "width": 628,
+            "height": 190.25,
+            "top": 394,
+            "right": 1360,
+            "bottom": 584.25,
+            "left": 732
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+            "padding": "24px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.15)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "index": 6,
+          "tag": "article",
+          "id": "",
+          "className": "group relative border border-mint/15 bg-navy-2/60 p-6 transition-all hover:-translate-y-0.5 hover:border-mint",
+          "text": "#03casos de estudio y confidencialidadLas métricas de los casos se publican anonimizadas o con autorización del cliente. Los nombres de empresa aparecen únicamente cuando existe permiso explícito.",
+          "rect": {
+            "x": 80,
+            "y": 608.25,
+            "width": 628,
+            "height": 190.25,
+            "top": 608.25,
+            "right": 708,
+            "bottom": 798.5,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+            "padding": "24px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.15)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "index": 7,
+          "tag": "article",
+          "id": "",
+          "className": "group relative border border-mint/15 bg-navy-2/60 p-6 transition-all hover:-translate-y-0.5 hover:border-mint",
+          "text": "#04limitación de responsabilidadNo me responsabilizo por decisiones tomadas a partir del contenido publicado ni por interrupciones de servicio de proveedores externos. Todo trabajo profesional se rige por un contrato aparte.",
+          "rect": {
+            "x": 732,
+            "y": 608.25,
+            "width": 628,
+            "height": 190.25,
+            "top": 608.25,
+            "right": 1360,
+            "bottom": 798.5,
+            "left": 732
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+            "padding": "24px",
+            "display": "block",
+            "border": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.15)",
+            "position": "relative",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "index": 8,
+          "tag": "section",
+          "id": "",
+          "className": "mt-16",
+          "text": "// 05cómo trabajamoscondiciones marcopropuesta escritaalcance, entregables y supuestos antes de escribir código.iteraciones cerradasbloques de trabajo con demo y aceptación explícita.propiedad del clienteel código entregado y su documentación pasan al cliente al pago final.",
+          "rect": {
+            "x": 80,
+            "y": 862.5,
+            "width": 1280,
+            "height": 184,
+            "top": 862.5,
+            "right": 1360,
+            "bottom": 1046.5,
+            "left": 80
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "64px 0px 0px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "index": 9,
+          "tag": "footer",
+          "id": "",
+          "className": "border-t border-mint/10 bg-navy-2/40",
+          "text": "© 2026 facundo ceresa · construido a mano·argentina · remoto·todos los sistemas okes/enprivacidadtérminosadmin ↗email",
+          "rect": {
+            "x": 0,
+            "y": 1246.5,
+            "width": 1440,
+            "height": 80,
+            "top": 1246.5,
+            "right": 1440,
+            "bottom": 1326.5,
+            "left": 0
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "backgroundColor": "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+            "display": "block",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "fcfacundo.ceresa",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "inicio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "stack",
+          "href": "https://core-composition.lovable.app/stack",
+          "target": ""
+        },
+        {
+          "text": "casos",
+          "href": "https://core-composition.lovable.app/casos",
+          "target": ""
+        },
+        {
+          "text": "contacto",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "hablemos",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "ver privacidad ↗",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "consultas ↗",
+          "href": "https://core-composition.lovable.app/contacto",
+          "target": ""
+        },
+        {
+          "text": "privacidad",
+          "href": "https://core-composition.lovable.app/privacidad",
+          "target": ""
+        },
+        {
+          "text": "términos",
+          "href": "https://core-composition.lovable.app/terminos",
+          "target": ""
+        },
+        {
+          "text": "admin ↗",
+          "href": "https://core-composition.lovable.app/admin",
+          "target": ""
+        },
+        {
+          "text": "email",
+          "href": "mailto:facundo@ceresa.dev",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [],
+      "assets": {
+        "images": [],
+        "backgrounds": [
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-40"
+          }
+        ],
+        "svgCount": 7,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          148
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          35
+        ],
+        [
+          "rgb(0, 0, 0)",
+          30
+        ],
+        [
+          "rgb(45, 212, 168)",
+          18
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.6)",
+          17
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          14
+        ],
+        [
+          "rgb(13, 27, 42)",
+          8
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          7
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          7
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.486863)",
+          7
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.4)",
+          7
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.524314)",
+          4
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.6)",
+          4
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "rgb(115, 255, 184)",
+          3
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.5)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.1)",
+          2
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          2
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          2
+        ],
+        [
+          "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+          1
+        ],
+        [
+          "oklab(0.191946 -0.0092643 -0.0278089 / 0.4)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          70
+        ],
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          66
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          8
+        ]
+      ]
+    },
+    "/admin": {
+      "url": "https://core-composition.lovable.app/admin",
+      "title": "Admin · Facundo Ceresa",
+      "lang": "en",
+      "height": 900,
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+        "lineHeight": "24px",
+        "color": "rgb(230, 255, 245)",
+        "backgroundColor": "rgb(13, 27, 42)",
+        "display": "block",
+        "border": "0px solid rgba(115, 255, 184, 0.12)",
+        "position": "static",
+        "top": "auto",
+        "zIndex": "auto",
+        "opacity": "1",
+        "transition": "all"
+      },
+      "header": null,
+      "sections": [
+        {
+          "index": 0,
+          "tag": "form",
+          "id": "",
+          "className": "mt-8 space-y-4",
+          "text": "emailcontraseña recordar sesióniniciar sesión",
+          "rect": {
+            "x": 532,
+            "y": 371.75,
+            "width": 380,
+            "height": 259.5,
+            "top": 371.75,
+            "right": 912,
+            "bottom": 631.25,
+            "left": 532
+          },
+          "styles": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+            "lineHeight": "24px",
+            "color": "rgba(115, 255, 184, 0.75)",
+            "margin": "32px 0px 0px",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        }
+      ],
+      "links": [
+        {
+          "text": "← volver al sitio",
+          "href": "https://core-composition.lovable.app/",
+          "target": ""
+        },
+        {
+          "text": "Edit with",
+          "href": "https://lovable.dev/projects/lovp_4wg1dehs6w8mc9e450j1tv4k1n?utm_source=lovable-badge",
+          "target": "_blank"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "es",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "rgb(115, 255, 184)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "en",
+          "type": "submit",
+          "styles": {
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "15px",
+            "letterSpacing": "2.4px",
+            "color": "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+            "display": "block",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "all"
+          }
+        },
+        {
+          "text": "iniciar sesión",
+          "type": "submit",
+          "styles": {
+            "fontSize": "11px",
+            "fontWeight": "700",
+            "fontFamily": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+            "lineHeight": "16.5px",
+            "letterSpacing": "2.64px",
+            "color": "rgb(13, 27, 42)",
+            "backgroundColor": "rgb(45, 212, 168)",
+            "padding": "12px 20px",
+            "margin": "8px 0px 0px",
+            "display": "inline-flex",
+            "gap": "8px",
+            "border": "0px solid rgba(115, 255, 184, 0.12)",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1",
+            "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        },
+        {
+          "text": "",
+          "type": "button",
+          "styles": {
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "fontFamily": "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+            "lineHeight": "18px",
+            "color": "rgb(197, 193, 185)",
+            "display": "flex",
+            "border": "0px none rgb(197, 193, 185)",
+            "borderRadius": "0px 6px 6px 0px",
+            "position": "static",
+            "top": "auto",
+            "zIndex": "auto",
+            "opacity": "1"
+          }
+        }
+      ],
+      "forms": [
+        {
+          "action": "https://core-composition.lovable.app/admin",
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "name": null,
+              "type": "email",
+              "placeholder": "facundo@ceresa.dev",
+              "required": true
+            },
+            {
+              "tag": "input",
+              "name": null,
+              "type": "password",
+              "placeholder": "••••••••••••",
+              "required": true
+            },
+            {
+              "tag": "input",
+              "name": null,
+              "type": "checkbox",
+              "placeholder": null,
+              "required": false
+            }
+          ]
+        }
+      ],
+      "assets": {
+        "images": [],
+        "backgrounds": [
+          {
+            "bg": "linear-gradient(90deg, rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgba(115, 255, 184, 0.05) 1px, rgba(0, 0, 0, 0) 1px)",
+            "className": "grid-blueprint pointer-events-none absolute inset-0 opacity-60"
+          },
+          {
+            "bg": "radial-gradient(circle, rgb(115, 255, 184) 0%, rgba(0, 0, 0, 0) 65%)",
+            "className": "pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity"
+          }
+        ],
+        "svgCount": 4,
+        "favicons": [
+          "https://core-composition.lovable.app/favicon.ico"
+        ]
+      },
+      "colors": [
+        [
+          "rgba(115, 255, 184, 0.12)",
+          90
+        ],
+        [
+          "rgb(0, 0, 0)",
+          38
+        ],
+        [
+          "rgb(197, 193, 185)",
+          18
+        ],
+        [
+          "rgba(115, 255, 184, 0.75)",
+          15
+        ],
+        [
+          "rgb(13, 27, 42)",
+          9
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.299608)",
+          6
+        ],
+        [
+          "rgb(45, 212, 168)",
+          6
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.449412)",
+          6
+        ],
+        [
+          "rgb(230, 255, 245)",
+          3
+        ],
+        [
+          "rgb(115, 255, 184)",
+          3
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.25)",
+          2
+        ],
+        [
+          "oklab(0.904065 -0.14753 0.0576204 / 0.37451)",
+          1
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.3)",
+          1
+        ],
+        [
+          "rgb(10, 21, 33)",
+          1
+        ],
+        [
+          "oklab(0.777999 -0.143017 0.025884 / 0.15)",
+          1
+        ],
+        [
+          "rgb(27, 27, 27)",
+          1
+        ],
+        [
+          "rgba(255, 255, 255, 0.04)",
+          1
+        ]
+      ],
+      "fonts": [
+        [
+          "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          53
+        ],
+        [
+          "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, monospace",
+          24
+        ],
+        [
+          "CameraPlainVariable, \"CameraPlainVariable Fallback\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+          17
+        ],
+        [
+          "\"Space Grotesk\", ui-sans-serif, system-ui, sans-serif",
+          2
+        ]
+      ]
+    }
+  },
+  "viewportScreenshots": [
+    "docs/design-references/core-composition/home-1440x900.png",
+    "docs/design-references/core-composition/home-1366x768.png",
+    "docs/design-references/core-composition/home-1024x768.png",
+    "docs/design-references/core-composition/home-768x1024.png",
+    "docs/design-references/core-composition/home-390x844.png",
+    "docs/design-references/core-composition/home-360x800.png"
+  ],
+  "behaviorSamples": [
+    {
+      "scrollY": 0,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 69,
+          "top": 0,
+          "right": 1440,
+          "bottom": 69,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 120,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -120,
+          "width": 1440,
+          "height": 69,
+          "top": -120,
+          "right": 1440,
+          "bottom": -51,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 600,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -600,
+          "width": 1440,
+          "height": 69,
+          "top": -600,
+          "right": 1440,
+          "bottom": -531,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 1200,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -1200,
+          "width": 1440,
+          "height": 69,
+          "top": -1200,
+          "right": 1440,
+          "bottom": -1131,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 2400,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -2400,
+          "width": 1440,
+          "height": 69,
+          "top": -2400,
+          "right": 1440,
+          "bottom": -2331,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 4200,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -4200,
+          "width": 1440,
+          "height": 69,
+          "top": -4200,
+          "right": 1440,
+          "bottom": -4131,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    },
+    {
+      "scrollY": 6400,
+      "header": {
+        "rect": {
+          "x": 0,
+          "y": -6400,
+          "width": 1440,
+          "height": 69,
+          "top": -6400,
+          "right": 1440,
+          "bottom": -6331,
+          "left": 0
+        },
+        "backgroundColor": "oklab(0.217683 -0.0113979 -0.0336839 / 0.85)",
+        "backdropFilter": "blur(24px)",
+        "borderBottom": "1px solid oklab(0.777999 -0.143017 0.025884 / 0.1)",
+        "boxShadow": "none",
+        "transform": "none",
+        "transition": "all"
+      }
+    }
+  ]
+}

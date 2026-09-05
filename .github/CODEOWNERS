@@ -1,0 +1,7 @@
+* @facundoceresa
+.github/ @facundoceresa
+infra/ @facundoceresa
+apps/web/features/auth/ @facundoceresa
+apps/web/lib/security/ @facundoceresa
+apps/web/lib/db/ @facundoceresa
+apps/web/drizzle/ @facundoceresa

@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portfolio-facu-web:dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - apps/web/.env
+    environment:
+      APP_ORIGIN: http://localhost:3000
+      WEB_IMAGE_DIGEST: portfolio-facu-web:dev
+    read_only: false
+    volumes:
+      - ./apps/web/storage:/app/apps/web/storage:rw
+
+  db:
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: portfolio_dev_password
+    secrets: []
