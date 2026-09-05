@@ -27,6 +27,28 @@ export const metadata: Metadata = {
     template: "%s - Facundo Ceresa",
   },
   description: "Portfolio técnico full-stack de Facundo Ceresa en Montevideo, Uruguay.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      es: "/",
+      en: "/en",
+    },
+  },
+  openGraph: {
+    title: "Facundo Ceresa - Portfolio full-stack",
+    description: "Casos reales de software, integraciones ERP, automatización e IA aplicada con criterio técnico.",
+    url: "/",
+    siteName: "Facundo Ceresa",
+    locale: "es_UY",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Facundo Ceresa - Portfolio full-stack" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facundo Ceresa - Portfolio full-stack",
+    description: "Portfolio técnico con casos reales, capturas locales y repositorios públicos.",
+    images: ["/opengraph-image"],
+  },
   robots: {
     index: true,
     follow: true,

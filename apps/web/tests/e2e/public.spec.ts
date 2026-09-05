@@ -47,3 +47,20 @@ test("public navigation and case 404 work", async ({ page }) => {
   await page.goto("/casos/no-existe");
   await expect(page.getByText(/ruta no encontrada/i)).toBeVisible();
 });
+
+test("seo routes expose case metadata and share assets", async ({ page }) => {
+  await page.goto("/casos/sector07-control");
+  await expect(page).toHaveTitle(/Sector 07 Control - portfolio Facundo Ceresa/);
+  await expect(page.locator("meta[property='og:title']")).toHaveAttribute("content", "Sector 07 Control - portfolio Facundo Ceresa");
+  await expect(page.locator("meta[name='twitter:card']")).toHaveAttribute("content", "summary_large_image");
+
+  const sitemap = await page.request.get("/sitemap.xml");
+  await expect(sitemap).toBeOK();
+  const xml = await sitemap.text();
+  expect(xml).toContain("/casos/sector07-control");
+  expect(xml).toContain("/en/cases/sector07-control");
+
+  const og = await page.request.get("/opengraph-image");
+  await expect(og).toBeOK();
+  expect(og.headers()["content-type"]).toContain("image/png");
+});

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { PublicShell } from "@/components/public-shell";
 import { PageHeader } from "@/components/page-header";
@@ -7,6 +8,12 @@ import { getPublishedCases, getPublishedProjects, getSettings } from "@/features
 import { readProjectMeta } from "@/features/content/project-meta";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Casos reales",
+  description: "Casos reales de software full-stack, integraciones ERP, automatización y herramientas internas construidas por Facundo Ceresa.",
+  alternates: { canonical: "/casos", languages: { es: "/casos", en: "/en/cases" } },
+};
 
 export default async function CasesPage() {
   const [settings, cases, projects] = await Promise.all([getSettings(), getPublishedCases("es"), getPublishedProjects("es")]);
