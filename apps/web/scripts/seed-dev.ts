@@ -15,7 +15,7 @@ const peluqueriaRepoUrl = "https://github.com/facundoceresa/peluqueria-agenda";
 const peluqueriaShots = [
   {
     src: "/work/peluqueria-agenda/panel-dashboard.png",
-    alt: "Dashboard privado de peluqueria-agenda con agenda, métricas y gestion operativa del salon",
+    alt: "Dashboard privado de peluqueria-agenda con agenda, métricas y gestión operativa del salón",
     width: 1440,
     height: 1324,
   },
@@ -834,7 +834,7 @@ try {
           {
             type: "paragraph",
             markdown:
-              "El problema era llevar una estimación tecnica de materiales a un flujo web confiable: el usuario ingresa superficie, selecciona productos o sistemas, y recibe cantidades por mano, envases completos y costos sin depender de planillas ni cálculos manuales.",
+              "El problema era llevar una estimación técnica de materiales a un flujo web confiable: el usuario ingresa superficie, selecciona productos o sistemas, y recibe cantidades por mano, envases completos y costos sin depender de planillas ni cálculos manuales.",
           },
           {
             type: "heading",
@@ -846,7 +846,7 @@ try {
             ordered: false,
             items: [
               "Calcula materiales y costos desde metros cuadrados, productos individuales o sistemas compuestos.",
-              "Expande sistemas en componentes obligatorios y opcionales con multiplicadores y presentaciónes preferidas.",
+              "Expande sistemas en componentes obligatorios y opcionales con multiplicadores y presentaciones preferidas.",
               "Consolida productos repetidos antes de calcular envases, evitando duplicar consumo cuando un producto aparece por varias vías.",
               "Calcula consumo por mano, total requerido, cantidad de envases completos y costo por presentación.",
               "Genera presupuestos persistidos con snapshot inmutable para que el PDF conserve precios y datos del momento del cálculo.",
@@ -1196,7 +1196,7 @@ try {
             type: "image",
             src: "/work/sector07-control/filtros-operativos-desktop.png",
             alt: "Búsqueda y filtros operativos de Sector 07 Control",
-            caption: "Filtros: búsqueda por cliente, NP, producto u observacion, mas cliente, estado y fecha.",
+            caption: "Filtros: búsqueda por cliente, NP, producto u observación, más cliente, estado y fecha.",
             width: 1440,
             height: 1100,
           },
@@ -1380,7 +1380,7 @@ try {
         locale: "es",
         slug: "caso-borrador",
         title: "Caso borrador",
-        dek: "Caso de desarrollo sin publicar, creado para probar el detalle real y evitar el bug de indice.",
+        dek: "Caso de desarrollo sin publicar, creado para probar el detalle real y evitar el bug de índice.",
         category: "borrador",
         contentBlocks: [{ type: "paragraph", markdown: "Completar con caso real antes de publicación." }],
       },

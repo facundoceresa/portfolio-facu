@@ -4,6 +4,7 @@ import { ArrowUpRight, Check, Cpu, Database, Mail, Network, ShieldCheck } from "
 import type { Locale } from "@/features/content/schemas";
 import { copy, draftProjectCandidates, methodSteps, stackLayers } from "@/features/content/defaults";
 import { readProjectMeta, type ProjectScreenshot } from "@/features/content/project-meta";
+import { getPublicContact } from "@/features/content/public-contact";
 import { getRoute } from "@/lib/i18n/routes";
 import { HeroTerminal } from "@/components/home/hero-terminal";
 
@@ -47,7 +48,7 @@ type HeroCopy = (typeof copy)["es"]["hero"];
 export function HomePage({ locale, settings, projects }: { locale: Locale; settings: Record<string, string>; projects: ProjectRow[] }) {
   const t = copy[locale];
   const availability = locale === "es" ? settings.availability_es : settings.availability_en;
-  const contact = getSocialTargets(settings);
+  const contact = getPublicContact(settings);
   return (
     <>
       <section className="relative overflow-hidden">
@@ -83,7 +84,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
                 </Link>
                 <div className="social-icon-strip" aria-label={locale === "es" ? "Enlaces sociales" : "Social links"}>
                   <SocialIconLink href={contact.githubHref} label="GitHub" kind="github" />
-                  <SocialIconLink href={contact.linkedinHref} label="LinkedIn" kind="linkedin" />
+                  {contact.linkedinHref ? <SocialIconLink href={contact.linkedinHref} label="LinkedIn" kind="linkedin" /> : null}
                   <SocialIconLink href={contact.mailHref} label="Email" kind="mail" />
                 </div>
               </div>
@@ -207,12 +208,14 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <div className="contact-actions">
           <a className="hard-button hard-button-primary contact-action-primary" href={contact.mailHref}>
             <Mail size={16} aria-hidden="true" />
-            {contact.emailLabel}
+            {contact.email}
           </a>
-          <a className="hard-button hard-button-secondary" href={contact.linkedinHref} rel="noopener noreferrer">
-            <BrandIcon kind="linkedin" />
-            linkedin
-          </a>
+          {contact.linkedinHref ? (
+            <a className="hard-button hard-button-secondary" href={contact.linkedinHref} rel="noopener noreferrer">
+              <BrandIcon kind="linkedin" />
+              linkedin
+            </a>
+          ) : null}
           <a className="hard-button hard-button-secondary" href={contact.githubHref} rel="noopener noreferrer">
             <BrandIcon kind="github" />
             github
@@ -333,17 +336,6 @@ function DraftEmptyState({ text, locale }: { text: string; locale: Locale }) {
       </div>
     </div>
   );
-}
-
-function getSocialTargets(settings: Record<string, string>) {
-  const configuredEmail = settings.public_email?.trim();
-  const emailLabel = configuredEmail && !configuredEmail.endsWith(".local") ? configuredEmail : "hola@ceresa.dev";
-  return {
-    emailLabel,
-    mailHref: `mailto:${emailLabel}`,
-    githubHref: settings.github_url?.trim() || "#",
-    linkedinHref: settings.linkedin_url?.trim() || "#",
-  };
 }
 
 function SocialIconLink({ href, label, kind }: { href: string; label: string; kind: "github" | "linkedin" | "mail" }) {

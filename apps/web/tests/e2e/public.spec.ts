@@ -5,7 +5,8 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /FACUNDO/i })).toBeVisible();
   await expect(page.getByRole("button", { name: /terminal de perfil/i })).toContainText("$ whoami");
   await expect(page.getByRole("link", { name: /github/i }).first()).toBeVisible();
-  await expect(page.getByRole("link", { name: /linkedin/i }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /github/i }).first()).toHaveAttribute("href", "https://github.com/facundoceresa");
+  await expect(page.getByRole("link", { name: /linkedin/i })).toHaveCount(0);
   await expect(page.getByRole("link", { name: /email/i }).first()).toBeVisible();
   await expect(page.getByRole("heading", { name: /Peluqueria Agenda/i })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Consulta Stock General/i })).toBeVisible();
@@ -46,6 +47,9 @@ test("public navigation and case 404 work", async ({ page }) => {
   await expect(page.getByRole("link", { name: /demo/i }).first()).toHaveAttribute("href", "https://stock.anclauruguay.com");
   await page.goto("/casos/consulta-stock-general");
   await expect(page.getByRole("link", { name: /ver demo/i })).toHaveAttribute("href", "https://stock.anclauruguay.com");
+  await page.goto("/contacto");
+  await expect(page.getByRole("link", { name: "hola@ceresa.dev" })).toHaveAttribute("href", "mailto:hola@ceresa.dev");
+  await expect(page.getByRole("link", { name: "github" })).toHaveAttribute("href", "https://github.com/facundoceresa");
   await page.getByRole("navigation", { name: "Principal" }).getByRole("link", { name: "stack" }).click();
   await expect(page).toHaveURL(/\/stack$/);
   await page.goto("/casos/no-existe");

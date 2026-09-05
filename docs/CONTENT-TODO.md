@@ -3,11 +3,11 @@
 No publicar métricas, clientes, URLs sociales ni logros sin evidencia.
 
 - Confirmar email público definitivo.
-- Confirmar GitHub real.
-- Confirmar LinkedIn real.
-- Redactar al menos tres proyectos reales.
-- Redactar al menos un caso completo con evidencia.
-- Traducir ES/EN antes de publicar.
+- GitHub real confirmado: `https://github.com/facundoceresa`.
+- Confirmar LinkedIn real o mantenerlo oculto.
+- Cuatro proyectos reales publicados: peluqueria-agenda, consulta-stock-general, calculadora-materiales-anclaflex y sector07-control.
+- Cuatro casos completos con evidencia local publicados.
+- Mantener ES/EN completos antes de publicar nuevos casos.
 - Confirmar proveedor SMTP y remitente.
 - Actualizar privacidad y términos con dominio/proveedor definitivos.
 - Confirmar disponibilidad administrable.
