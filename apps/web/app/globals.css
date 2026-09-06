@@ -16,8 +16,11 @@
   --warning: #ffd166;
   --shadow-hard: 8px 8px 0 rgba(45, 212, 168, 0.16);
   --header-height: 69px;
-  --ease-reference: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration-reference: 150ms;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-reference: var(--ease-out);
+  --duration-reference: 160ms;
 }
 
 @theme inline {
@@ -95,6 +98,7 @@ select {
   background-size: 42px 42px;
   box-shadow: var(--shadow-hard);
   transition:
+    transform var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference),
     box-shadow var(--duration-reference) var(--ease-reference);
@@ -103,7 +107,6 @@ select {
 .blueprint-panel:hover {
   border-color: rgba(115, 255, 184, 0.48);
   box-shadow: 10px 10px 0 rgba(45, 212, 168, 0.2);
-  translate: -2px -2px;
 }
 
 .tech-label {
@@ -118,6 +121,7 @@ select {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
   line-height: 0.84;
+  overflow-wrap: break-word;
   text-transform: uppercase;
 }
 
@@ -135,6 +139,7 @@ select {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   transition:
+    transform 140ms var(--ease-out),
     translate var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference),
@@ -150,6 +155,10 @@ select {
   border-color: var(--glow);
 }
 
+.hard-button:active {
+  transform: scale(0.97);
+}
+
 .hard-button-primary {
   background: var(--mint);
   color: var(--surface);
@@ -159,10 +168,6 @@ select {
 .hard-button-primary:hover {
   background: var(--glow);
   box-shadow: 0 0 24px rgba(115, 255, 184, 0.35), 0 0 60px rgba(45, 212, 168, 0.25);
-}
-
-.hard-button-primary:hover svg:last-child {
-  translate: 2px -2px;
 }
 
 .hard-button-secondary {
@@ -189,6 +194,7 @@ select {
   display: inline-flex;
   height: 1rem;
   transition:
+    transform 140ms var(--ease-out),
     color var(--duration-reference) var(--ease-reference),
     filter var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference);
@@ -198,7 +204,10 @@ select {
 .hero-social-link:hover {
   color: var(--glow);
   filter: drop-shadow(0 0 10px rgba(115, 255, 184, 0.42));
-  translate: 0 -1px;
+}
+
+.hero-social-link:active {
+  transform: scale(0.94);
 }
 
 .contact-actions {
@@ -216,7 +225,6 @@ select {
 
 .contact-action-primary:hover {
   box-shadow: 0 0 28px rgba(115, 255, 184, 0.34), 0 0 70px rgba(45, 212, 168, 0.2);
-  translate: 0 -2px;
 }
 
 .technical-card {
@@ -224,6 +232,7 @@ select {
   background: rgba(10, 21, 33, 0.72);
   box-shadow: 4px 4px 0 rgba(115, 255, 184, 0.05);
   transition:
+    transform var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference),
@@ -236,18 +245,19 @@ select {
   box-shadow: 4px 4px 0 rgba(115, 255, 184, 0.05);
 }
 
+.technical-card:active {
+  transform: scale(0.995);
+}
+
 .hero-manifesto {
   background: var(--surface);
   box-shadow: 10px 10px 0 var(--surface), 11px 11px 0 var(--mint);
   color: var(--muted);
   transition:
+    transform var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference),
     box-shadow var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference);
-}
-
-.hero-manifesto:hover {
-  translate: -2px -2px;
 }
 
 .terminal-window {
@@ -262,6 +272,7 @@ select {
   min-height: 10.25rem;
   padding: 1rem;
   transition:
+    transform 140ms var(--ease-out),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference);
 }
@@ -275,7 +286,7 @@ select {
 }
 
 .terminal-window:active {
-  translate: 0 1px;
+  transform: scale(0.995);
 }
 
 .terminal-session {
@@ -283,7 +294,7 @@ select {
 }
 
 .terminal-line {
-  animation: terminal-line-pop 180ms var(--ease-reference) both;
+  animation: terminal-line-pop 180ms var(--ease-out) both;
   word-break: break-word;
 }
 
@@ -312,6 +323,7 @@ select {
   min-height: 2.45rem;
   padding: 0.65rem 1rem;
   transition:
+    transform var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference),
@@ -323,7 +335,6 @@ select {
   background: rgba(20, 53, 40, 0.34);
   border-color: var(--mint);
   color: var(--glow);
-  translate: -4px;
 }
 
 .section-intro {
@@ -331,7 +342,7 @@ select {
 }
 
 .section-intro::before {
-  animation: line-draw 900ms ease both;
+  animation: line-draw 720ms var(--ease-in-out) both;
   background: linear-gradient(90deg, var(--mint), transparent);
   content: "";
   height: 1px;
@@ -363,7 +374,7 @@ select {
 }
 
 .blueprint-line {
-  animation: line-draw 900ms ease both;
+  animation: line-draw 720ms var(--ease-in-out) both;
   transform-origin: left center;
 }
 
@@ -377,6 +388,14 @@ select {
   box-shadow: inset 0 0 0 1px rgba(230, 255, 245, 0.04);
   margin-top: 1.5rem;
   overflow: hidden;
+}
+
+.project-shot-wrap img,
+.case-index-shot img,
+.case-image-link img {
+  transition:
+    transform 260ms var(--ease-out),
+    filter 260ms ease;
 }
 
 .project-shot-topbar {
@@ -428,6 +447,7 @@ select {
 
 .case-index-card {
   transition:
+    transform var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference),
     box-shadow var(--duration-reference) var(--ease-reference);
@@ -436,7 +456,6 @@ select {
 .case-index-card:hover {
   border-color: rgba(115, 255, 184, 0.34);
   box-shadow: 6px 6px 0 rgba(115, 255, 184, 0.08);
-  translate: -2px -2px;
 }
 
 .case-summary-grid {
@@ -469,6 +488,7 @@ select {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition:
+    transform 140ms var(--ease-out),
     background var(--duration-reference) var(--ease-reference),
     border-color var(--duration-reference) var(--ease-reference);
 }
@@ -476,6 +496,10 @@ select {
 .case-section-nav a:hover {
   background: rgba(20, 53, 40, 0.26);
   border-color: var(--line-strong);
+}
+
+.case-section-nav a:active {
+  transform: scale(0.98);
 }
 
 .case-image-frame {
@@ -542,6 +566,7 @@ select {
   text-decoration-color: rgba(115, 255, 184, 0.34);
   text-underline-offset: 0.3em;
   transition:
+    transform 140ms var(--ease-out),
     color var(--duration-reference) var(--ease-reference),
     text-decoration-color var(--duration-reference) var(--ease-reference);
 }
@@ -549,6 +574,28 @@ select {
 .content-link:hover {
   color: var(--fog);
   text-decoration-color: var(--glow);
+}
+
+.content-link:active {
+  transform: scale(0.98);
+}
+
+.next-case-link {
+  transition:
+    border-color var(--duration-reference) var(--ease-reference),
+    transform 140ms var(--ease-out);
+}
+
+.next-case-link:hover {
+  border-color: var(--line-strong);
+}
+
+.next-case-link:active {
+  transform: scale(0.99);
+}
+
+.next-case-arrow {
+  transition: transform var(--duration-reference) var(--ease-reference);
 }
 
 .scanline {
@@ -641,18 +688,179 @@ select {
 
 @keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, -50%, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, -50%, 0);
   }
 }
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+  left: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.marquee-rail {
+  contain: layout paint;
+  min-height: 4.35rem;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-boot {
+  animation: boot-lift 520ms var(--ease-out) both;
+}
+
+.hero-boot-delay-1 {
+  animation-delay: 70ms;
+}
+
+.hero-boot-delay-2 {
+  animation-delay: 140ms;
+}
+
+.hero-boot-delay-3 {
+  animation-delay: 210ms;
+}
+
+.scroll-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.scroll-reveal-image {
+  clip-path: inset(0 0 0 0);
+}
+
+.scroll-reveal-lift[data-visible="true"] {
+  animation: reveal-lift 420ms var(--ease-out) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal-image[data-visible="true"] {
+  animation: reveal-clip 620ms var(--ease-in-out) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal-line[data-visible="true"] {
+  animation: reveal-line 420ms var(--ease-out) both;
+  animation-delay: var(--reveal-delay, 0ms);
+  transform-origin: left center;
+}
+
+.mobile-nav-panel {
+  background: rgba(10, 21, 33, 0.995);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.34);
+  transform-origin: top right;
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
+
+.mobile-nav-toggle {
+  transition:
+    transform 140ms var(--ease-out),
+    border-color var(--duration-reference) var(--ease-reference),
+    background var(--duration-reference) var(--ease-reference);
+}
+
+.mobile-nav-toggle:active {
+  transform: scale(0.94);
+}
+
+@keyframes boot-lift {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-lift {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-clip {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes reveal-line {
+  from {
+    opacity: 0;
+    transform: scaleX(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .blueprint-panel:hover,
+  .hero-manifesto:hover,
+  .case-index-card:hover {
+    translate: -2px -2px;
+  }
+
+  .hard-button-primary:hover svg:last-child {
+    translate: 2px -2px;
+  }
+
+  .hero-social-link:hover {
+    translate: 0 -1px;
+  }
+
+  .contact-action-primary:hover {
+    translate: 0 -2px;
+  }
+
+  .hero-layer-row:hover {
+    translate: -4px;
+  }
+
+  .next-case-link:hover .next-case-arrow {
+    transform: translate(4px, -4px);
+  }
+
+  .project-shot-wrap:hover img,
+  .case-index-shot:hover img,
+  .case-image-frame:hover .case-image {
+    transform: scale(1.015);
+  }
 }
 
 @media (max-width: 767px) {
+  .hero-watermark {
+    display: none;
+  }
+
+  .marquee-rail {
+    display: none;
+  }
+
   .social-icon-strip {
     flex-basis: 100%;
     margin-left: 0;
@@ -721,6 +929,8 @@ select {
   }
 
   .animate-marquee,
+  .hero-boot,
+  .scroll-reveal,
   .terminal-cursor,
   .terminal-line,
   .pulse-dot,
@@ -730,5 +940,9 @@ select {
   .scanline::after {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .scroll-reveal-image {
+    clip-path: inset(0 0 0 0) !important;
   }
 }

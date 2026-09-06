@@ -35,7 +35,7 @@ export const copy = {
     },
     method: {
       eyebrow: "// método",
-      title: "observar·modelar automatizar·sostener",
+      title: "observar · modelar automatizar · sostener",
     },
     ai: {
       eyebrow: "// postura_ia",
@@ -73,7 +73,7 @@ export const copy = {
     },
     method: {
       eyebrow: "// method",
-      title: "observe·model automate·sustain",
+      title: "observe · model automate · sustain",
     },
     ai: {
       eyebrow: "// ai_stance",

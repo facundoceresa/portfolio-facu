@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { PublicShell } from "@/components/public-shell";
 import { PageHeader } from "@/components/page-header";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { getPublishedCases, getPublishedProjects, getSettings } from "@/features/content/data";
 import { readProjectMeta } from "@/features/content/project-meta";
 
@@ -53,7 +54,7 @@ export function CasesList({
         const meta = readProjectMeta(project?.translation.body);
         const screenshot = meta.screenshots[0];
         return (
-          <article key={item.caseStudy.id} className="case-index-card technical-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5">
+          <ScrollReveal key={item.caseStudy.id} as="article" className="case-index-card technical-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5" delay={Math.min(index, 4) * 50}>
             <Link href={`${base}/${item.translation.slug}`} className="case-index-shot scanline" aria-label={`${locale === "es" ? "Ver caso" : "View case"} ${item.translation.title}`}>
               {screenshot ? (
                 <Image
@@ -105,7 +106,7 @@ export function CasesList({
                 ) : null}
               </div>
             </div>
-          </article>
+          </ScrollReveal>
         );
       })}
     </section>

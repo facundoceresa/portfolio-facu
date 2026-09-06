@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { ContentBlocks } from "@/components/content-blocks";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import type { ContentBlock, Locale } from "@/features/content/schemas";
 import { getPublishedCases, getPublishedProjects, type getCaseBySlug } from "@/features/content/data";
 import { headingId } from "@/features/content/project-meta";
@@ -41,9 +42,9 @@ export function CaseDetailLayout({
   const headings = blocks.filter((block): block is Extract<ContentBlock, { type: "heading" }> => block.type === "heading" && block.level === 2);
   return (
     <article className="mx-auto max-w-5xl px-5 py-20 md:px-10 md:py-28">
-      <p className="tech-label mb-5">{`// caso · ${item.translation.category} · ${item.caseStudy.readTimeMinutes} min`}</p>
-      <h1 className="display-title text-[clamp(3rem,8vw,7rem)] text-mint">{item.translation.title}</h1>
-      <p className="mt-8 text-xl leading-9 text-[color:var(--muted)]">{item.translation.dek}</p>
+      <p className="hero-boot tech-label mb-5">{`// caso · ${item.translation.category} · ${item.caseStudy.readTimeMinutes} min`}</p>
+      <h1 className="hero-boot hero-boot-delay-1 display-title text-[clamp(3rem,8vw,7rem)] text-mint">{item.translation.title}</h1>
+      <p className="hero-boot hero-boot-delay-2 mt-8 text-xl leading-9 text-[color:var(--muted)]">{item.translation.dek}</p>
 
       <section className="case-summary-grid mt-12" aria-label={labels.summary}>
         <SummaryTile label={labels.category} value={item.translation.category} />
@@ -71,9 +72,9 @@ export function CaseDetailLayout({
       {nextCase ? (
         <footer className="mt-16 border-t border-[color:var(--line)] pt-8">
           <p className="tech-label mb-4">{labels.next}</p>
-          <Link className="group flex items-center justify-between gap-6 border border-[color:var(--line)] p-5 transition-colors hover:border-[color:var(--line-strong)]" href={`${base}/${nextCase.translation.slug}`}>
+          <Link className="next-case-link flex items-center justify-between gap-6 border border-[color:var(--line)] p-5" href={`${base}/${nextCase.translation.slug}`}>
             <span className="font-display text-2xl font-bold uppercase text-mint">{nextCase.translation.title}</span>
-            <ArrowUpRight className="text-[color:var(--glow)] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" size={18} />
+            <ArrowUpRight className="next-case-arrow text-[color:var(--glow)]" size={18} />
           </Link>
         </footer>
       ) : null}
@@ -83,12 +84,12 @@ export function CaseDetailLayout({
 
 function SummaryTile({ label, value, verified }: { label: string; value: string; verified?: string }) {
   return (
-    <div className="technical-card p-4">
+    <ScrollReveal className="technical-card p-4">
       <p className="tech-label mb-3">{label}</p>
       <div className="flex items-center gap-2">
         <strong className="font-display text-2xl font-bold uppercase text-mint">{value}</strong>
         {verified ? <CheckCircle2 aria-label={verified} className="text-[color:var(--glow)]" size={18} /> : null}
       </div>
-    </div>
+    </ScrollReveal>
   );
 }

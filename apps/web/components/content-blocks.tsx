@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSanitize from "rehype-sanitize";
 import type { ContentBlock } from "@/features/content/schemas";
 import { headingId } from "@/features/content/project-meta";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export function ContentBlocks({
   blocks,
@@ -36,15 +37,17 @@ export function ContentBlocks({
             .filter(Boolean)
             .join(" ");
           return (
-            <figure key={index} className="case-image-frame">
-              <a href={block.src} target="_blank" rel="noopener noreferrer" className="case-image-link" aria-label={`${openImageLabel}: ${block.alt}`}>
-                <Image src={block.src} alt={block.alt} width={block.width} height={block.height} className={imageClassName} sizes="(min-width: 1024px) 960px, calc(100vw - 40px)" />
-              </a>
-              <figcaption>
-                {block.caption ? <span>{block.caption}</span> : null}
-                <a href={block.src} target="_blank" rel="noopener noreferrer">{openImageLabel}</a>
-              </figcaption>
-            </figure>
+            <ScrollReveal key={index} variant="image">
+              <figure className="case-image-frame">
+                <a href={block.src} target="_blank" rel="noopener noreferrer" className="case-image-link" aria-label={`${openImageLabel}: ${block.alt}`}>
+                  <Image src={block.src} alt={block.alt} width={block.width} height={block.height} className={imageClassName} sizes="(min-width: 1024px) 960px, calc(100vw - 40px)" />
+                </a>
+                <figcaption>
+                  {block.caption ? <span>{block.caption}</span> : null}
+                  <a href={block.src} target="_blank" rel="noopener noreferrer">{openImageLabel}</a>
+                </figcaption>
+              </figure>
+            </ScrollReveal>
           );
         }
         if (block.type === "quote") {
@@ -54,10 +57,10 @@ export function ContentBlocks({
           return <pre key={index} className="overflow-x-auto border border-[color:var(--line)] bg-[rgba(0,0,0,0.24)] p-4 font-mono text-sm text-[color:var(--glow)]"><code>{block.code}</code></pre>;
         }
         if (block.type === "metric") {
-          return <div key={index} className="technical-card p-5"><strong className="font-display text-4xl text-mint">{block.value}</strong><p className="mt-2 text-[color:var(--muted)]">{block.label}</p></div>;
+          return <ScrollReveal key={index} className="technical-card p-5"><strong className="font-display text-4xl text-mint">{block.value}</strong><p className="mt-2 text-[color:var(--muted)]">{block.label}</p></ScrollReveal>;
         }
         if (block.type === "callout") {
-          return <aside key={index} className="border border-[color:var(--line-strong)] bg-[rgba(45,212,168,0.08)] p-5 text-[color:var(--fog)]">{block.text}</aside>;
+          return <ScrollReveal key={index} variant="line" className="border border-[color:var(--line-strong)] bg-[rgba(45,212,168,0.08)] p-5 text-[color:var(--fog)]">{block.text}</ScrollReveal>;
         }
         return null;
       })}

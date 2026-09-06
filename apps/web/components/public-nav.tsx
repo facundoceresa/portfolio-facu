@@ -49,7 +49,7 @@ export function PublicNav({ locale }: { locale: Locale }) {
       </nav>
       <button
         type="button"
-        className="grid h-11 w-11 place-items-center border border-[color:var(--line)] text-[color:var(--glow)] md:hidden"
+        className="mobile-nav-toggle grid h-11 w-11 place-items-center border border-[color:var(--line)] text-[color:var(--glow)] md:hidden"
         aria-label={open ? labels[locale].close : labels[locale].open}
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
@@ -57,7 +57,7 @@ export function PublicNav({ locale }: { locale: Locale }) {
         {open ? <X size={18} /> : <Menu size={18} />}
       </button>
       {open ? (
-        <div className="absolute left-0 right-0 top-[var(--header-height)] border-b border-[color:var(--line)] bg-[rgba(10,21,33,0.98)] px-5 py-5 md:hidden">
+        <div className="mobile-nav-panel absolute left-0 right-0 top-[var(--header-height)] border-b border-[color:var(--line)] bg-[rgba(10,21,33,0.98)] px-5 py-5 md:hidden">
           <nav className="grid gap-2" aria-label={labels[locale].mobile}>
             {keys.map((key, index) => {
               const href = getRoute(locale, key);

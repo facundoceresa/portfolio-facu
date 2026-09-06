@@ -7,6 +7,7 @@ import { readProjectMeta, type ProjectScreenshot } from "@/features/content/proj
 import { getPublicContact } from "@/features/content/public-contact";
 import { getRoute } from "@/lib/i18n/routes";
 import { HeroTerminal } from "@/components/home/hero-terminal";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 type ProjectRow = {
   project: {
@@ -65,16 +66,16 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <div className="mx-auto grid min-h-[calc(100dvh-69px)] max-w-[1360px] gap-10 px-5 py-16 md:grid-cols-[1.2fr_0.8fr] md:px-10 md:py-28">
           <div className="flex flex-col justify-between gap-14">
             <div>
-              <p className="tech-label mb-6">CERESA · {availability}</p>
-              <h1 className="display-title max-w-5xl text-[clamp(3.1rem,11vw,9.4rem)] text-mint drop-shadow-[0_0_28px_rgba(45,212,168,0.34)]">
+              <p className="hero-boot tech-label mb-6">CERESA · {availability}</p>
+              <h1 className="hero-boot hero-boot-delay-1 display-title max-w-5xl text-[clamp(3.1rem,11vw,9.4rem)] text-mint drop-shadow-[0_0_28px_rgba(45,212,168,0.34)]">
                 FACUNDO
                 <br />
                 CERESA
               </h1>
             </div>
             <div className="max-w-[52rem]">
-              <p className="mb-5 max-w-2xl text-lg leading-8 text-[color:var(--muted)]">{t.hero.terminal}</p>
-              <div className="mb-9 flex flex-wrap items-center gap-3">
+              <p className="hero-boot hero-boot-delay-2 mb-5 max-w-2xl text-lg leading-8 text-[color:var(--muted)]">{t.hero.terminal}</p>
+              <div className="hero-boot hero-boot-delay-3 mb-9 flex flex-wrap items-center gap-3">
                 <Link className="hard-button hard-button-primary" href="#trabajo">
                   {t.hero.work}
                   <ArrowUpRight size={14} aria-hidden="true" />
@@ -88,7 +89,9 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
                   <SocialIconLink href={contact.mailHref} label="Email" kind="mail" />
                 </div>
               </div>
-              <HeroLayerRows />
+              <div className="hero-boot hero-boot-delay-3">
+                <HeroLayerRows />
+              </div>
             </div>
           </div>
           <aside className="grid content-center gap-8 md:pt-20">
@@ -96,7 +99,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           </aside>
         </div>
       </section>
-      <div aria-hidden="true" className="relative overflow-hidden border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.6)] py-4">
+      <div aria-hidden="true" className="marquee-rail relative overflow-hidden border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.6)] py-4">
         <div className="animate-marquee flex w-max gap-12 pr-12 font-display text-3xl font-bold uppercase text-[color:var(--mint)]">
           {[...keywords, ...keywords, ...keywords].map((word, index) => (
             <span key={`${word}-${index}`} className="after:ml-12 after:text-mint after:content-['+']">
@@ -137,12 +140,12 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             </a>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {capabilityCards[locale].map((item) => (
-              <div key={item.title} className="technical-card p-5">
+            {capabilityCards[locale].map((item, index) => (
+              <ScrollReveal key={item.title} className="technical-card p-5" delay={index * 50}>
                 <p className="tech-label mb-3">{item.kicker}</p>
                 <h3 className="font-display text-2xl font-bold uppercase text-[color:var(--glow)]">{item.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{item.body}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -151,7 +154,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <SectionIntro eyebrow={t.stack.eyebrow} title={t.stack.title} body={t.stack.body} />
         <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
           {stackLayers.map((layer, index) => (
-            <div key={layer.key} className="technical-card p-5">
+            <ScrollReveal key={layer.key} className="technical-card p-5" delay={index * 50}>
               <div className="mb-8 flex items-center justify-between font-mono text-xs text-[color:var(--dim)]">
                 <span>0{index + 1}</span>
                 <span className="h-2 w-2 animate-[pulse-dot_2s_ease-in-out_infinite] bg-mint" />
@@ -160,7 +163,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               <div className="flex flex-wrap gap-2">
                 {layer.tools.map((tool) => <span key={tool} className="border border-[color:var(--line)] px-2 py-1 font-mono text-[0.65rem] uppercase text-[color:var(--dim)]">{tool}</span>)}
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -168,14 +171,14 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <SectionIntro eyebrow={t.method.eyebrow} title={t.method.title} />
         <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
           {methodSteps.map((step, index) => (
-            <div key={step.title} className="technical-card p-5">
+            <ScrollReveal key={step.title} className="technical-card p-5" delay={index * 50}>
               <div className="mb-8 flex items-center justify-between font-mono text-xs text-mint">
                 <span>0{index + 1}</span>
                 <Check size={14} />
               </div>
               <h3 className="font-display text-xl font-bold uppercase text-[color:var(--glow)]">{locale === "es" ? step.title : step.enTitle}</h3>
               <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{step.body}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -193,10 +196,10 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               ["datos propios", "sin enviar PII a herramientas que no tienen contrato claro"],
               ["medición", "si no mejora el proceso real, no se publica como logro"],
             ].map(([title, body]) => (
-              <div key={title} className="technical-card p-5">
+              <ScrollReveal key={title} className="technical-card p-5">
                 <h3 className="tech-label mb-3">{title}</h3>
                 <p className="text-sm leading-6 text-[color:var(--muted)]">{body}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -228,7 +231,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
 
 function HeroManifesto({ hero }: { hero: HeroCopy }) {
   return (
-    <div className="hero-manifesto border-l-4 border-l-[color:var(--glow)] p-6">
+    <div className="hero-boot hero-boot-delay-2 hero-manifesto border-l-4 border-l-[color:var(--glow)] p-6">
       <p className="tech-label mb-4">{hero.kicker}</p>
       <h2 className="mb-4 font-display text-3xl font-bold text-[color:var(--fog)]">{hero.title}</h2>
       <p className="leading-7 text-[color:var(--muted)]">{hero.body}</p>
@@ -257,14 +260,14 @@ function HeroLayerRows() {
 
 function SectionIntro({ eyebrow, title, body, action }: { eyebrow: string; title: string; body?: string; action?: React.ReactNode }) {
   return (
-    <div className="section-intro mx-auto flex max-w-[1360px] flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between md:px-10">
+    <ScrollReveal className="section-intro mx-auto flex max-w-[1360px] flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between md:px-10">
       <div>
         <p className="tech-label mb-4">{eyebrow}</p>
         <h2 className="display-title max-w-3xl text-[clamp(2.8rem,6vw,6rem)] text-mint">{title}</h2>
         {body ? <p className="mt-5 max-w-xl leading-7 text-[color:var(--muted)]">{body}</p> : null}
       </div>
       {action}
-    </div>
+    </ScrollReveal>
   );
 }
 
@@ -273,7 +276,7 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
   const meta = readProjectMeta(project.translation.body);
   const screenshot = meta.screenshots[0];
   return (
-    <article className="relative md:min-h-[520px]">
+    <ScrollReveal as="article" className="relative md:min-h-[520px]" delay={Math.min(index, 3) * 60}>
       <div className={`blueprint-panel min-h-[300px] overflow-hidden p-5 md:w-[64%] ${index % 2 ? "md:ml-auto" : ""}`}>
         <div className="relative z-10 flex justify-between font-mono text-xs uppercase text-[color:var(--glow)]">
           <span>{project.translation.category}</span>
@@ -311,7 +314,7 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
           ) : null}
         </div>
       </div>
-    </article>
+    </ScrollReveal>
   );
 }
 
