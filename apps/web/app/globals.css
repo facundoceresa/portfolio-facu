@@ -113,25 +113,33 @@ select {
 
 .tech-label {
   font-family: var(--font-mono), monospace;
-  color: rgba(115, 255, 184, 0.8);
+  color: rgba(45, 212, 168, 0.72);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-size: 0.72rem;
-  text-shadow: 0 0 18px rgba(115, 255, 184, 0.16);
 }
 
 .display-title {
+  color: rgba(115, 255, 184, 0.72);
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
   line-height: 0.84;
   overflow-wrap: break-word;
   text-transform: uppercase;
-  text-shadow: 0 0 26px rgba(115, 255, 184, 0.16);
+  text-shadow: none;
+}
+
+.display-title-dim {
+  color: rgba(115, 255, 184, 0.48);
+}
+
+.display-title-fog {
+  color: rgba(230, 255, 245, 0.72);
 }
 
 .text-glow-soft {
-  color: var(--mint);
-  text-shadow: 0 0 18px rgba(115, 255, 184, 0.3);
+  color: rgba(115, 255, 184, 0.88);
+  text-shadow: 0 0 16px rgba(115, 255, 184, 0.22);
 }
 
 .text-glow-strong {
@@ -157,8 +165,19 @@ select {
 }
 
 .page-header-body {
-  color: rgba(115, 255, 184, 0.68);
-  text-shadow: 0 0 18px rgba(45, 212, 168, 0.1);
+  color: rgba(45, 212, 168, 0.74);
+}
+
+.text-tone-muted {
+  color: rgba(230, 255, 245, 0.58);
+}
+
+.text-tone-dim {
+  color: rgba(115, 255, 184, 0.48);
+}
+
+.text-tone-green {
+  color: rgba(45, 212, 168, 0.76);
 }
 
 .hard-button {

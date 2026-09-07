@@ -67,14 +67,14 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           <div className="flex flex-col justify-between gap-14">
             <div>
               <p className="hero-boot tech-label mb-6">CERESA · {availability}</p>
-              <h1 className="hero-boot hero-boot-delay-1 display-title max-w-5xl text-[clamp(3.1rem,11vw,9.4rem)] text-mint drop-shadow-[0_0_28px_rgba(45,212,168,0.34)]">
+              <h1 className="hero-boot hero-boot-delay-1 display-title max-w-5xl text-[clamp(3.1rem,11vw,9.4rem)]">
                 FACUNDO
                 <br />
-                CERESA
+                <span className="text-glow-strong">CERESA</span>
               </h1>
             </div>
             <div className="max-w-[52rem]">
-              <p className="hero-boot hero-boot-delay-2 mb-5 max-w-2xl text-lg leading-8 text-[color:var(--muted)]">{t.hero.terminal}</p>
+              <p className="hero-boot hero-boot-delay-2 mb-5 max-w-2xl text-lg leading-8 text-tone-green">{t.hero.terminal}</p>
               <div className="hero-boot hero-boot-delay-3 mb-9 flex flex-wrap items-center gap-3">
                 <Link className="hard-button hard-button-primary" href="#trabajo">
                   {t.hero.work}
@@ -128,8 +128,8 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <div className="mx-auto grid max-w-[1360px] gap-10 px-5 md:grid-cols-[0.85fr_1fr] md:px-10">
           <div>
             <p className="tech-label mb-4">{locale === "es" ? "// perfil" : "// profile"}</p>
-            <h2 className="display-title text-[clamp(2.4rem,5vw,5.4rem)] text-mint">{locale === "es" ? "Software cerca del proceso." : "Software close to the process."}</h2>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-[color:var(--muted)]">
+            <h2 className="display-title text-[clamp(2.4rem,5vw,5.4rem)]">{renderAccentTitle(locale === "es" ? "Software cerca del proceso." : "Software close to the process.")}</h2>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-tone-muted">
               {locale === "es"
                 ? "Trabajo mejor cuando el problema cruza operación, datos e integración: entender cómo se mueve el negocio, modelarlo bien y dejar una herramienta que alguien pueda usar todos los días."
                 : "My best work sits where operations, data and integration meet: understanding how the business moves, modeling it well and leaving behind a tool people can use every day."}
@@ -143,8 +143,8 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             {capabilityCards[locale].map((item, index) => (
               <ScrollReveal key={item.title} className="technical-card p-5" delay={index * 50} hover="surface">
                 <p className="tech-label mb-3">{item.kicker}</p>
-                <h3 className="font-display text-2xl font-bold uppercase text-[color:var(--glow)]">{item.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{item.body}</p>
+                <h3 className="font-display text-2xl font-bold uppercase text-[color:rgba(115,255,184,0.82)]">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-tone-muted">{item.body}</p>
               </ScrollReveal>
             ))}
           </div>
@@ -159,7 +159,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
                 <span>0{index + 1}</span>
                 <span className="h-2 w-2 animate-[pulse-dot_2s_ease-in-out_infinite] bg-mint" />
               </div>
-              <h3 className="mb-5 font-display text-xl font-bold uppercase text-mint">{layer.title}</h3>
+              <h3 className="mb-5 font-display text-xl font-bold uppercase text-[color:rgba(115,255,184,0.72)]">{layer.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {layer.tools.map((tool) => <span key={tool} className="border border-[color:var(--line)] px-2 py-1 font-mono text-[0.65rem] uppercase text-[color:var(--dim)]">{tool}</span>)}
               </div>
@@ -176,8 +176,8 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
                 <span>0{index + 1}</span>
                 <Check size={14} />
               </div>
-              <h3 className="font-display text-xl font-bold uppercase text-[color:var(--glow)]">{locale === "es" ? step.title : step.enTitle}</h3>
-              <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{step.body}</p>
+              <h3 className="font-display text-xl font-bold uppercase text-[color:rgba(115,255,184,0.86)]">{locale === "es" ? step.title : step.enTitle}</h3>
+              <p className="mt-4 text-sm leading-6 text-tone-muted">{step.body}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -186,8 +186,8 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <div className="mx-auto grid max-w-[1360px] gap-10 px-5 md:grid-cols-[0.8fr_1fr] md:px-10">
           <div>
             <p className="tech-label mb-4">{t.ai.eyebrow}</p>
-            <h2 className="display-title text-[clamp(2.4rem,5vw,5.6rem)] text-mint">{t.ai.title}</h2>
-            <p className="mt-8 max-w-xl text-lg leading-8 text-[color:var(--muted)]">{t.ai.body}</p>
+            <h2 className="display-title text-[clamp(2.4rem,5vw,5.6rem)]">{renderAccentTitle(t.ai.title)}</h2>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-tone-green">{t.ai.body}</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {[
@@ -198,7 +198,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             ].map(([title, body]) => (
               <ScrollReveal key={title} className="technical-card p-5" hover="surface">
                 <h3 className="tech-label mb-3">{title}</h3>
-                <p className="text-sm leading-6 text-[color:var(--muted)]">{body}</p>
+                <p className="text-sm leading-6 text-tone-muted">{body}</p>
               </ScrollReveal>
             ))}
           </div>
@@ -206,8 +206,8 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
       </section>
       <section id="contacto" className="px-5 py-28 text-center md:px-10">
         <p className="tech-label mb-4">{t.contact.eyebrow}</p>
-        <h2 className="display-title mx-auto max-w-3xl text-[clamp(2.8rem,7vw,6rem)] text-[color:var(--glow)]">{t.contact.title}</h2>
-        <p className="mx-auto mt-6 max-w-2xl leading-7 text-[color:var(--muted)]">{t.contact.body}</p>
+        <h2 className="display-title mx-auto max-w-3xl text-[clamp(2.8rem,7vw,6rem)]">{renderAccentTitle(t.contact.title)}</h2>
+        <p className="mx-auto mt-6 max-w-2xl leading-7 text-tone-green">{t.contact.body}</p>
         <div className="contact-actions">
           <a className="hard-button hard-button-primary contact-action-primary" href={contact.mailHref}>
             <Mail size={16} aria-hidden="true" />
@@ -231,7 +231,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
 
 function HeroManifesto({ hero }: { hero: HeroCopy }) {
   return (
-    <div className="hero-boot hero-boot-delay-2 hero-manifesto border-l-4 border-l-[color:var(--glow)] p-6">
+    <div className="hero-boot hero-boot-delay-2 hero-manifesto border-l border-l-[color:var(--glow)] p-6">
       <p className="tech-label mb-4">{hero.kicker}</p>
       <h2 className="mb-4 font-display text-3xl font-bold text-[color:var(--fog)]">{hero.title}</h2>
       <p className="leading-7 text-[color:var(--muted)]">{hero.body}</p>
@@ -263,11 +263,22 @@ function SectionIntro({ eyebrow, title, body, action }: { eyebrow: string; title
     <ScrollReveal className="section-intro mx-auto flex max-w-[1360px] flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between md:px-10">
       <div>
         <p className="tech-label mb-4">{eyebrow}</p>
-        <h2 className="display-title max-w-3xl text-[clamp(2.8rem,6vw,6rem)] text-mint">{title}</h2>
-        {body ? <p className="mt-5 max-w-xl leading-7 text-[color:var(--muted)]">{body}</p> : null}
+        <h2 className="display-title max-w-3xl text-[clamp(2.8rem,6vw,6rem)]">{renderAccentTitle(title)}</h2>
+        {body ? <p className="mt-5 max-w-xl leading-7 text-tone-muted">{body}</p> : null}
       </div>
       {action}
     </ScrollReveal>
+  );
+}
+
+function renderAccentTitle(title: string) {
+  const words = title.trim().split(/\s+/);
+  if (words.length < 2) return title;
+  const last = words.pop();
+  return (
+    <>
+      {words.join(" ")} <span className="text-glow-soft">{last}</span>
+    </>
   );
 }
 

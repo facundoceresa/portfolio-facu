@@ -38,3 +38,4 @@ Captured routes:
 - Preserved local project content, email, backend field names, Turnstile behavior, and current routes.
 - Rebuilt visual treatment for contact, privacy/terms, global 404, and case-not-found fallbacks.
 - Added text glow utilities and stronger opacity hierarchy without changing `ScrollReveal` opacity behavior.
+- Follow-up tone pass removed glow from the base display style. Default titles now sit at lower mint opacity; only selected words/spans receive strong or soft glow so emphasis is selective.
