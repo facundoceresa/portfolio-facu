@@ -17,7 +17,7 @@ export default async function ContactPage() {
         <ScrollReveal>
           <ContactForm locale="en" />
         </ScrollReveal>
-        <ScrollReveal as="aside" className="technical-card h-fit p-6" delay={50}>
+        <ScrollReveal as="aside" className="technical-card h-fit p-6" delay={50} hover="surface">
           <p className="tech-label mb-4">{"// channels"}</p>
           <a className="block text-2xl font-display font-bold text-mint" href={contact.mailHref}>{contact.email}</a>
           <p className="mt-6 leading-7 text-[color:var(--muted)]">{contact.location}</p>

@@ -84,7 +84,7 @@ export function CaseDetailLayout({
 
 function SummaryTile({ label, value, verified }: { label: string; value: string; verified?: string }) {
   return (
-    <ScrollReveal className="technical-card p-4">
+    <ScrollReveal className="technical-card p-4" hover="surface">
       <p className="tech-label mb-3">{label}</p>
       <div className="flex items-center gap-2">
         <strong className="font-display text-2xl font-bold uppercase text-mint">{value}</strong>

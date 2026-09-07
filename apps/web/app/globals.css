@@ -20,7 +20,7 @@
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --ease-reference: var(--ease-out);
-  --duration-reference: 160ms;
+  --duration-reference: 220ms;
 }
 
 @theme inline {
@@ -140,7 +140,7 @@ select {
   text-transform: uppercase;
   transition:
     transform 140ms var(--ease-out),
-    translate var(--duration-reference) var(--ease-reference),
+    translate 220ms var(--ease-drawer),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference),
     color var(--duration-reference) var(--ease-reference),
@@ -194,7 +194,7 @@ select {
   display: inline-flex;
   height: 1rem;
   transition:
-    transform 140ms var(--ease-out),
+    transform 160ms var(--ease-drawer),
     color var(--duration-reference) var(--ease-reference),
     filter var(--duration-reference) var(--ease-reference),
     translate var(--duration-reference) var(--ease-reference);
@@ -232,8 +232,8 @@ select {
   background: rgba(10, 21, 33, 0.72);
   box-shadow: 4px 4px 0 rgba(115, 255, 184, 0.05);
   transition:
-    transform var(--duration-reference) var(--ease-reference),
-    translate var(--duration-reference) var(--ease-reference),
+    transform 260ms var(--ease-drawer),
+    translate 260ms var(--ease-drawer),
     border-color var(--duration-reference) var(--ease-reference),
     background var(--duration-reference) var(--ease-reference),
     box-shadow var(--duration-reference) var(--ease-reference);
@@ -246,7 +246,7 @@ select {
 }
 
 .technical-card:active {
-  transform: scale(0.995);
+  transform: scale(0.985);
 }
 
 .hero-manifesto {
@@ -394,7 +394,7 @@ select {
 .case-index-shot img,
 .case-image-link img {
   transition:
-    transform 260ms var(--ease-out),
+    transform 420ms var(--ease-drawer),
     filter 260ms ease;
 }
 
@@ -433,6 +433,18 @@ select {
   width: 100%;
 }
 
+.project-feature-panel,
+.project-feature-card {
+  transition:
+    transform 420ms var(--ease-drawer),
+    box-shadow 260ms var(--ease-reference),
+    border-color 220ms var(--ease-reference);
+}
+
+.project-feature-card {
+  transform-origin: center;
+}
+
 .case-index-shot {
   background:
     linear-gradient(rgba(115, 255, 184, 0.055) 1px, transparent 1px),
@@ -447,8 +459,8 @@ select {
 
 .case-index-card {
   transition:
-    transform var(--duration-reference) var(--ease-reference),
-    translate var(--duration-reference) var(--ease-reference),
+    transform 260ms var(--ease-drawer),
+    translate 260ms var(--ease-drawer),
     border-color var(--duration-reference) var(--ease-reference),
     box-shadow var(--duration-reference) var(--ease-reference);
 }
@@ -583,7 +595,7 @@ select {
 .next-case-link {
   transition:
     border-color var(--duration-reference) var(--ease-reference),
-    transform 140ms var(--ease-out);
+    transform 180ms var(--ease-drawer);
 }
 
 .next-case-link:hover {
@@ -595,7 +607,7 @@ select {
 }
 
 .next-case-arrow {
-  transition: transform var(--duration-reference) var(--ease-reference);
+  transition: transform 260ms var(--ease-drawer);
 }
 
 .scanline {
@@ -711,7 +723,7 @@ select {
 }
 
 .hero-boot {
-  animation: boot-lift 520ms var(--ease-out) both;
+  animation: boot-lift 680ms var(--ease-drawer) both;
 }
 
 .hero-boot-delay-1 {
@@ -735,33 +747,17 @@ select {
   clip-path: inset(0 0 0 0);
 }
 
-.scroll-reveal-lift[data-visible="true"] {
-  animation: reveal-lift 420ms var(--ease-out) both;
-  animation-delay: var(--reveal-delay, 0ms);
-}
-
-.scroll-reveal-image[data-visible="true"] {
-  animation: reveal-clip 620ms var(--ease-in-out) both;
-  animation-delay: var(--reveal-delay, 0ms);
-}
-
-.scroll-reveal-line[data-visible="true"] {
-  animation: reveal-line 420ms var(--ease-out) both;
-  animation-delay: var(--reveal-delay, 0ms);
-  transform-origin: left center;
-}
-
 .mobile-nav-panel {
   background: rgba(10, 21, 33, 0.995);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.34);
   transform-origin: top right;
   transition:
-    opacity 200ms var(--ease-out),
-    transform 200ms var(--ease-out);
+    opacity 260ms var(--ease-drawer),
+    transform 260ms var(--ease-drawer);
 
   @starting-style {
     opacity: 0;
-    transform: translateY(-6px) scale(0.98);
+    transform: translate3d(0, -12px, 0) scale(0.965);
   }
 }
 
@@ -779,52 +775,19 @@ select {
 @keyframes boot-lift {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translate3d(0, 16px, 0) scale(0.97);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(0, -2px, 0) scale(1.006);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal-lift {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal-clip {
-  from {
-    clip-path: inset(0 0 100% 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes reveal-line {
-  from {
-    opacity: 0;
-    transform: scaleX(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scaleX(1);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .blueprint-panel:hover,
-  .hero-manifesto:hover,
-  .case-index-card:hover {
-    translate: -2px -2px;
-  }
-
   .hard-button-primary:hover svg:last-child {
     translate: 2px -2px;
   }
@@ -845,7 +808,19 @@ select {
     transform: translate(4px, -4px);
   }
 
-  .project-shot-wrap:hover img,
+  .project-feature:hover .project-feature-panel {
+    transform: translate3d(-4px, 2px, 0) scale(0.994);
+  }
+
+  .project-feature:hover .project-feature-card {
+    box-shadow: 12px 12px 0 rgba(115, 255, 184, 0.18);
+    transform: translate3d(10px, -8px, 0) scale(1.018);
+  }
+
+  .project-feature:hover .project-shot-image {
+    transform: scale(1.025);
+  }
+
   .case-index-shot:hover img,
   .case-image-frame:hover .case-image {
     transform: scale(1.015);

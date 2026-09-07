@@ -20,7 +20,7 @@ export function StackBody({ locale }: { locale: "es" | "en" }) {
   return (
     <section className="mx-auto grid max-w-[1360px] gap-5 px-5 pb-28 md:px-10">
       {stackLayers.map((layer, index) => (
-        <ScrollReveal key={layer.key} as="article" className="technical-card grid gap-8 p-6 md:grid-cols-[12rem_1fr] md:p-8" delay={index * 50}>
+        <ScrollReveal key={layer.key} as="article" className="technical-card grid gap-8 p-6 md:grid-cols-[12rem_1fr] md:p-8" delay={index * 50} hover="surface">
           <div className="font-mono text-mint">0{index + 1}</div>
           <div>
             <h2 className="font-display text-4xl font-bold uppercase text-[color:var(--glow)]">{layer.title}</h2>

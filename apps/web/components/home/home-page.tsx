@@ -141,7 +141,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {capabilityCards[locale].map((item, index) => (
-              <ScrollReveal key={item.title} className="technical-card p-5" delay={index * 50}>
+              <ScrollReveal key={item.title} className="technical-card p-5" delay={index * 50} hover="surface">
                 <p className="tech-label mb-3">{item.kicker}</p>
                 <h3 className="font-display text-2xl font-bold uppercase text-[color:var(--glow)]">{item.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-[color:var(--muted)]">{item.body}</p>
@@ -154,7 +154,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <SectionIntro eyebrow={t.stack.eyebrow} title={t.stack.title} body={t.stack.body} />
         <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
           {stackLayers.map((layer, index) => (
-            <ScrollReveal key={layer.key} className="technical-card p-5" delay={index * 50}>
+            <ScrollReveal key={layer.key} className="technical-card p-5" delay={index * 50} hover="surface">
               <div className="mb-8 flex items-center justify-between font-mono text-xs text-[color:var(--dim)]">
                 <span>0{index + 1}</span>
                 <span className="h-2 w-2 animate-[pulse-dot_2s_ease-in-out_infinite] bg-mint" />
@@ -171,7 +171,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <SectionIntro eyebrow={t.method.eyebrow} title={t.method.title} />
         <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
           {methodSteps.map((step, index) => (
-            <ScrollReveal key={step.title} className="technical-card p-5" delay={index * 50}>
+            <ScrollReveal key={step.title} className="technical-card p-5" delay={index * 50} hover="surface">
               <div className="mb-8 flex items-center justify-between font-mono text-xs text-mint">
                 <span>0{index + 1}</span>
                 <Check size={14} />
@@ -196,7 +196,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               ["datos propios", "sin enviar PII a herramientas que no tienen contrato claro"],
               ["medición", "si no mejora el proceso real, no se publica como logro"],
             ].map(([title, body]) => (
-              <ScrollReveal key={title} className="technical-card p-5">
+              <ScrollReveal key={title} className="technical-card p-5" hover="surface">
                 <h3 className="tech-label mb-3">{title}</h3>
                 <p className="text-sm leading-6 text-[color:var(--muted)]">{body}</p>
               </ScrollReveal>
@@ -276,15 +276,15 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
   const meta = readProjectMeta(project.translation.body);
   const screenshot = meta.screenshots[0];
   return (
-    <ScrollReveal as="article" className="relative md:min-h-[520px]" delay={Math.min(index, 3) * 60}>
-      <div className={`blueprint-panel min-h-[300px] overflow-hidden p-5 md:w-[64%] ${index % 2 ? "md:ml-auto" : ""}`}>
+    <ScrollReveal as="article" className="project-feature relative md:min-h-[520px]" delay={Math.min(index, 3) * 60} hover="card">
+      <div className={`project-feature-panel blueprint-panel min-h-[300px] overflow-hidden p-5 md:w-[64%] ${index % 2 ? "md:ml-auto" : ""}`}>
         <div className="relative z-10 flex justify-between font-mono text-xs uppercase text-[color:var(--glow)]">
           <span>{project.translation.category}</span>
           <span className="text-5xl font-bold text-[rgba(115,255,184,0.22)]">0{index + 1}</span>
         </div>
         {screenshot ? <ProjectScreenshotFrame screenshot={screenshot} priority={index === 0} /> : <BlueprintVisual index={index} />}
       </div>
-      <div className={`bg-mint p-6 text-[color:var(--surface)] shadow-[8px_8px_0_rgba(115,255,184,0.18)] md:absolute md:top-40 md:w-[45%] ${index % 2 ? "md:left-8" : "md:right-8"}`}>
+      <div className={`project-feature-card bg-mint p-6 text-[color:var(--surface)] shadow-[8px_8px_0_rgba(115,255,184,0.18)] md:absolute md:top-40 md:w-[45%] ${index % 2 ? "md:left-8" : "md:right-8"}`}>
         <p className="mb-4 font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em]">caso · 0{index + 1}</p>
         <h3 className="font-display text-2xl font-bold leading-none">{project.translation.title}</h3>
         <p className="mt-4 text-sm leading-6">{project.translation.summary}</p>
