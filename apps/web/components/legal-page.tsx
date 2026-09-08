@@ -7,19 +7,19 @@ import { Clock, Database, Mail, ShieldCheck } from "lucide-react";
 
 export function LegalPage({ locale, settings, kind }: { locale: Locale; settings: Record<string, string>; kind: "privacy" | "terms" }) {
   const contact = getPublicContact(settings);
-  const title = locale === "es" ? (kind === "privacy" ? "Politica de privacidad_" : "Terminos_") : kind === "privacy" ? "Privacy policy_" : "Terms_";
+  const title = locale === "es" ? (kind === "privacy" ? "Politica de privacidad" : "Terminos de uso") : kind === "privacy" ? "Privacy policy" : "Terms of use";
   const intro =
     locale === "es"
       ? kind === "privacy"
-        ? "Sin letra chica ni parrafos copiados de plantillas: esto es exactamente lo que pasa con tus datos cuando usas este sitio."
+        ? "Qué datos guarda este portfolio, para qué se usan y cómo pedir cambios o eliminación."
         : "Condiciones simples para usar este portfolio, sus demos publicas y el formulario de contacto."
       : kind === "privacy"
-        ? "No hidden fine print or copied boilerplate: this is exactly what happens to your data when you use this site."
+        ? "What this portfolio stores, how that data is used, and how to request changes or deletion."
         : "Simple terms for using this portfolio, its public demos, and the contact form.";
   const sections = kind === "privacy" ? privacySections(locale) : termsSections(locale);
   return (
     <PublicShell locale={locale} settings={settings}>
-      <PageHeader eyebrow={locale === "es" ? `// legal / ${kind === "privacy" ? "privacidad" : "terminos"}` : `// legal / ${kind}`} title={title} body={intro} />
+      <PageHeader eyebrow={locale === "es" ? `legal / ${kind === "privacy" ? "privacidad" : "terminos"}` : `legal / ${kind}`} title={title} body={intro} variant="read" />
       <article className="legal-page mx-auto max-w-[1360px] px-5 pb-28 md:px-10">
         <ScrollReveal className="legal-updated">
           <span className="pulse-dot h-2 w-2 bg-mint" aria-hidden="true" />
@@ -29,8 +29,8 @@ export function LegalPage({ locale, settings, kind }: { locale: Locale; settings
           {sections.map((section, index) => (
             <ScrollReveal key={section.title} as="section" className="legal-section" delay={Math.min(index, 4) * 45}>
               <div className="legal-section-heading">
-                <p className="tech-label">{`// ${String(index + 1).padStart(2, "0")}`}</p>
-                <h2 className="display-title text-[clamp(2rem,4vw,3rem)] text-mint">{section.title}</h2>
+                <p className="tech-label">{`${locale === "es" ? "sección" : "section"} ${String(index + 1).padStart(2, "0")}`}</p>
+                <h2 className="display-title text-[clamp(2rem,4vw,3rem)]">{section.title}</h2>
                 <span>{locale === "es" ? "seccion" : "section"}</span>
               </div>
               <div className="legal-section-grid">
@@ -38,7 +38,7 @@ export function LegalPage({ locale, settings, kind }: { locale: Locale; settings
                 <aside className="legal-summary">
                   <div className="legal-summary-icon">{section.icon}</div>
                   <div>
-                    <p className="tech-label">resumen</p>
+                    <p className="tech-label">{locale === "es" ? "resumen" : "summary"}</p>
                     <ul>
                       {section.summary.map((item) => (
                         <li key={item}>{item}</li>

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { ContentBlocks } from "@/components/content-blocks";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import type { ContentBlock, Locale } from "@/features/content/schemas";
 import { getPublishedCases, getPublishedProjects, type getCaseBySlug } from "@/features/content/data";
-import { headingId } from "@/features/content/project-meta";
+import { headingId, readProjectMeta } from "@/features/content/project-meta";
 
 type CaseRow = NonNullable<Awaited<ReturnType<typeof getCaseBySlug>>>;
 type ProjectRows = Awaited<ReturnType<typeof getPublishedProjects>>;
@@ -37,14 +38,30 @@ export function CaseDetailLayout({
     sections: locale === "es" ? "secciones" : "sections",
   };
   const project = projects.find((candidate) => candidate.project.sortOrder === item.caseStudy.sortOrder);
+  const projectMeta = readProjectMeta(project?.translation.body);
+  const heroScreenshot = projectMeta.screenshots[0];
   const currentIndex = cases.findIndex((candidate) => candidate.caseStudy.id === item.caseStudy.id);
   const nextCase = currentIndex >= 0 && cases.length > 1 ? cases[(currentIndex + 1) % cases.length] : null;
   const headings = blocks.filter((block): block is Extract<ContentBlock, { type: "heading" }> => block.type === "heading" && block.level === 2);
   return (
     <article className="mx-auto max-w-5xl px-5 py-20 md:px-10 md:py-28">
-      <p className="hero-boot tech-label mb-5">{`// caso · ${item.translation.category} · ${item.caseStudy.readTimeMinutes} min`}</p>
+      <p className="hero-boot tech-label mb-5">{`${locale === "es" ? "caso" : "case"} · ${item.translation.category} · ${item.caseStudy.readTimeMinutes} min`}</p>
       <h1 className="hero-boot hero-boot-delay-1 display-title text-[clamp(3rem,8vw,7rem)] text-mint">{item.translation.title}</h1>
       <p className="hero-boot hero-boot-delay-2 mt-8 text-xl leading-9 text-[color:var(--muted)]">{item.translation.dek}</p>
+
+      {heroScreenshot ? (
+        <ScrollReveal className="case-hero-shot scanline" variant="image">
+          <Image
+            src={heroScreenshot.src}
+            alt={heroScreenshot.alt}
+            width={heroScreenshot.width}
+            height={heroScreenshot.height}
+            className="case-hero-shot-image"
+            sizes="(min-width: 1024px) 960px, calc(100vw - 40px)"
+            priority
+          />
+        </ScrollReveal>
+      ) : null}
 
       <section className="case-summary-grid mt-12" aria-label={labels.summary}>
         <SummaryTile label={labels.category} value={item.translation.category} />
@@ -84,7 +101,7 @@ export function CaseDetailLayout({
 
 function SummaryTile({ label, value, verified }: { label: string; value: string; verified?: string }) {
   return (
-    <ScrollReveal className="technical-card p-4" hover="surface">
+    <ScrollReveal className="case-summary-tile" hover="surface" variant="compress">
       <p className="tech-label mb-3">{label}</p>
       <div className="flex items-center gap-2">
         <strong className="font-display text-2xl font-bold uppercase text-mint">{value}</strong>

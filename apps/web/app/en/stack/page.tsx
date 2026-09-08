@@ -9,7 +9,7 @@ export default async function StackPage() {
   const settings = await getSettings();
   return (
     <PublicShell locale="en" settings={settings}>
-      <PageHeader eyebrow="// stack" title="Machines that build machines." body="Technical layers for turning real processes into operable, measurable and maintainable systems." />
+      <PageHeader eyebrow="stack" title="Production technical layers" body="Technologies selected by how they integrate, operate and hold up after the system stops being a demo." variant="index" />
       <StackBody locale="en" />
     </PublicShell>
   );

@@ -20,7 +20,7 @@ export default async function CasesPage() {
   const [settings, cases, projects] = await Promise.all([getSettings(), getPublishedCases("es"), getPublishedProjects("es")]);
   return (
     <PublicShell locale="es" settings={settings}>
-      <PageHeader eyebrow="// casos" title="Casos reales, sin humo." body="Detalle técnico publicado sólo cuando existe evidencia y traducción completa." />
+      <PageHeader eyebrow="casos" title="Trabajo publicado con evidencia" body="Detalle técnico, capturas y resultados sólo cuando hay contexto suficiente para sostenerlos." variant="showcase" />
       <CasesList locale="es" cases={cases} projects={projects} />
     </PublicShell>
   );
@@ -54,7 +54,7 @@ export function CasesList({
         const meta = readProjectMeta(project?.translation.body);
         const screenshot = meta.screenshots[0];
         return (
-          <ScrollReveal key={item.caseStudy.id} as="article" className="case-index-card technical-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5" delay={Math.min(index, 4) * 50} hover="card">
+          <ScrollReveal key={item.caseStudy.id} as="article" className="case-index-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5" delay={Math.min(index, 4) * 60} hover="card" variant={index % 2 ? "slide-right" : "slide-left"}>
             <Link href={`${base}/${item.translation.slug}`} className="case-index-shot scanline" aria-label={`${locale === "es" ? "Ver caso" : "View case"} ${item.translation.title}`}>
               {screenshot ? (
                 <Image

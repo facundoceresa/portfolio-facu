@@ -8,6 +8,8 @@ import { getPublicContact } from "@/features/content/public-contact";
 import { getRoute } from "@/lib/i18n/routes";
 import { HeroTerminal } from "@/components/home/hero-terminal";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { SignalSwarm } from "@/components/signal-swarm";
+import { BrandIcon } from "@/components/brand-icon";
 
 type ProjectRow = {
   project: {
@@ -31,16 +33,30 @@ const keywords = ["integraciones", "erp", "automatización", "arquitectura", "po
 const rowOffsets = ["md:ml-0", "md:ml-4", "md:ml-8", "md:ml-12"];
 const capabilityCards = {
   es: [
-    { kicker: "01", title: "Sistemas internos", body: "Paneles, flujos operativos, permisos, auditoría y reportes para equipos que viven dentro del proceso." },
-    { kicker: "02", title: "Integraciones ERP", body: "Lecturas controladas, sincronizaciones, snapshots, límites claros y herramientas que no rompen la base oficial." },
-    { kicker: "03", title: "Automatización", body: "Tareas repetibles convertidas en procesos observables, con fallback humano cuando el error cuesta." },
-    { kicker: "04", title: "Producto técnico", body: "MVPs, demos y herramientas publicables con tests, despliegue y documentación operativa." },
+    { kicker: "operación", title: "Sistemas internos", body: "Paneles, permisos, auditoría y reportes para equipos que trabajan dentro del proceso." },
+    { kicker: "datos", title: "Integraciones ERP", body: "Lecturas controladas, sincronizaciones y límites claros alrededor de la base oficial." },
+    { kicker: "flujo", title: "Automatización", body: "Tareas repetibles convertidas en procesos observables con fallback humano." },
+    { kicker: "entrega", title: "Producto técnico", body: "MVPs y herramientas publicables con tests, despliegue y documentación operativa." },
   ],
   en: [
-    { kicker: "01", title: "Internal systems", body: "Dashboards, operational flows, permissions, audit trails and reports for teams working inside the process." },
-    { kicker: "02", title: "ERP integrations", body: "Controlled reads, synchronization, snapshots, clear boundaries and tools that avoid breaking the official database." },
-    { kicker: "03", title: "Automation", body: "Repeatable tasks turned into observable processes, with human fallback where mistakes are expensive." },
-    { kicker: "04", title: "Technical product", body: "MVPs, demos and publishable tools with tests, deployment and operational documentation." },
+    { kicker: "ops", title: "Internal systems", body: "Dashboards, permissions, audit trails and reports for teams working inside the process." },
+    { kicker: "data", title: "ERP integrations", body: "Controlled reads, synchronization and clear boundaries around the official database." },
+    { kicker: "flow", title: "Automation", body: "Repeatable tasks turned into observable processes with human fallback." },
+    { kicker: "ship", title: "Technical product", body: "MVPs and publishable tools with tests, deployment and operational documentation." },
+  ],
+};
+const aiPrinciples = {
+  es: [
+    ["trazabilidad", "prompts, decisiones, versiones y riesgos quedan visibles"],
+    ["fallback humano", "el flujo vuelve a una persona cuando el error cuesta"],
+    ["datos propios", "PII y contratos definen qué herramienta puede intervenir"],
+    ["medición", "si no mejora una operación real, no se publica como logro"],
+  ],
+  en: [
+    ["traceability", "prompts, decisions, versions and risks stay visible"],
+    ["human fallback", "the flow returns to a person when mistakes are expensive"],
+    ["owned data", "PII and contracts define which tool may intervene"],
+    ["measurement", "if it does not improve real operations, it is not shipped as a win"],
   ],
 };
 
@@ -50,6 +66,9 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
   const t = copy[locale];
   const availability = locale === "es" ? settings.availability_es : settings.availability_en;
   const contact = getPublicContact(settings);
+  const projectLabels = locale === "es"
+    ? { view: "ver caso", repo: "repo", demo: "demo", metric: "resultado" }
+    : { view: "view case", repo: "repo", demo: "demo", metric: "outcome" };
   return (
     <>
       <section className="relative overflow-hidden">
@@ -90,7 +109,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
                 </div>
               </div>
               <div className="hero-boot hero-boot-delay-3">
-                <HeroLayerRows />
+                <HeroLayerRows locale={locale} />
               </div>
             </div>
           </div>
@@ -121,13 +140,13 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           }
         />
         <div className="mx-auto mt-14 grid max-w-[1360px] gap-24 px-5 md:px-10">
-          {projects.length ? projects.map((project, index) => <ProjectFeature key={project.project.id} project={project} index={index} locale={locale} />) : <DraftEmptyState text={t.work.empty} locale={locale} />}
+          {projects.length ? projects.map((project, index) => <ProjectFeature key={project.project.id} project={project} index={index} locale={locale} labels={projectLabels} />) : <DraftEmptyState text={t.work.empty} locale={locale} />}
         </div>
       </section>
       <section id="perfil" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.34)] py-24">
         <div className="mx-auto grid max-w-[1360px] gap-10 px-5 md:grid-cols-[0.85fr_1fr] md:px-10">
           <div>
-            <p className="tech-label mb-4">{locale === "es" ? "// perfil" : "// profile"}</p>
+            <p className="tech-label mb-4">{locale === "es" ? "perfil" : "profile"}</p>
             <h2 className="display-title text-[clamp(2.4rem,5vw,5.4rem)]">{renderAccentTitle(locale === "es" ? "Software cerca del proceso." : "Software close to the process.")}</h2>
             <p className="mt-7 max-w-xl text-lg leading-8 text-tone-muted">
               {locale === "es"
@@ -139,12 +158,12 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="capability-grid">
             {capabilityCards[locale].map((item, index) => (
-              <ScrollReveal key={item.title} className="technical-card p-5" delay={index * 50} hover="surface">
-                <p className="tech-label mb-3">{item.kicker}</p>
-                <h3 className="font-display text-2xl font-bold uppercase text-[color:rgba(115,255,184,0.82)]">{item.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-tone-muted">{item.body}</p>
+              <ScrollReveal key={item.title} className="capability-item" delay={index * 45} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+                <p className="capability-kicker">{item.kicker}</p>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
               </ScrollReveal>
             ))}
           </div>
@@ -152,16 +171,13 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
       </section>
       <section id="stack" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.42)] py-24">
         <SectionIntro eyebrow={t.stack.eyebrow} title={t.stack.title} body={t.stack.body} />
-        <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
+        <div className="stack-board mx-auto mt-12 max-w-[1360px] px-5 md:px-10">
           {stackLayers.map((layer, index) => (
-            <ScrollReveal key={layer.key} className="technical-card p-5" delay={index * 50} hover="surface">
-              <div className="mb-8 flex items-center justify-between font-mono text-xs text-[color:var(--dim)]">
-                <span>0{index + 1}</span>
-                <span className="h-2 w-2 animate-[pulse-dot_2s_ease-in-out_infinite] bg-mint" />
-              </div>
-              <h3 className="mb-5 font-display text-xl font-bold uppercase text-[color:rgba(115,255,184,0.72)]">{layer.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {layer.tools.map((tool) => <span key={tool} className="border border-[color:var(--line)] px-2 py-1 font-mono text-[0.65rem] uppercase text-[color:var(--dim)]">{tool}</span>)}
+            <ScrollReveal key={layer.key} className="stack-board-row" delay={index * 55} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+              <span className="stack-board-index">{layer.key}</span>
+              <h3>{layer.title}</h3>
+              <div>
+                {layer.tools.map((tool) => <span key={tool}>{tool}</span>)}
               </div>
             </ScrollReveal>
           ))}
@@ -169,15 +185,15 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
       </section>
       <section id="metodo" className="py-24">
         <SectionIntro eyebrow={t.method.eyebrow} title={t.method.title} />
-        <div className="mx-auto mt-12 grid max-w-[1360px] gap-4 px-5 md:grid-cols-4 md:px-10">
+        <div className="process-trace mx-auto mt-12 max-w-[1360px] px-5 md:px-10">
           {methodSteps.map((step, index) => (
-            <ScrollReveal key={step.title} className="technical-card p-5" delay={index * 50} hover="surface">
-              <div className="mb-8 flex items-center justify-between font-mono text-xs text-mint">
-                <span>0{index + 1}</span>
-                <Check size={14} />
+            <ScrollReveal key={step.title} className="process-step" delay={index * 70} hover="surface" variant="trace">
+              <span className="process-node"><Check size={14} aria-hidden="true" /></span>
+              <div>
+                <p>{String(index + 1).padStart(2, "0")}</p>
+                <h3>{locale === "es" ? step.title : step.enTitle}</h3>
+                <span>{locale === "es" ? step.body : step.enBody}</span>
               </div>
-              <h3 className="font-display text-xl font-bold uppercase text-[color:rgba(115,255,184,0.86)]">{locale === "es" ? step.title : step.enTitle}</h3>
-              <p className="mt-4 text-sm leading-6 text-tone-muted">{step.body}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -189,18 +205,21 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             <h2 className="display-title text-[clamp(2.4rem,5vw,5.6rem)]">{renderAccentTitle(t.ai.title)}</h2>
             <p className="mt-8 max-w-xl text-lg leading-8 text-tone-green">{t.ai.body}</p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              ["trazabilidad", "prompts, decisiones, versiones y riesgo no se pierden en una caja negra"],
-              ["fallback humano", "la automatización no reemplaza criterio donde el error cuesta"],
-              ["datos propios", "sin enviar PII a herramientas que no tienen contrato claro"],
-              ["medición", "si no mejora el proceso real, no se publica como logro"],
-            ].map(([title, body]) => (
-              <ScrollReveal key={title} className="technical-card p-5" hover="surface">
-                <h3 className="tech-label mb-3">{title}</h3>
-                <p className="text-sm leading-6 text-tone-muted">{body}</p>
-              </ScrollReveal>
-            ))}
+          <div className="ai-system">
+            <ScrollReveal variant="compress">
+              <SignalSwarm locale={locale} />
+            </ScrollReveal>
+            <div className="ai-ledger">
+              {aiPrinciples[locale].map(([title, body], index) => (
+                <ScrollReveal key={title} className="ai-ledger-row" delay={index * 55} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -240,9 +259,9 @@ function HeroManifesto({ hero }: { hero: HeroCopy }) {
   );
 }
 
-function HeroLayerRows() {
+function HeroLayerRows({ locale }: { locale: Locale }) {
   return (
-    <div className="hero-layer-console grid gap-2 font-mono text-xs text-[color:var(--dim)]" aria-label="Capas técnicas principales">
+    <div className="hero-layer-console grid gap-2 font-mono text-xs text-[color:var(--dim)]" aria-label={locale === "es" ? "Capas técnicas principales" : "Main technical layers"}>
       {stackLayers.map((layer, index) => (
         <div
           key={layer.key}
@@ -251,7 +270,7 @@ function HeroLayerRows() {
           <span className="font-bold text-[color:var(--glow)]">0{index + 1}</span>
           <span className="uppercase text-[color:var(--glow)]">{layer.title}</span>
           <span className="hidden text-[color:var(--muted)] sm:inline">{layer.tools.slice(0, 3).join(" · ")}</span>
-          <span className="ml-auto font-bold text-[color:var(--glow)]">↳ ok</span>
+          <span className="ml-auto font-bold text-[color:var(--glow)]">{locale === "es" ? "estable" : "stable"}</span>
         </div>
       ))}
     </div>
@@ -282,12 +301,22 @@ function renderAccentTitle(title: string) {
   );
 }
 
-function ProjectFeature({ project, index, locale }: { project: ProjectRow; index: number; locale: Locale }) {
+function ProjectFeature({
+  project,
+  index,
+  locale,
+  labels,
+}: {
+  project: ProjectRow;
+  index: number;
+  locale: Locale;
+  labels: { view: string; repo: string; demo: string; metric: string };
+}) {
   const href = `${getRoute(locale, "cases")}/${project.translation.slug}`;
   const meta = readProjectMeta(project.translation.body);
   const screenshot = meta.screenshots[0];
   return (
-    <ScrollReveal as="article" className="project-feature relative md:min-h-[520px]" delay={Math.min(index, 3) * 60} hover="card">
+    <ScrollReveal as="article" className="project-feature relative md:min-h-[520px]" delay={Math.min(index, 3) * 65} hover="card" variant={index % 2 ? "slide-right" : "slide-left"}>
       <div className={`project-feature-panel blueprint-panel min-h-[300px] overflow-hidden p-5 md:w-[64%] ${index % 2 ? "md:ml-auto" : ""}`}>
         <div className="relative z-10 flex justify-between font-mono text-xs uppercase text-[color:var(--glow)]">
           <span>{project.translation.category}</span>
@@ -296,7 +325,7 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
         {screenshot ? <ProjectScreenshotFrame screenshot={screenshot} priority={index === 0} /> : <BlueprintVisual index={index} />}
       </div>
       <div className={`project-feature-card bg-mint p-6 text-[color:var(--surface)] shadow-[8px_8px_0_rgba(115,255,184,0.18)] md:absolute md:top-40 md:w-[45%] ${index % 2 ? "md:left-8" : "md:right-8"}`}>
-        <p className="mb-4 font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em]">caso · 0{index + 1}</p>
+        <p className="mb-4 font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em]">{locale === "es" ? "caso" : "case"} · 0{index + 1}</p>
         <h3 className="font-display text-2xl font-bold leading-none">{project.translation.title}</h3>
         <p className="mt-4 text-sm leading-6">{project.translation.summary}</p>
         {meta.stack.length ? (
@@ -308,19 +337,25 @@ function ProjectFeature({ project, index, locale }: { project: ProjectRow; index
             ))}
           </div>
         ) : null}
-        {project.project.metricValue ? <p className="mt-6 font-display text-4xl font-bold">{project.project.metricValue}</p> : null}
+        {project.project.metricValue ? (
+          <div className="project-feature-metric">
+            <p>{labels.metric}</p>
+            <strong>{project.project.metricValue}</strong>
+            {project.project.metricLabelKey ? <span>{project.project.metricLabelKey}</span> : null}
+          </div>
+        ) : null}
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <Link href={href} className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-            ver caso <ArrowUpRight size={15} />
+            {labels.view} <ArrowUpRight size={15} />
           </Link>
           {project.project.repoUrl ? (
             <a href={project.project.repoUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-              repo <BrandIcon kind="github" />
+              {labels.repo} <BrandIcon kind="github" />
             </a>
           ) : null}
           {project.project.liveUrl ? (
             <a href={project.project.liveUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-              demo <ArrowUpRight size={15} />
+              {labels.demo} <ArrowUpRight size={15} />
             </a>
           ) : null}
         </div>
@@ -333,7 +368,7 @@ function DraftEmptyState({ text, locale }: { text: string; locale: Locale }) {
   return (
     <div className="technical-card grid gap-8 p-8 md:grid-cols-[1fr_1.1fr]">
       <div>
-        <p className="tech-label mb-4">{"// contenido_en_revision"}</p>
+        <p className="tech-label mb-4">{locale === "es" ? "contenido en revisión" : "content under review"}</p>
         <h3 className="font-display text-3xl font-bold uppercase text-mint">{text}</h3>
         <Link className="hard-button hard-button-secondary mt-8" href={getRoute(locale, "contact")}>
           conversar contexto
@@ -357,22 +392,6 @@ function SocialIconLink({ href, label, kind }: { href: string; label: string; ki
     <a className="hero-social-link" href={href} aria-label={label} rel="noopener noreferrer">
       {kind === "mail" ? <Mail size={16} aria-hidden="true" /> : <BrandIcon kind={kind} />}
     </a>
-  );
-}
-
-function BrandIcon({ kind }: { kind: "github" | "linkedin" }) {
-  if (kind === "github") {
-    return (
-      <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.25A9.75 9.75 0 0 0 8.92 21.26c.49.09.67-.21.67-.47v-1.7c-2.73.59-3.31-1.17-3.31-1.17-.45-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.88 1.5 2.3 1.07 2.86.82.09-.64.34-1.07.62-1.31-2.18-.25-4.47-1.09-4.47-4.85 0-1.07.38-1.95 1.01-2.64-.1-.25-.44-1.25.1-2.6 0 0 .83-.27 2.7 1a9.26 9.26 0 0 1 4.92 0c1.88-1.27 2.7-1 2.7-1 .54 1.35.2 2.35.1 2.6.63.69 1.01 1.57 1.01 2.64 0 3.77-2.3 4.6-4.49 4.85.36.31.67.91.67 1.85v2.74c0 .26.18.57.68.47A9.75 9.75 0 0 0 12 2.25Z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M6.94 8.75H3.78v10.14h3.16V8.75ZM5.36 3.86a1.83 1.83 0 1 0 0 3.66 1.83 1.83 0 0 0 0-3.66Zm13.86 9.47c0-3.05-1.63-4.47-3.8-4.47a3.28 3.28 0 0 0-2.96 1.63h-.04V8.75H9.39v10.14h3.16v-5.02c0-1.32.25-2.6 1.89-2.6 1.61 0 1.63 1.51 1.63 2.68v4.94h3.15v-5.56Z" />
-    </svg>
   );
 }
 

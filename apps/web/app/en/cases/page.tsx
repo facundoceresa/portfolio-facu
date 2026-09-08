@@ -16,7 +16,7 @@ export default async function CasesPage() {
   const [settings, cases, projects] = await Promise.all([getSettings(), getPublishedCases("en"), getPublishedProjects("en")]);
   return (
     <PublicShell locale="en" settings={settings}>
-      <PageHeader eyebrow="// cases" title="Real cases, no fiction." body="Technical detail is published only when evidence and complete translation exist." />
+      <PageHeader eyebrow="cases" title="Published work with evidence" body="Technical detail, screenshots and outcomes only when there is enough context to support them." variant="showcase" />
       <CasesList locale="en" cases={cases} projects={projects} />
     </PublicShell>
   );

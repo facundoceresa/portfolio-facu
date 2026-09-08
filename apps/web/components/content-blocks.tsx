@@ -18,7 +18,7 @@ export function ContentBlocks({
       {blocks.map((block, index) => {
         if (block.type === "heading") {
           const Tag = `h${block.level}` as "h2" | "h3" | "h4";
-          return <Tag key={index} id={headingId(block.text)} className="scroll-mt-28 mt-6 font-display text-3xl font-bold uppercase text-mint">{block.text}</Tag>;
+          return <Tag key={index} id={headingId(block.text)} className="content-heading scroll-mt-28 mt-6 font-display text-3xl font-bold uppercase">{block.text}</Tag>;
         }
         if (block.type === "paragraph") {
           return <ReactMarkdown key={index} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSanitize]} components={{ p: "p", a: SafeLink }}>{block.markdown}</ReactMarkdown>;
@@ -57,7 +57,7 @@ export function ContentBlocks({
           return <pre key={index} className="overflow-x-auto border border-[color:var(--line)] bg-[rgba(0,0,0,0.24)] p-4 font-mono text-sm text-[color:var(--glow)]"><code>{block.code}</code></pre>;
         }
         if (block.type === "metric") {
-          return <ScrollReveal key={index} className="technical-card p-5"><strong className="font-display text-4xl text-mint">{block.value}</strong><p className="mt-2 text-[color:var(--muted)]">{block.label}</p></ScrollReveal>;
+          return <ScrollReveal key={index} className="case-metric-block" variant="compress"><strong>{block.value}</strong><p>{block.label}</p></ScrollReveal>;
         }
         if (block.type === "callout") {
           return <ScrollReveal key={index} variant="line" className="border border-[color:var(--line-strong)] bg-[rgba(45,212,168,0.08)] p-5 text-[color:var(--fog)]">{block.text}</ScrollReveal>;

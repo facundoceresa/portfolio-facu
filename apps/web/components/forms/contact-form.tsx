@@ -24,21 +24,21 @@ const labels = {
     sending: "enviando...",
     success: "Mensaje recibido. Si SMTP falla, igual queda visible en el panel.",
     error: "No se pudo enviar. Revisa los campos o intenta de nuevo.",
-    formTitle: "// formulario_directo",
-    formMeta: "v1 · 5 campos",
-    namePlaceholder: "Como te llamas",
+    formTitle: "mensaje directo",
+    formMeta: "respuesta < 48 h",
+    namePlaceholder: "Tu nombre",
     emailPlaceholder: "tu@correo.com",
     companyPlaceholder: "Empresa · rol",
-    messagePlaceholder: "Que queres resolver, contexto, restricciones, enlaces utiles...",
-    markdown: "markdown soportado",
-    response: "respuesta estimada",
+    messagePlaceholder: "Objetivo, contexto, restricciones y enlaces utiles.",
+    markdown: "contexto breve",
+    response: "estimado",
     responseValue: "< 48 h",
     scopeLabels: {
-      automation: "automatizacion",
-      integration: "integracion",
-      fullstack: "producto end-to-end",
+      automation: "automatización",
+      integration: "integración",
+      fullstack: "producto completo",
       infrastructure: "infraestructura",
-      "technical-review": "auditoria tecnica",
+      "technical-review": "auditoría técnica",
     },
     budgetLabels: {
       undefined: "por definir",
@@ -60,24 +60,24 @@ const labels = {
     sending: "sending...",
     success: "Message received. If SMTP fails, it still remains visible in the panel.",
     error: "Could not send. Review the fields or try again.",
-    formTitle: "// direct_form",
-    formMeta: "v1 · 5 fields",
+    formTitle: "direct message",
+    formMeta: "reply < 48 h",
     namePlaceholder: "How should I call you",
     emailPlaceholder: "you@email.com",
     companyPlaceholder: "Company · role",
-    messagePlaceholder: "What you want to solve, context, constraints, useful links...",
-    markdown: "markdown supported",
-    response: "estimated response",
+    messagePlaceholder: "Goal, context, constraints and useful links.",
+    markdown: "short context",
+    response: "estimate",
     responseValue: "< 48 h",
     scopeLabels: {
       automation: "automation",
       integration: "integration",
-      fullstack: "end-to-end product",
+      fullstack: "complete product",
       infrastructure: "infrastructure",
       "technical-review": "technical review",
     },
     budgetLabels: {
-      undefined: "undefined",
+      undefined: "to define",
       "under-1k": "< 1k",
       "1k-5k": "1k - 5k",
       "5k-15k": "5k - 15k",
@@ -122,6 +122,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
           });
           if (response.ok) {
             form.reset();
+            setMessageLength(0);
             setState({ ok: true, message: t.success });
           } else {
             setState({ ok: false, error: t.error });
@@ -147,8 +148,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
         <input id="companyRole" name="companyRole" maxLength={120} autoComplete="organization-title" placeholder={t.companyPlaceholder} className="form-control" />
       </Field>
 
-      <ChoiceField id="scope" label={t.scope} values={contactScopes} labels={t.scopeLabels} defaultValue="automation" />
-      <ChoiceField id="budget" label={t.budget} values={contactBudgets} labels={t.budgetLabels} defaultValue="undefined" />
+      <div className="grid gap-6 md:grid-cols-2">
+        <SelectField id="scope" label={t.scope} values={contactScopes} labels={t.scopeLabels} placeholder={locale === "es" ? "Elegí el foco" : "Choose the focus"} required />
+        <SelectField id="budget" label={t.budget} values={contactBudgets} labels={t.budgetLabels} defaultValue="undefined" />
+      </div>
 
       <Field id="message" label={t.message}>
         <textarea
@@ -157,7 +160,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
           required
           minLength={20}
           maxLength={2000}
-          rows={7}
+          rows={3}
           placeholder={t.messagePlaceholder}
           className="form-control resize-y py-3"
           onChange={(event) => setMessageLength(event.currentTarget.value.length)}
@@ -203,30 +206,31 @@ function Field({ id, label, children }: { id: string; label: string; children: R
   );
 }
 
-function ChoiceField<T extends string>({
+function SelectField<T extends string>({
   id,
   label,
   values,
   labels,
+  placeholder,
   defaultValue,
+  required,
 }: {
   id: string;
   label: string;
   values: readonly T[];
   labels: Record<T, string>;
-  defaultValue: T;
+  placeholder?: string;
+  defaultValue?: T;
+  required?: boolean;
 }) {
   return (
-    <fieldset className="form-field">
-      <legend className="tech-label">{label}</legend>
-      <div className="choice-grid">
+    <Field id={id} label={label}>
+      <select id={id} name={id} defaultValue={defaultValue ?? ""} required={required} className="form-control form-select">
+        {placeholder ? <option value="" disabled>{placeholder}</option> : null}
         {values.map((value) => (
-          <label className="choice-pill" key={value}>
-            <input type="radio" name={id} value={value} defaultChecked={value === defaultValue} required />
-            <span>{labels[value]}</span>
-          </label>
+          <option key={value} value={value}>{labels[value]}</option>
         ))}
-      </div>
-    </fieldset>
+      </select>
+    </Field>
   );
 }

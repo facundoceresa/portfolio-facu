@@ -2,9 +2,10 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { PageHeader } from "@/components/page-header";
 import { PublicShell } from "@/components/public-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { BrandIcon } from "@/components/brand-icon";
 import { getSettings } from "@/features/content/data";
 import { getPublicContact } from "@/features/content/public-contact";
-import { GitBranch, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 
 export const dynamic = "force-dynamic";
@@ -14,24 +15,24 @@ export default async function ContactPage() {
   const contact = getPublicContact(settings);
   return (
     <PublicShell locale="en" settings={settings}>
-      <PageHeader eyebrow="// contact" title="Direct ping_" body="No 20-field intake. Send context, constraints and goals so I can reply with a technical hypothesis." />
+      <PageHeader eyebrow="contact" title="Direct technical contact" body="Goals, context and constraints are enough to evaluate whether I can help and what should happen next." variant="contact" />
       <section className="mx-auto grid max-w-[1360px] gap-8 px-5 pb-28 md:grid-cols-[minmax(0,1fr)_20rem] md:px-10 lg:gap-10">
         <ScrollReveal>
           <ContactForm locale="en" />
         </ScrollReveal>
         <ScrollReveal as="aside" className="contact-side h-fit" delay={50}>
           <ContactChannel icon={<Mail size={18} />} label="email" value={contact.email} href={contact.mailHref} />
-          <ContactChannel icon={<GitBranch size={18} />} label="github" value="@facundoceresa" href={contact.githubHref} />
+          <ContactChannel icon={<BrandIcon kind="github" />} label="github" value="@facundoceresa" href={contact.githubHref} />
           <div className="contact-side-card">
             <div className="contact-side-icon"><MapPin size={17} aria-hidden="true" /></div>
             <div>
-              <p className="tech-label">{"// availability"}</p>
+              <p className="tech-label">availability</p>
               <p className="mt-4 text-sm leading-7 text-[color:var(--muted)]">{contact.location}</p>
               <p className="mt-2 text-sm leading-7 text-[color:var(--dim)]">{settings.availability_en}</p>
             </div>
           </div>
           <div className="contact-side-note">
-            <p className="tech-label">do not send</p>
+            <p className="tech-label">contact fit</p>
             <p>I do not reply to agencies, recruiters, or proposals without real technical context.</p>
           </div>
         </ScrollReveal>

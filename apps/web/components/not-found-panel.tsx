@@ -8,11 +8,11 @@ type NotFoundPanelProps = {
 
 const copy = {
   es: {
-    label: "// http 404 · ruta no encontrada",
+    label: "404 · ruta no encontrada",
     title: "Esta pagina no existe (todavia)",
     body: "La URL fue movida, renombrada o todavia no fue publicada.",
-    command: "$ router.match(location.pathname)",
-    trace: ["-> no matching route", "-> status 404", "-> suggestion: revisa el enlace o volve al inicio_"],
+    command: "router: sin coincidencias para esta ruta",
+    trace: ["estado 404", "sugerencia: revisa el enlace o volve al inicio"],
     home: "volver al inicio",
     contact: "reportar enlace roto",
     cards: [
@@ -28,11 +28,11 @@ const copy = {
     ],
   },
   en: {
-    label: "// http 404 · route_not_resolved",
+    label: "404 · route not found",
     title: "This page does not exist (yet)",
     body: "The URL was moved, renamed, or has not been published yet.",
-    command: "$ router.match(location.pathname)",
-    trace: ["-> no matching route", "-> status 404", "-> suggestion: check the link or go back home_"],
+    command: "router: no match for this route",
+    trace: ["status 404", "suggestion: check the link or go back home"],
     home: "back home",
     contact: "report broken link",
     cards: [
@@ -62,7 +62,7 @@ export function NotFoundPanel({ locale = "es", context = "site" }: NotFoundPanel
           <div className="not-found-console-icon">
             <SearchX size={22} aria-hidden="true" />
           </div>
-          <p className="tech-label">{">_ resolver.trace"}</p>
+          <p className="tech-label">{locale === "es" ? "ruta sin resolver" : "unresolved route"}</p>
           <div className="not-found-trace">
             <p>{t.command}</p>
             {t.trace.map((line) => (

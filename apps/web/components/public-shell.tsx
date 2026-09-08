@@ -38,7 +38,7 @@ export function PublicShell({ locale, settings, children }: PublicShellProps) {
               {locale}/{other}
             </Link>
             <Link className="hard-button hard-button-primary px-3 py-2 text-[0.65rem]" href={getRoute(locale, "contact")}>
-              {locale === "es" ? "hablemos" : "talk"}
+              {locale === "es" ? "contactar" : "contact"}
               <ArrowUpRight size={13} aria-hidden="true" />
             </Link>
           </div>
@@ -50,7 +50,7 @@ export function PublicShell({ locale, settings, children }: PublicShellProps) {
           <div className="flex flex-wrap gap-x-4 gap-y-2">
             <span>© 2026 facundo ceresa</span>
             <span>{contact.location}</span>
-            <span>todos los sistemas ok</span>
+            <span>{locale === "es" ? "portfolio técnico" : "technical portfolio"}</span>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link href={getRoute(locale, "privacy")}>{locale === "es" ? "privacidad" : "privacy"}</Link>
