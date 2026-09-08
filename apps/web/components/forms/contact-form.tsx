@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState, useTransition, type ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { contactBudgets, contactScopes } from "@/features/contact/schemas";
+import { contactScopes } from "@/features/contact/schemas";
 import type { Locale } from "@/features/content/schemas";
 
 type FormState = {
@@ -15,9 +15,7 @@ const labels = {
   es: {
     name: "Nombre",
     email: "Email",
-    companyRole: "Empresa / rol (opcional)",
-    scope: "Alcance",
-    budget: "Presupuesto",
+    scope: "Foco",
     message: "Mensaje",
     consent: "Autorizo el uso de estos datos unicamente para responder este mensaje.",
     submit: "enviar mensaje",
@@ -28,9 +26,8 @@ const labels = {
     formMeta: "respuesta < 48 h",
     namePlaceholder: "Tu nombre",
     emailPlaceholder: "tu@correo.com",
-    companyPlaceholder: "Empresa · rol",
-    messagePlaceholder: "Objetivo, contexto, restricciones y enlaces utiles.",
-    markdown: "contexto breve",
+    messagePlaceholder: "Qué querés resolver, dónde está el bloqueo y qué sistema existe hoy.",
+    markdown: "mínimo 20 caracteres",
     response: "estimado",
     responseValue: "< 48 h",
     scopeLabels: {
@@ -40,20 +37,11 @@ const labels = {
       infrastructure: "infraestructura",
       "technical-review": "auditoría técnica",
     },
-    budgetLabels: {
-      undefined: "por definir",
-      "under-1k": "< 1k",
-      "1k-5k": "1k - 5k",
-      "5k-15k": "5k - 15k",
-      "over-15k": "> 15k",
-    },
   },
   en: {
     name: "Name",
     email: "Email",
-    companyRole: "Company / role (optional)",
-    scope: "Scope",
-    budget: "Budget",
+    scope: "Focus",
     message: "Message",
     consent: "I authorize these details to be used only to answer this message.",
     submit: "send message",
@@ -64,9 +52,8 @@ const labels = {
     formMeta: "reply < 48 h",
     namePlaceholder: "How should I call you",
     emailPlaceholder: "you@email.com",
-    companyPlaceholder: "Company · role",
-    messagePlaceholder: "Goal, context, constraints and useful links.",
-    markdown: "short context",
+    messagePlaceholder: "What you need to solve, where it is blocked and which system exists today.",
+    markdown: "20 character minimum",
     response: "estimate",
     responseValue: "< 48 h",
     scopeLabels: {
@@ -75,13 +62,6 @@ const labels = {
       fullstack: "complete product",
       infrastructure: "infrastructure",
       "technical-review": "technical review",
-    },
-    budgetLabels: {
-      undefined: "to define",
-      "under-1k": "< 1k",
-      "1k-5k": "1k - 5k",
-      "5k-15k": "5k - 15k",
-      "over-15k": "> 15k",
     },
   },
 };
@@ -135,7 +115,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
         <span>{t.formMeta}</span>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <Field id="name" label={t.name}>
           <input id="name" name="name" required minLength={2} maxLength={80} autoComplete="name" placeholder={t.namePlaceholder} className="form-control" />
         </Field>
@@ -144,14 +124,8 @@ export function ContactForm({ locale }: { locale: Locale }) {
         </Field>
       </div>
 
-      <Field id="companyRole" label={t.companyRole}>
-        <input id="companyRole" name="companyRole" maxLength={120} autoComplete="organization-title" placeholder={t.companyPlaceholder} className="form-control" />
-      </Field>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        <SelectField id="scope" label={t.scope} values={contactScopes} labels={t.scopeLabels} placeholder={locale === "es" ? "Elegí el foco" : "Choose the focus"} required />
-        <SelectField id="budget" label={t.budget} values={contactBudgets} labels={t.budgetLabels} defaultValue="undefined" />
-      </div>
+      <SelectField id="scope" label={t.scope} values={contactScopes} labels={t.scopeLabels} placeholder={locale === "es" ? "Elegí el foco del proyecto" : "Choose the project focus"} required />
+      <input type="hidden" name="budget" value="undefined" />
 
       <Field id="message" label={t.message}>
         <textarea
@@ -160,7 +134,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
           required
           minLength={20}
           maxLength={2000}
-          rows={3}
+          rows={2}
           placeholder={t.messagePlaceholder}
           className="form-control resize-y py-3"
           onChange={(event) => setMessageLength(event.currentTarget.value.length)}

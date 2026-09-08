@@ -35,6 +35,7 @@
   --reveal-slide-right: translate3d(2.25rem, 0, 0) scale(0.992);
   --reveal-compress: translate3d(0, 0.75rem, 0) scale(0.972);
   --reveal-trace: translate3d(0, 1.25rem, 0) scale(1);
+  --reveal-line: translate3d(0, 0.45rem, 0) scale(0.996);
 }
 
 @theme inline {
@@ -56,6 +57,10 @@ html {
   background: var(--background);
   color: var(--fog);
   scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 body {
@@ -178,8 +183,8 @@ select {
 }
 
 .page-header-contact {
-  padding-bottom: 2rem;
-  padding-top: 2.8rem;
+  padding-bottom: 1.25rem;
+  padding-top: 2.25rem;
 }
 
 .page-header-read {
@@ -202,6 +207,7 @@ select {
 
 .page-header-contact .page-header-title {
   color: rgba(115, 255, 184, 0.78);
+  line-height: 0.9;
 }
 
 .page-header::before {
@@ -360,8 +366,8 @@ select {
 
 .contact-form-panel {
   display: grid;
-  gap: 0.85rem;
-  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  gap: 0.62rem;
+  padding: clamp(0.95rem, 1.8vw, 1.35rem);
 }
 
 .contact-form-panel-header {
@@ -369,7 +375,7 @@ select {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 
 .contact-form-panel-header span,
@@ -386,15 +392,15 @@ select {
 
 .form-field {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .form-control {
   background: rgba(13, 27, 42, 0.82);
   border: 1px solid rgba(115, 255, 184, 0.25);
   color: var(--fog);
-  min-height: 2.55rem;
-  padding: 0.62rem 0.78rem;
+  min-height: 2.35rem;
+  padding: 0.52rem 0.68rem;
   transition:
     background 180ms var(--ease-reference),
     border-color 180ms var(--ease-reference),
@@ -508,7 +514,7 @@ select {
   font-size: 0.66rem;
   gap: 0.65rem;
   letter-spacing: 0.16em;
-  line-height: 1.7;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
@@ -522,7 +528,7 @@ select {
 
 .contact-form-submit-row {
   border-top: 1px solid var(--line);
-  padding-top: 0.95rem;
+  padding-top: 0.7rem;
 }
 
 .contact-form-submit-row p strong {
@@ -620,24 +626,29 @@ select {
 
 .capability-grid {
   display: grid;
-  gap: 0.9rem;
+  border-top: 1px solid var(--line);
+  gap: 0;
 }
 
 .capability-item {
-  background: linear-gradient(90deg, rgba(10, 21, 33, 0.86), rgba(10, 21, 33, 0.34));
+  background:
+    linear-gradient(90deg, rgba(115, 255, 184, 0.045), transparent 42%),
+    rgba(10, 21, 33, 0.42);
   border-bottom: 1px solid var(--line);
   display: grid;
   gap: 0.55rem;
-  grid-template-columns: minmax(5.5rem, 0.28fr) minmax(0, 1fr);
-  padding: 1rem 0;
+  grid-template-columns: minmax(5.5rem, 0.24fr) minmax(0, 1fr);
+  min-height: 5.7rem;
+  padding: 0.85rem 0;
   transition:
     background var(--duration-reference) var(--ease-reference),
-    border-color var(--duration-reference) var(--ease-reference),
-    transform 220ms var(--ease-drawer);
+    border-color var(--duration-reference) var(--ease-reference);
 }
 
 .capability-item:hover {
-  background: linear-gradient(90deg, rgba(20, 53, 40, 0.4), rgba(10, 21, 33, 0.2));
+  background:
+    linear-gradient(90deg, rgba(115, 255, 184, 0.075), transparent 48%),
+    rgba(10, 21, 33, 0.58);
   border-color: rgba(115, 255, 184, 0.28);
 }
 
@@ -653,15 +664,90 @@ select {
 .capability-item h3 {
   color: rgba(230, 255, 245, 0.82);
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-size: clamp(1.08rem, 1.55vw, 1.42rem);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .capability-item p:last-child {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.25rem;
+}
+
+.profile-section {
+  background:
+    linear-gradient(rgba(115, 255, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(115, 255, 184, 0.024) 1px, transparent 1px),
+    rgba(10, 21, 33, 0.48);
+  background-size: 34px 34px;
+}
+
+.profile-console {
+  background: rgba(10, 21, 33, 0.82);
+  border: 1px solid rgba(115, 255, 184, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(230, 255, 245, 0.035);
+  padding: 1.1rem;
+}
+
+.profile-console-topbar {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  color: var(--signal-label);
+  display: flex;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: 0.14em;
+  margin: -1.1rem -1.1rem 1rem;
+  min-height: 2rem;
+  padding: 0 0.9rem;
+  text-transform: uppercase;
+}
+
+.profile-console-topbar strong {
+  color: rgba(230, 255, 245, 0.52);
+  font-size: inherit;
+}
+
+.profile-title {
+  font-size: clamp(2.25rem, 4.4vw, 4.9rem);
+  line-height: 0.88;
+}
+
+.profile-lead {
+  color: rgba(230, 255, 245, 0.78);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
   line-height: 1.65;
+  margin-top: 1.15rem;
+  max-width: 42rem;
+}
+
+.profile-body {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  max-width: 42rem;
+}
+
+.profile-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.profile-facts span {
+  border: 1px solid rgba(115, 255, 184, 0.16);
+  color: rgba(115, 255, 184, 0.74);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.42rem 0.55rem;
+  text-transform: uppercase;
 }
 
 .stack-board {
@@ -766,9 +852,9 @@ select {
 
 .process-step {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
   grid-template-columns: 2.25rem minmax(0, 1fr);
-  padding: 1.15rem 0 1.15rem 0;
+  padding: 0.9rem 0;
   position: relative;
 }
 
@@ -791,13 +877,13 @@ select {
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.28rem;
 }
 
 .process-step h3 {
   color: rgba(230, 255, 245, 0.86);
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  font-size: clamp(1.24rem, 2.2vw, 1.85rem);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -805,9 +891,14 @@ select {
 .process-step span:last-child {
   color: var(--muted);
   display: block;
-  line-height: 1.65;
-  margin-top: 0.55rem;
+  line-height: 1.55;
+  margin-top: 0.35rem;
   max-width: 44rem;
+}
+
+.method-copy {
+  position: sticky;
+  top: 6rem;
 }
 
 .ai-system {
@@ -817,8 +908,9 @@ select {
 
 .signal-swarm {
   background:
-    linear-gradient(rgba(115, 255, 184, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(115, 255, 184, 0.024) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(115, 255, 184, 0.08), transparent 46%),
+    linear-gradient(rgba(115, 255, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(115, 255, 184, 0.032) 1px, transparent 1px),
     rgba(10, 21, 33, 0.84);
   background-size: 30px 30px;
   border: 1px solid rgba(115, 255, 184, 0.24);
@@ -829,7 +921,7 @@ select {
 
 .signal-swarm canvas {
   display: block;
-  height: 20rem;
+  height: 22rem;
   width: 100%;
 }
 
@@ -1077,10 +1169,160 @@ select {
 
 .project-shot-image {
   display: block;
-  height: 18rem;
+  height: 100%;
+  min-height: 13rem;
   object-fit: cover;
   object-position: top;
   width: 100%;
+}
+
+.project-log-row {
+  align-items: stretch;
+  background:
+    linear-gradient(90deg, rgba(115, 255, 184, 0.055), transparent 42%),
+    rgba(10, 21, 33, 0.68);
+  border: 1px solid rgba(115, 255, 184, 0.16);
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(16rem, 0.5fr) minmax(0, 1fr) minmax(12rem, 0.28fr);
+  min-height: 16rem;
+  overflow: hidden;
+  transition:
+    background var(--duration-reference) var(--ease-reference),
+    border-color var(--duration-reference) var(--ease-reference),
+    box-shadow var(--duration-reference) var(--ease-reference);
+}
+
+.project-log-row:hover {
+  background:
+    linear-gradient(90deg, rgba(115, 255, 184, 0.075), transparent 48%),
+    rgba(10, 21, 33, 0.78);
+  border-color: rgba(115, 255, 184, 0.34);
+  box-shadow: 0 0 32px rgba(45, 212, 168, 0.08);
+}
+
+.project-log-shot {
+  border-right: 1px solid var(--line);
+  display: block;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.project-log-shot .project-shot-wrap {
+  border: 0;
+  height: 100%;
+  margin-top: 0;
+}
+
+.project-log-shot .project-shot-topbar {
+  min-height: 1.7rem;
+}
+
+.project-log-body {
+  display: grid;
+  padding: clamp(1rem, 2vw, 1.45rem);
+}
+
+.project-log-meta,
+.project-log-stack,
+.project-log-actions,
+.project-log-metric span,
+.project-log-metric p {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.project-log-meta {
+  color: var(--signal-label);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.project-log-body h3 {
+  color: rgba(230, 255, 245, 0.88);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.65rem, 3vw, 3rem);
+  font-weight: 700;
+  line-height: 0.96;
+  max-width: 44rem;
+  text-transform: uppercase;
+}
+
+.project-log-body > p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 0.9rem;
+  max-width: 44rem;
+}
+
+.project-log-stack {
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.project-log-stack span {
+  border: 1px solid rgba(115, 255, 184, 0.14);
+  color: rgba(115, 255, 184, 0.66);
+  padding: 0.38rem 0.5rem;
+}
+
+.project-log-side {
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.project-log-metric {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.project-log-metric span {
+  color: var(--signal-label);
+}
+
+.project-log-metric strong {
+  color: var(--glow);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.9;
+}
+
+.project-log-metric p {
+  color: rgba(230, 255, 245, 0.55);
+  line-height: 1.5;
+}
+
+.project-log-actions {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.project-log-actions a {
+  align-items: center;
+  color: rgba(230, 255, 245, 0.76);
+  display: inline-flex;
+  gap: 0.45rem;
+  min-height: 2rem;
+  transition:
+    color var(--duration-reference) var(--ease-reference),
+    translate 160ms var(--ease-reference);
+}
+
+.project-log-actions a:hover {
+  color: var(--glow);
+  translate: 2px 0;
 }
 
 .project-feature-panel,
@@ -1781,16 +2023,16 @@ select {
   }
 
   .project-feature:hover .project-feature-panel {
-    transform: translate3d(-4px, 2px, 0) scale(0.994);
+    transform: translate3d(-2px, 1px, 0) scale(0.997);
   }
 
   .project-feature:hover .project-feature-card {
-    box-shadow: 12px 12px 0 rgba(115, 255, 184, 0.18);
-    transform: translate3d(10px, -8px, 0) scale(1.018);
+    box-shadow: 8px 8px 0 rgba(115, 255, 184, 0.12);
+    transform: translate3d(3px, -2px, 0) scale(1.004);
   }
 
   .project-feature:hover .project-shot-image {
-    transform: scale(1.025);
+    transform: scale(1.006);
   }
 
   .case-index-shot:hover img,
@@ -1864,8 +2106,24 @@ select {
 
   .capability-item,
   .stack-board-row,
-  .stack-layer-row {
+  .stack-layer-row,
+  .project-log-row {
     grid-template-columns: 1fr;
+  }
+
+  .project-log-shot,
+  .project-log-side {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .project-log-side {
+    border-top: 1px solid var(--line);
+    gap: 1rem;
+  }
+
+  .method-copy {
+    position: static;
   }
 
   .stack-board-row div:last-child,

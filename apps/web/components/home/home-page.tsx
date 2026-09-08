@@ -45,6 +45,22 @@ const capabilityCards = {
     { kicker: "ship", title: "Technical product", body: "MVPs and publishable tools with tests, deployment and operational documentation." },
   ],
 };
+const profileCopy = {
+  es: {
+    intro:
+      "Soy Facundo Ceresa, desarrollador full-stack de Montevideo. Me interesa construir software operativo: herramientas que conectan sistemas, ordenan datos y ayudan a equipos reales a trabajar con menos fricción.",
+    focus: "Vengo de resolver problemas cerca de la operación: integraciones con ERP, automatizaciones internas, paneles de gestión, infraestructura liviana y flujos donde la trazabilidad importa.",
+    facts: ["Montevideo, Uruguay", "full-stack + integraciones", "automatización e IA aplicada", "sistemas internos en producción"],
+    cv: "descargar cv técnico",
+  },
+  en: {
+    intro:
+      "I'm Facundo Ceresa, a full-stack developer from Montevideo. I like building operational software: tools that connect systems, organize data and help real teams work with less friction.",
+    focus: "Most of my work sits close to operations: ERP integrations, internal automation, management panels, lightweight infrastructure and flows where traceability matters.",
+    facts: ["Montevideo, Uruguay", "full-stack + integrations", "automation and applied AI", "internal systems in production"],
+    cv: "download technical cv",
+  },
+};
 const aiPrinciples = {
   es: [
     ["trazabilidad", "prompts, decisiones, versiones y riesgos quedan visibles"],
@@ -127,7 +143,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           ))}
         </div>
       </div>
-      <section id="trabajo" className="relative py-24 md:py-32">
+      <section id="trabajo" className="relative py-20 md:py-24">
         <SectionIntro
           eyebrow={t.work.eyebrow}
           title={t.work.title}
@@ -139,32 +155,39 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             </Link>
           }
         />
-        <div className="mx-auto mt-14 grid max-w-[1360px] gap-24 px-5 md:px-10">
+        <div className="mx-auto mt-10 grid max-w-[1360px] gap-4 px-5 md:px-10">
           {projects.length ? projects.map((project, index) => <ProjectFeature key={project.project.id} project={project} index={index} locale={locale} labels={projectLabels} />) : <DraftEmptyState text={t.work.empty} locale={locale} />}
         </div>
       </section>
-      <section id="perfil" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.34)] py-24">
-        <div className="mx-auto grid max-w-[1360px] gap-10 px-5 md:grid-cols-[0.85fr_1fr] md:px-10">
-          <div>
-            <p className="tech-label mb-4">{locale === "es" ? "perfil" : "profile"}</p>
-            <h2 className="display-title text-[clamp(2.4rem,5vw,5.4rem)]">{renderAccentTitle(locale === "es" ? "Software cerca del proceso." : "Software close to the process.")}</h2>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-tone-muted">
-              {locale === "es"
-                ? "Trabajo mejor cuando el problema cruza operación, datos e integración: entender cómo se mueve el negocio, modelarlo bien y dejar una herramienta que alguien pueda usar todos los días."
-                : "My best work sits where operations, data and integration meet: understanding how the business moves, modeling it well and leaving behind a tool people can use every day."}
-            </p>
-            <a className="hard-button hard-button-secondary mt-8" href="/facundo-ceresa-cv.md" download>
-              {locale === "es" ? "descargar cv técnico" : "download technical cv"}
+      <section id="perfil" className="profile-section border-y border-[color:var(--line)] py-16 md:py-20">
+        <div className="mx-auto grid max-w-[1360px] gap-8 px-5 md:grid-cols-[0.92fr_1.08fr] md:items-start md:px-10">
+          <ScrollReveal className="profile-console" variant="line">
+            <div className="profile-console-topbar">
+              <span>profile.md</span>
+              <strong>{locale === "es" ? "persona + oficio" : "person + craft"}</strong>
+            </div>
+            <h2 className="display-title profile-title">{renderAccentTitle(locale === "es" ? "Software cerca del proceso." : "Software close to the process.")}</h2>
+            <p className="profile-lead">{profileCopy[locale].intro}</p>
+            <p className="profile-body">{profileCopy[locale].focus}</p>
+            <div className="profile-facts">
+              {profileCopy[locale].facts.map((fact) => (
+                <span key={fact}>{fact}</span>
+              ))}
+            </div>
+            <a className="hard-button hard-button-secondary mt-5" href="/facundo-ceresa-cv.md" download>
+              {profileCopy[locale].cv}
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
-          </div>
-          <div className="capability-grid">
-            {capabilityCards[locale].map((item, index) => (
-              <ScrollReveal key={item.title} className="capability-item" delay={index * 45} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+          </ScrollReveal>
+          <div className="capability-grid" aria-label={locale === "es" ? "Áreas técnicas" : "Technical areas"}>
+            {capabilityCards[locale].map((item) => (
+              <div key={item.title} className="capability-item">
                 <p className="capability-kicker">{item.kicker}</p>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </ScrollReveal>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -173,7 +196,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
         <SectionIntro eyebrow={t.stack.eyebrow} title={t.stack.title} body={t.stack.body} />
         <div className="stack-board mx-auto mt-12 max-w-[1360px] px-5 md:px-10">
           {stackLayers.map((layer, index) => (
-            <ScrollReveal key={layer.key} className="stack-board-row" delay={index * 55} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+            <ScrollReveal key={layer.key} className="stack-board-row" delay={index * 45} hover="surface" variant="line">
               <span className="stack-board-index">{layer.key}</span>
               <h3>{layer.title}</h3>
               <div>
@@ -183,11 +206,15 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           ))}
         </div>
       </section>
-      <section id="metodo" className="py-24">
-        <SectionIntro eyebrow={t.method.eyebrow} title={t.method.title} />
-        <div className="process-trace mx-auto mt-12 max-w-[1360px] px-5 md:px-10">
+      <section id="metodo" className="py-16 md:py-20">
+        <div className="method-layout mx-auto grid max-w-[1360px] gap-9 px-5 md:grid-cols-[0.55fr_1fr] md:px-10">
+          <ScrollReveal className="method-copy" variant="line">
+            <p className="tech-label mb-4">{t.method.eyebrow}</p>
+            <h2 className="display-title text-[clamp(2.1rem,4vw,4.3rem)]">{renderAccentTitle(t.method.title)}</h2>
+          </ScrollReveal>
+          <div className="process-trace">
           {methodSteps.map((step, index) => (
-            <ScrollReveal key={step.title} className="process-step" delay={index * 70} hover="surface" variant="trace">
+            <ScrollReveal key={step.title} className="process-step" delay={index * 60} hover="surface" variant="trace">
               <span className="process-node"><Check size={14} aria-hidden="true" /></span>
               <div>
                 <p>{String(index + 1).padStart(2, "0")}</p>
@@ -196,6 +223,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               </div>
             </ScrollReveal>
           ))}
+          </div>
         </div>
       </section>
       <section id="ia" className="border-y border-[color:var(--line)] bg-[rgba(10,21,33,0.38)] py-24">
@@ -211,7 +239,7 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             </ScrollReveal>
             <div className="ai-ledger">
               {aiPrinciples[locale].map(([title, body], index) => (
-                <ScrollReveal key={title} className="ai-ledger-row" delay={index * 55} hover="surface" variant={index % 2 ? "slide-right" : "slide-left"}>
+                <ScrollReveal key={title} className="ai-ledger-row" delay={index * 45} hover="surface" variant="line">
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <div>
                     <h3>{title}</h3>
@@ -223,9 +251,9 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
           </div>
         </div>
       </section>
-      <section id="contacto" className="px-5 py-28 text-center md:px-10">
+      <section id="contacto" className="px-5 py-20 text-center md:px-10">
         <p className="tech-label mb-4">{t.contact.eyebrow}</p>
-        <h2 className="display-title mx-auto max-w-3xl text-[clamp(2.8rem,7vw,6rem)]">{renderAccentTitle(t.contact.title)}</h2>
+        <h2 className="display-title mx-auto max-w-3xl text-[clamp(2.4rem,6vw,5.2rem)]">{renderAccentTitle(t.contact.title)}</h2>
         <p className="mx-auto mt-6 max-w-2xl leading-7 text-tone-green">{t.contact.body}</p>
         <div className="contact-actions">
           <a className="hard-button hard-button-primary contact-action-primary" href={contact.mailHref}>
@@ -316,47 +344,40 @@ function ProjectFeature({
   const meta = readProjectMeta(project.translation.body);
   const screenshot = meta.screenshots[0];
   return (
-    <ScrollReveal as="article" className="project-feature relative md:min-h-[520px]" delay={Math.min(index, 3) * 65} hover="card" variant={index % 2 ? "slide-right" : "slide-left"}>
-      <div className={`project-feature-panel blueprint-panel min-h-[300px] overflow-hidden p-5 md:w-[64%] ${index % 2 ? "md:ml-auto" : ""}`}>
-        <div className="relative z-10 flex justify-between font-mono text-xs uppercase text-[color:var(--glow)]">
-          <span>{project.translation.category}</span>
-          <span className="text-5xl font-bold text-[rgba(115,255,184,0.22)]">0{index + 1}</span>
-        </div>
+    <ScrollReveal as="article" className="project-log-row" delay={Math.min(index, 3) * 45} variant="line">
+      <Link href={href} className="project-log-shot scanline" aria-label={`${labels.view} ${project.translation.title}`}>
         {screenshot ? <ProjectScreenshotFrame screenshot={screenshot} priority={index === 0} /> : <BlueprintVisual index={index} />}
-      </div>
-      <div className={`project-feature-card bg-mint p-6 text-[color:var(--surface)] shadow-[8px_8px_0_rgba(115,255,184,0.18)] md:absolute md:top-40 md:w-[45%] ${index % 2 ? "md:left-8" : "md:right-8"}`}>
-        <p className="mb-4 font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em]">{locale === "es" ? "caso" : "case"} · 0{index + 1}</p>
-        <h3 className="font-display text-2xl font-bold leading-none">{project.translation.title}</h3>
-        <p className="mt-4 text-sm leading-6">{project.translation.summary}</p>
+      </Link>
+      <div className="project-log-body">
+        <div className="project-log-meta">
+          <span>{locale === "es" ? "caso" : "case"} · 0{index + 1}</span>
+          <span>{project.translation.category}</span>
+        </div>
+        <h3>{project.translation.title}</h3>
+        <p>{project.translation.summary}</p>
         {meta.stack.length ? (
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="project-log-stack">
             {meta.stack.slice(0, 6).map((tool) => (
-              <span key={tool} className="border border-[rgba(10,21,33,0.34)] px-2 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.12em]">
-                {tool}
-              </span>
+              <span key={tool}>{tool}</span>
             ))}
           </div>
         ) : null}
+      </div>
+      <div className="project-log-side">
         {project.project.metricValue ? (
-          <div className="project-feature-metric">
-            <p>{labels.metric}</p>
+          <div className="project-log-metric">
+            <span>{labels.metric}</span>
             <strong>{project.project.metricValue}</strong>
-            {project.project.metricLabelKey ? <span>{project.project.metricLabelKey}</span> : null}
+            {project.project.metricLabelKey ? <p>{project.project.metricLabelKey}</p> : null}
           </div>
         ) : null}
-        <div className="mt-6 flex flex-wrap items-center gap-4">
-          <Link href={href} className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-            {labels.view} <ArrowUpRight size={15} />
-          </Link>
+        <div className="project-log-actions">
+          <Link href={href}>{labels.view} <ArrowUpRight size={15} /></Link>
           {project.project.repoUrl ? (
-            <a href={project.project.repoUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-              {labels.repo} <BrandIcon kind="github" />
-            </a>
+            <a href={project.project.repoUrl} rel="noopener noreferrer" target="_blank">{labels.repo} <BrandIcon kind="github" /></a>
           ) : null}
           {project.project.liveUrl ? (
-            <a href={project.project.liveUrl} rel="noopener noreferrer" target="_blank" className="inline-flex min-h-11 items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em]">
-              {labels.demo} <ArrowUpRight size={15} />
-            </a>
+            <a href={project.project.liveUrl} rel="noopener noreferrer" target="_blank">{labels.demo} <ArrowUpRight size={15} /></a>
           ) : null}
         </div>
       </div>

@@ -15,8 +15,8 @@ export default async function ContactPage() {
   const contact = getPublicContact(settings);
   return (
     <PublicShell locale="en" settings={settings}>
-      <PageHeader eyebrow="contact" title="Direct technical contact" body="Goals, context and constraints are enough to evaluate whether I can help and what should happen next." variant="contact" />
-      <section className="mx-auto grid max-w-[1360px] gap-8 px-5 pb-28 md:grid-cols-[minmax(0,1fr)_20rem] md:px-10 lg:gap-10">
+      <PageHeader eyebrow="contact" title="Let's talk systems" body="A clear goal and current context are enough to start a useful conversation." variant="contact" />
+      <section className="contact-page-grid mx-auto grid max-w-[1360px] gap-6 px-5 pb-16 md:grid-cols-[minmax(0,1fr)_17rem] md:px-10">
         <ScrollReveal>
           <ContactForm locale="en" />
         </ScrollReveal>
@@ -33,7 +33,7 @@ export default async function ContactPage() {
           </div>
           <div className="contact-side-note">
             <p className="tech-label">contact fit</p>
-            <p>I do not reply to agencies, recruiters, or proposals without real technical context.</p>
+            <p>Priority for internal systems, integrations, automation and technical product work.</p>
           </div>
         </ScrollReveal>
       </section>

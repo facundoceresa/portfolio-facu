@@ -15,8 +15,8 @@ export default async function ContactPage() {
   const contact = getPublicContact(settings);
   return (
     <PublicShell locale="es" settings={settings}>
-      <PageHeader eyebrow="contacto" title="Contacto técnico directo" body="Objetivo, contexto y restricciones. Con eso alcanza para evaluar si puedo ayudar y cómo seguir." variant="contact" />
-      <section className="mx-auto grid max-w-[1360px] gap-8 px-5 pb-28 md:grid-cols-[minmax(0,1fr)_20rem] md:px-10 lg:gap-10">
+      <PageHeader eyebrow="contacto" title="Hablemos de tu sistema" body="Un objetivo claro y el contexto actual alcanzan para iniciar una conversación útil." variant="contact" />
+      <section className="contact-page-grid mx-auto grid max-w-[1360px] gap-6 px-5 pb-16 md:grid-cols-[minmax(0,1fr)_17rem] md:px-10">
         <ScrollReveal>
           <ContactForm locale="es" />
         </ScrollReveal>
@@ -33,7 +33,7 @@ export default async function ContactPage() {
           </div>
           <div className="contact-side-note">
             <p className="tech-label">criterio de contacto</p>
-            <p>No respondo a agencias, reclutadores ni propuestas sin contexto tecnico real.</p>
+            <p>Prioridad para sistemas internos, integraciones, automatización y producto técnico.</p>
           </div>
         </ScrollReveal>
       </section>

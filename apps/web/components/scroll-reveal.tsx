@@ -35,6 +35,8 @@ export function ScrollReveal({
   const initialTransform =
     variant === "image"
       ? "var(--reveal-image)"
+      : variant === "line"
+        ? "var(--reveal-line)"
       : variant === "slide-left"
         ? "var(--reveal-slide-left)"
         : variant === "slide-right"
@@ -48,8 +50,22 @@ export function ScrollReveal({
 
   const props = {
     className: ["scroll-reveal", `scroll-reveal-${variant}`, className].filter(Boolean).join(" "),
-    initial: reduceMotion ? false : { transform: initialTransform, filter: variant === "trace" ? "blur(5px)" : "blur(0px)" },
-    animate: visible ? { transform: "translate3d(0, 0, 0) scale(1)", filter: "blur(0px)" } : undefined,
+    initial: reduceMotion
+      ? false
+      : {
+          transform: initialTransform,
+          filter: variant === "trace" ? "blur(2px)" : "blur(0px)",
+          opacity: variant === "line" ? 0.76 : undefined,
+          clipPath: variant === "line" ? "inset(0 0 14% 0)" : undefined,
+        },
+    animate: visible
+      ? {
+          transform: "translate3d(0, 0, 0) scale(1)",
+          filter: "blur(0px)",
+          opacity: 1,
+          clipPath: variant === "line" ? "inset(0 0 0% 0)" : undefined,
+        }
+      : undefined,
     whileHover: !reduceMotion && hoverTransform ? { transform: hoverTransform } : undefined,
     whileTap: !reduceMotion && hover !== "none" ? { transform: "translate3d(0, -1px, 0) scale(0.992)" } : undefined,
     transition: { ...springTransition, delay: visible ? delay / 1000 : 0 },

@@ -44,8 +44,8 @@ export const copy = {
     },
     contact: {
       eyebrow: "contacto",
-      title: "contame qué sistema querés mover",
-      body: "Un mensaje breve con objetivo, contexto y restricciones alcanza para evaluar el siguiente paso.",
+      title: "Transformemos un proceso en software.",
+      body: "Describí el objetivo y el contexto. Te respondo con una lectura técnica concreta.",
       submit: "enviar mensaje",
     },
   },
@@ -82,8 +82,8 @@ export const copy = {
     },
     contact: {
       eyebrow: "contact",
-      title: "tell me which system needs to move",
-      body: "A short message with goals, context and constraints is enough to evaluate the next step.",
+      title: "Turn a process into software.",
+      body: "Share the goal and context. I will reply with a concrete technical read.",
       submit: "send message",
     },
   },

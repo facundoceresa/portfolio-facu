@@ -54,7 +54,7 @@ export function CasesList({
         const meta = readProjectMeta(project?.translation.body);
         const screenshot = meta.screenshots[0];
         return (
-          <ScrollReveal key={item.caseStudy.id} as="article" className="case-index-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5" delay={Math.min(index, 4) * 60} hover="card" variant={index % 2 ? "slide-right" : "slide-left"}>
+          <ScrollReveal key={item.caseStudy.id} as="article" className="case-index-card grid gap-6 overflow-hidden p-4 md:grid-cols-[minmax(18rem,0.72fr)_1fr] md:p-5" delay={Math.min(index, 4) * 45} hover="surface" variant="line">
             <Link href={`${base}/${item.translation.slug}`} className="case-index-shot scanline" aria-label={`${locale === "es" ? "Ver caso" : "View case"} ${item.translation.title}`}>
               {screenshot ? (
                 <Image
