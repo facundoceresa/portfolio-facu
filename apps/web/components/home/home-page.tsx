@@ -50,14 +50,22 @@ const profileCopy = {
     intro:
       "Soy Facundo Ceresa, desarrollador full-stack de Montevideo. Me interesa construir software operativo: herramientas que conectan sistemas, ordenan datos y ayudan a equipos reales a trabajar con menos fricción.",
     focus: "Vengo de resolver problemas cerca de la operación: integraciones con ERP, automatizaciones internas, paneles de gestión, infraestructura liviana y flujos donde la trazabilidad importa.",
-    facts: ["Montevideo, Uruguay", "full-stack + integraciones", "automatización e IA aplicada", "sistemas internos en producción"],
+    facts: [
+      ["base", "Montevideo, Uruguay"],
+      ["rol", "full-stack developer"],
+      ["foco", "integraciones, datos, automatización"],
+    ],
     cv: "descargar cv técnico",
   },
   en: {
     intro:
       "I'm Facundo Ceresa, a full-stack developer from Montevideo. I like building operational software: tools that connect systems, organize data and help real teams work with less friction.",
     focus: "Most of my work sits close to operations: ERP integrations, internal automation, management panels, lightweight infrastructure and flows where traceability matters.",
-    facts: ["Montevideo, Uruguay", "full-stack + integrations", "automation and applied AI", "internal systems in production"],
+    facts: [
+      ["base", "Montevideo, Uruguay"],
+      ["role", "full-stack developer"],
+      ["focus", "integrations, data, automation"],
+    ],
     cv: "download technical cv",
   },
 };
@@ -155,12 +163,12 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             </Link>
           }
         />
-        <div className="mx-auto mt-10 grid max-w-[1360px] gap-4 px-5 md:px-10">
+        <div className="project-showcase-grid mx-auto mt-12 max-w-[1360px] px-5 md:px-10">
           {projects.length ? projects.map((project, index) => <ProjectFeature key={project.project.id} project={project} index={index} locale={locale} labels={projectLabels} />) : <DraftEmptyState text={t.work.empty} locale={locale} />}
         </div>
       </section>
       <section id="perfil" className="profile-section border-y border-[color:var(--line)] py-16 md:py-20">
-        <div className="mx-auto grid max-w-[1360px] gap-8 px-5 md:grid-cols-[0.92fr_1.08fr] md:items-start md:px-10">
+        <div className="mx-auto grid max-w-[1360px] gap-12 px-5 md:grid-cols-[0.95fr_1.05fr] md:items-center md:px-10">
           <ScrollReveal className="profile-console" variant="line">
             <div className="profile-console-topbar">
               <span>profile.md</span>
@@ -169,9 +177,12 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
             <h2 className="display-title profile-title">{renderAccentTitle(locale === "es" ? "Software cerca del proceso." : "Software close to the process.")}</h2>
             <p className="profile-lead">{profileCopy[locale].intro}</p>
             <p className="profile-body">{profileCopy[locale].focus}</p>
-            <div className="profile-facts">
-              {profileCopy[locale].facts.map((fact) => (
-                <span key={fact}>{fact}</span>
+            <div className="profile-meta-console" aria-label={locale === "es" ? "Datos breves de perfil" : "Short profile facts"}>
+              {profileCopy[locale].facts.map(([key, value]) => (
+                <p key={key}>
+                  <span>{key}</span>
+                  <strong>{value}</strong>
+                </p>
               ))}
             </div>
             <a className="hard-button hard-button-secondary mt-5" href="/facundo-ceresa-cv.md" download>
@@ -179,15 +190,15 @@ export function HomePage({ locale, settings, projects }: { locale: Locale; setti
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
           </ScrollReveal>
-          <div className="capability-grid" aria-label={locale === "es" ? "Áreas técnicas" : "Technical areas"}>
-            {capabilityCards[locale].map((item) => (
-              <div key={item.title} className="capability-item">
+          <div className="profile-focus-board" aria-label={locale === "es" ? "Áreas técnicas" : "Technical areas"}>
+            {capabilityCards[locale].map((item, index) => (
+              <ScrollReveal key={item.title} className="capability-item" delay={index * 35} hover="surface" variant="compress">
                 <p className="capability-kicker">{item.kicker}</p>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -344,34 +355,34 @@ function ProjectFeature({
   const meta = readProjectMeta(project.translation.body);
   const screenshot = meta.screenshots[0];
   return (
-    <ScrollReveal as="article" className="project-log-row" delay={Math.min(index, 3) * 45} variant="line">
-      <Link href={href} className="project-log-shot scanline" aria-label={`${labels.view} ${project.translation.title}`}>
+    <ScrollReveal as="article" className={`project-showcase-card project-card-${index % 4}`} delay={Math.min(index, 3) * 55} hover="surface" variant="compress">
+      <Link href={href} className="project-showcase-shot scanline" aria-label={`${labels.view} ${project.translation.title}`}>
         {screenshot ? <ProjectScreenshotFrame screenshot={screenshot} priority={index === 0} /> : <BlueprintVisual index={index} />}
       </Link>
-      <div className="project-log-body">
-        <div className="project-log-meta">
+      <div className="project-showcase-body">
+        <div className="project-showcase-meta">
           <span>{locale === "es" ? "caso" : "case"} · 0{index + 1}</span>
           <span>{project.translation.category}</span>
         </div>
         <h3>{project.translation.title}</h3>
         <p>{project.translation.summary}</p>
         {meta.stack.length ? (
-          <div className="project-log-stack">
+          <div className="project-showcase-stack">
             {meta.stack.slice(0, 6).map((tool) => (
               <span key={tool}>{tool}</span>
             ))}
           </div>
         ) : null}
       </div>
-      <div className="project-log-side">
+      <div className="project-showcase-footer">
         {project.project.metricValue ? (
-          <div className="project-log-metric">
+          <div className="project-showcase-metric">
             <span>{labels.metric}</span>
             <strong>{project.project.metricValue}</strong>
             {project.project.metricLabelKey ? <p>{project.project.metricLabelKey}</p> : null}
           </div>
         ) : null}
-        <div className="project-log-actions">
+        <div className="project-showcase-actions">
           <Link href={href}>{labels.view} <ArrowUpRight size={15} /></Link>
           {project.project.repoUrl ? (
             <a href={project.project.repoUrl} rel="noopener noreferrer" target="_blank">{labels.repo} <BrandIcon kind="github" /></a>
